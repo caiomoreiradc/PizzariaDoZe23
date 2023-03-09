@@ -115,6 +115,7 @@
             // buttonCadastraIngre
             // 
             buttonCadastraIngre.BackColor = Color.FromArgb(128, 255, 128);
+            buttonCadastraIngre.Cursor = Cursors.Hand;
             buttonCadastraIngre.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             buttonCadastraIngre.Location = new Point(65, 132);
             buttonCadastraIngre.Name = "buttonCadastraIngre";

@@ -211,6 +211,7 @@
             // buttonEnviarEndFunci
             // 
             buttonEnviarEndFunci.BackColor = Color.FromArgb(128, 255, 128);
+            buttonEnviarEndFunci.Cursor = Cursors.Hand;
             buttonEnviarEndFunci.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             buttonEnviarEndFunci.Location = new Point(91, 196);
             buttonEnviarEndFunci.Name = "buttonEnviarEndFunci";
@@ -233,7 +234,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(658, 264);
+            ClientSize = new Size(658, 246);
             Controls.Add(labelTituloCadastroEndFunci);
             Controls.Add(buttonEnviarEndFunci);
             Controls.Add(panel1);

@@ -306,6 +306,7 @@
             // botaoEnderecoFunci
             // 
             botaoEnderecoFunci.BackColor = Color.FromArgb(128, 255, 255);
+            botaoEnderecoFunci.Cursor = Cursors.Hand;
             botaoEnderecoFunci.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             botaoEnderecoFunci.Location = new Point(110, 217);
             botaoEnderecoFunci.Name = "botaoEnderecoFunci";
@@ -318,6 +319,7 @@
             // button1
             // 
             button1.BackColor = Color.FromArgb(128, 255, 128);
+            button1.Cursor = Cursors.Hand;
             button1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             button1.Location = new Point(110, 262);
             button1.Name = "button1";
