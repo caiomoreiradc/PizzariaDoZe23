@@ -110,7 +110,7 @@
             // 
             pictureBox1.BackColor = Color.Transparent;
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(776, 138);
+            pictureBox1.Location = new Point(777, 134);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(75, 77);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
