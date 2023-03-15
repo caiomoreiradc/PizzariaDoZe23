@@ -41,22 +41,23 @@
             // Titulo
             // 
             Titulo.AutoSize = true;
-            Titulo.Font = new Font("Segoe UI", 36F, FontStyle.Regular, GraphicsUnit.Point);
-            Titulo.Location = new Point(23, 9);
+            Titulo.Font = new Font("Segoe UI", 72F, FontStyle.Regular, GraphicsUnit.Point);
+            Titulo.Location = new Point(336, 104);
             Titulo.Name = "Titulo";
-            Titulo.Size = new Size(352, 65);
+            Titulo.Size = new Size(699, 128);
             Titulo.TabIndex = 0;
             Titulo.Text = "Pizzaria D     Zé";
             Titulo.Click += Titulo_Click;
             // 
             // botaoFuncionarios
             // 
-            botaoFuncionarios.BackColor = SystemColors.ScrollBar;
+            botaoFuncionarios.BackColor = SystemColors.ActiveCaption;
             botaoFuncionarios.Cursor = Cursors.Hand;
-            botaoFuncionarios.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            botaoFuncionarios.Location = new Point(12, 77);
+            botaoFuncionarios.Font = new Font("Segoe UI", 24F, FontStyle.Regular, GraphicsUnit.Point);
+            botaoFuncionarios.ForeColor = Color.Black;
+            botaoFuncionarios.Location = new Point(336, 231);
             botaoFuncionarios.Name = "botaoFuncionarios";
-            botaoFuncionarios.Size = new Size(363, 44);
+            botaoFuncionarios.Size = new Size(699, 99);
             botaoFuncionarios.TabIndex = 1;
             botaoFuncionarios.Text = "Cadastro de Funcinários";
             botaoFuncionarios.UseMnemonic = false;
@@ -65,12 +66,13 @@
             // 
             // botaoClientes
             // 
-            botaoClientes.BackColor = SystemColors.ScrollBar;
+            botaoClientes.BackColor = SystemColors.ActiveCaption;
             botaoClientes.Cursor = Cursors.Hand;
-            botaoClientes.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            botaoClientes.Location = new Point(12, 127);
+            botaoClientes.Font = new Font("Segoe UI", 24F, FontStyle.Regular, GraphicsUnit.Point);
+            botaoClientes.ForeColor = Color.Black;
+            botaoClientes.Location = new Point(336, 336);
             botaoClientes.Name = "botaoClientes";
-            botaoClientes.Size = new Size(363, 44);
+            botaoClientes.Size = new Size(699, 99);
             botaoClientes.TabIndex = 2;
             botaoClientes.Text = "Cadastro de Clientes";
             botaoClientes.UseVisualStyleBackColor = false;
@@ -78,12 +80,13 @@
             // 
             // botaoIngredientes
             // 
-            botaoIngredientes.BackColor = SystemColors.ScrollBar;
+            botaoIngredientes.BackColor = SystemColors.ActiveCaption;
             botaoIngredientes.Cursor = Cursors.Hand;
-            botaoIngredientes.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            botaoIngredientes.Location = new Point(12, 177);
+            botaoIngredientes.Font = new Font("Segoe UI", 24F, FontStyle.Regular, GraphicsUnit.Point);
+            botaoIngredientes.ForeColor = Color.Black;
+            botaoIngredientes.Location = new Point(336, 441);
             botaoIngredientes.Name = "botaoIngredientes";
-            botaoIngredientes.Size = new Size(363, 44);
+            botaoIngredientes.Size = new Size(699, 99);
             botaoIngredientes.TabIndex = 3;
             botaoIngredientes.Text = "Cadastro de Ingredientes";
             botaoIngredientes.UseVisualStyleBackColor = false;
@@ -91,12 +94,13 @@
             // 
             // botaoSabores
             // 
-            botaoSabores.BackColor = SystemColors.ScrollBar;
+            botaoSabores.BackColor = SystemColors.ActiveCaption;
             botaoSabores.Cursor = Cursors.Hand;
-            botaoSabores.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            botaoSabores.Location = new Point(12, 227);
+            botaoSabores.Font = new Font("Segoe UI", 24F, FontStyle.Regular, GraphicsUnit.Point);
+            botaoSabores.ForeColor = Color.Black;
+            botaoSabores.Location = new Point(336, 546);
             botaoSabores.Name = "botaoSabores";
-            botaoSabores.Size = new Size(363, 44);
+            botaoSabores.Size = new Size(699, 99);
             botaoSabores.TabIndex = 4;
             botaoSabores.Text = "Cadastro de Sabores";
             botaoSabores.UseVisualStyleBackColor = false;
@@ -106,9 +110,9 @@
             // 
             pictureBox1.BackColor = Color.Transparent;
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(240, 15);
+            pictureBox1.Location = new Point(776, 138);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(54, 56);
+            pictureBox1.Size = new Size(75, 77);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 5;
             pictureBox1.TabStop = false;
@@ -119,7 +123,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(387, 284);
+            ClientSize = new Size(1370, 749);
             Controls.Add(pictureBox1);
             Controls.Add(botaoSabores);
             Controls.Add(botaoIngredientes);

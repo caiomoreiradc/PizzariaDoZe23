@@ -10,28 +10,28 @@ namespace PizzariaDoZe
         private void button2_Click(object sender, EventArgs e)
         {
             formClientes clientes = new formClientes();
-            clientes.StartPosition = FormStartPosition.CenterParent;
+            clientes.StartPosition = FormStartPosition.CenterScreen;
             clientes.Show();
         }
 
         private void botaoFuncionarios_Click(object sender, EventArgs e)
         {
             formFunci funcionarios = new formFunci();
-            funcionarios.StartPosition = FormStartPosition.CenterParent;
+            funcionarios.StartPosition = FormStartPosition.CenterScreen;
             funcionarios.Show();
         }
 
         private void botaoIngredientes_Click(object sender, EventArgs e)
         {
             formIngredientes ingredientes = new formIngredientes();
-            ingredientes.StartPosition = FormStartPosition.CenterParent;
+            ingredientes.StartPosition = FormStartPosition.CenterScreen;
             ingredientes.Show();
         }
 
         private void botaoSabores_Click(object sender, EventArgs e)
         {
             formSabores sabores = new formSabores();
-            sabores.StartPosition = FormStartPosition.CenterParent;
+            sabores.StartPosition = FormStartPosition.CenterScreen;
             sabores.Show();
         }
 
