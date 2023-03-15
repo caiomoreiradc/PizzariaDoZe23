@@ -34,5 +34,15 @@ namespace PizzariaDoZe
             sabores.StartPosition = FormStartPosition.CenterParent;
             sabores.Show();
         }
+
+        private void Titulo_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -28,7 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formSabores));
             panel1 = new Panel();
+            radioButtonLombo = new RadioButton();
+            radioButtonAlho = new RadioButton();
+            radioButtonOvo = new RadioButton();
+            radioButtonPimentao = new RadioButton();
+            radioButtonCebola = new RadioButton();
+            radioButtonAzeitona = new RadioButton();
             pictureBoxPizza = new PictureBox();
             radioButtonCatupiry = new RadioButton();
             radioButtonTomate = new RadioButton();
@@ -45,12 +52,6 @@
             labelCodigSabor = new Label();
             labelTitulosSabores = new Label();
             button1 = new Button();
-            radioButtonAzeitona = new RadioButton();
-            radioButtonCebola = new RadioButton();
-            radioButtonPimentao = new RadioButton();
-            radioButtonOvo = new RadioButton();
-            radioButtonAlho = new RadioButton();
-            radioButtonLombo = new RadioButton();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBoxPizza).BeginInit();
             SuspendLayout();
@@ -83,8 +84,76 @@
             panel1.Size = new Size(567, 262);
             panel1.TabIndex = 0;
             // 
+            // radioButtonLombo
+            // 
+            radioButtonLombo.AutoSize = true;
+            radioButtonLombo.Location = new Point(445, 195);
+            radioButtonLombo.Name = "radioButtonLombo";
+            radioButtonLombo.Size = new Size(63, 19);
+            radioButtonLombo.TabIndex = 19;
+            radioButtonLombo.TabStop = true;
+            radioButtonLombo.Text = "Lombo";
+            radioButtonLombo.UseVisualStyleBackColor = true;
+            // 
+            // radioButtonAlho
+            // 
+            radioButtonAlho.AutoSize = true;
+            radioButtonAlho.Location = new Point(360, 195);
+            radioButtonAlho.Name = "radioButtonAlho";
+            radioButtonAlho.Size = new Size(50, 19);
+            radioButtonAlho.TabIndex = 18;
+            radioButtonAlho.TabStop = true;
+            radioButtonAlho.Text = "Alho";
+            radioButtonAlho.UseVisualStyleBackColor = true;
+            // 
+            // radioButtonOvo
+            // 
+            radioButtonOvo.AutoSize = true;
+            radioButtonOvo.Location = new Point(281, 195);
+            radioButtonOvo.Name = "radioButtonOvo";
+            radioButtonOvo.Size = new Size(47, 19);
+            radioButtonOvo.TabIndex = 17;
+            radioButtonOvo.TabStop = true;
+            radioButtonOvo.Text = "Ovo";
+            radioButtonOvo.UseVisualStyleBackColor = true;
+            // 
+            // radioButtonPimentao
+            // 
+            radioButtonPimentao.AutoSize = true;
+            radioButtonPimentao.Location = new Point(445, 170);
+            radioButtonPimentao.Name = "radioButtonPimentao";
+            radioButtonPimentao.Size = new Size(76, 19);
+            radioButtonPimentao.TabIndex = 16;
+            radioButtonPimentao.TabStop = true;
+            radioButtonPimentao.Text = "Pimentão";
+            radioButtonPimentao.UseVisualStyleBackColor = true;
+            // 
+            // radioButtonCebola
+            // 
+            radioButtonCebola.AutoSize = true;
+            radioButtonCebola.Location = new Point(360, 170);
+            radioButtonCebola.Name = "radioButtonCebola";
+            radioButtonCebola.Size = new Size(62, 19);
+            radioButtonCebola.TabIndex = 15;
+            radioButtonCebola.TabStop = true;
+            radioButtonCebola.Text = "Cebola";
+            radioButtonCebola.UseVisualStyleBackColor = true;
+            // 
+            // radioButtonAzeitona
+            // 
+            radioButtonAzeitona.AutoSize = true;
+            radioButtonAzeitona.Location = new Point(281, 170);
+            radioButtonAzeitona.Name = "radioButtonAzeitona";
+            radioButtonAzeitona.Size = new Size(71, 19);
+            radioButtonAzeitona.TabIndex = 14;
+            radioButtonAzeitona.TabStop = true;
+            radioButtonAzeitona.Text = "Azeitona";
+            radioButtonAzeitona.UseVisualStyleBackColor = true;
+            // 
             // pictureBoxPizza
             // 
+            pictureBoxPizza.Image = (Image)resources.GetObject("pictureBoxPizza.Image");
+            pictureBoxPizza.InitialImage = (Image)resources.GetObject("pictureBoxPizza.InitialImage");
             pictureBoxPizza.Location = new Point(14, 67);
             pictureBoxPizza.Name = "pictureBoxPizza";
             pictureBoxPizza.Size = new Size(245, 176);
@@ -241,72 +310,6 @@
             button1.TabIndex = 2;
             button1.Text = "Salvar Cadastro";
             button1.UseVisualStyleBackColor = false;
-            // 
-            // radioButtonAzeitona
-            // 
-            radioButtonAzeitona.AutoSize = true;
-            radioButtonAzeitona.Location = new Point(281, 170);
-            radioButtonAzeitona.Name = "radioButtonAzeitona";
-            radioButtonAzeitona.Size = new Size(71, 19);
-            radioButtonAzeitona.TabIndex = 14;
-            radioButtonAzeitona.TabStop = true;
-            radioButtonAzeitona.Text = "Azeitona";
-            radioButtonAzeitona.UseVisualStyleBackColor = true;
-            // 
-            // radioButtonCebola
-            // 
-            radioButtonCebola.AutoSize = true;
-            radioButtonCebola.Location = new Point(360, 170);
-            radioButtonCebola.Name = "radioButtonCebola";
-            radioButtonCebola.Size = new Size(62, 19);
-            radioButtonCebola.TabIndex = 15;
-            radioButtonCebola.TabStop = true;
-            radioButtonCebola.Text = "Cebola";
-            radioButtonCebola.UseVisualStyleBackColor = true;
-            // 
-            // radioButtonPimentao
-            // 
-            radioButtonPimentao.AutoSize = true;
-            radioButtonPimentao.Location = new Point(445, 170);
-            radioButtonPimentao.Name = "radioButtonPimentao";
-            radioButtonPimentao.Size = new Size(76, 19);
-            radioButtonPimentao.TabIndex = 16;
-            radioButtonPimentao.TabStop = true;
-            radioButtonPimentao.Text = "Pimentão";
-            radioButtonPimentao.UseVisualStyleBackColor = true;
-            // 
-            // radioButtonOvo
-            // 
-            radioButtonOvo.AutoSize = true;
-            radioButtonOvo.Location = new Point(281, 195);
-            radioButtonOvo.Name = "radioButtonOvo";
-            radioButtonOvo.Size = new Size(47, 19);
-            radioButtonOvo.TabIndex = 17;
-            radioButtonOvo.TabStop = true;
-            radioButtonOvo.Text = "Ovo";
-            radioButtonOvo.UseVisualStyleBackColor = true;
-            // 
-            // radioButtonAlho
-            // 
-            radioButtonAlho.AutoSize = true;
-            radioButtonAlho.Location = new Point(360, 195);
-            radioButtonAlho.Name = "radioButtonAlho";
-            radioButtonAlho.Size = new Size(50, 19);
-            radioButtonAlho.TabIndex = 18;
-            radioButtonAlho.TabStop = true;
-            radioButtonAlho.Text = "Alho";
-            radioButtonAlho.UseVisualStyleBackColor = true;
-            // 
-            // radioButtonLombo
-            // 
-            radioButtonLombo.AutoSize = true;
-            radioButtonLombo.Location = new Point(445, 195);
-            radioButtonLombo.Name = "radioButtonLombo";
-            radioButtonLombo.Size = new Size(63, 19);
-            radioButtonLombo.TabIndex = 19;
-            radioButtonLombo.TabStop = true;
-            radioButtonLombo.Text = "Lombo";
-            radioButtonLombo.UseVisualStyleBackColor = true;
             // 
             // formSabores
             // 

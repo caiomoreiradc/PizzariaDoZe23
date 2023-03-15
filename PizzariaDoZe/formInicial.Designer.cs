@@ -28,22 +28,26 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(paginaInicial));
             Titulo = new Label();
             botaoFuncionarios = new Button();
             botaoClientes = new Button();
             botaoIngredientes = new Button();
             botaoSabores = new Button();
+            pictureBox1 = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // Titulo
             // 
             Titulo.AutoSize = true;
             Titulo.Font = new Font("Segoe UI", 36F, FontStyle.Regular, GraphicsUnit.Point);
-            Titulo.Location = new Point(30, 9);
+            Titulo.Location = new Point(23, 9);
             Titulo.Name = "Titulo";
-            Titulo.Size = new Size(328, 65);
+            Titulo.Size = new Size(352, 65);
             Titulo.TabIndex = 0;
-            Titulo.Text = "Pizzaria Do Zé";
+            Titulo.Text = "Pizzaria D     Zé";
+            Titulo.Click += Titulo_Click;
             // 
             // botaoFuncionarios
             // 
@@ -98,12 +102,25 @@
             botaoSabores.UseVisualStyleBackColor = false;
             botaoSabores.Click += botaoSabores_Click;
             // 
+            // pictureBox1
+            // 
+            pictureBox1.BackColor = Color.Transparent;
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(240, 15);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(54, 56);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.TabIndex = 5;
+            pictureBox1.TabStop = false;
+            pictureBox1.Click += pictureBox1_Click;
+            // 
             // paginaInicial
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(255, 128, 128);
+            BackColor = Color.White;
             ClientSize = new Size(387, 284);
+            Controls.Add(pictureBox1);
             Controls.Add(botaoSabores);
             Controls.Add(botaoIngredientes);
             Controls.Add(botaoClientes);
@@ -111,6 +128,7 @@
             Controls.Add(Titulo);
             Name = "paginaInicial";
             Text = "Pizzaria do Zé 0.1";
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -122,5 +140,6 @@
         private Button botaoClientes;
         private Button botaoIngredientes;
         private Button botaoSabores;
+        private PictureBox pictureBox1;
     }
 }
