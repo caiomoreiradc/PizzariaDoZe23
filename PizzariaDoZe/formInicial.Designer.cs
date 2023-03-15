@@ -34,8 +34,8 @@
             botaoClientes = new Button();
             botaoIngredientes = new Button();
             botaoSabores = new Button();
-            pictureBox1 = new PictureBox();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            pictureBoxTitleLogo = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxTitleLogo).BeginInit();
             SuspendLayout();
             // 
             // Titulo
@@ -53,6 +53,7 @@
             // 
             botaoFuncionarios.BackColor = SystemColors.ActiveCaption;
             botaoFuncionarios.Cursor = Cursors.Hand;
+            botaoFuncionarios.FlatStyle = FlatStyle.Flat;
             botaoFuncionarios.Font = new Font("Segoe UI", 24F, FontStyle.Regular, GraphicsUnit.Point);
             botaoFuncionarios.ForeColor = Color.Black;
             botaoFuncionarios.Location = new Point(336, 231);
@@ -68,6 +69,7 @@
             // 
             botaoClientes.BackColor = SystemColors.ActiveCaption;
             botaoClientes.Cursor = Cursors.Hand;
+            botaoClientes.FlatStyle = FlatStyle.Flat;
             botaoClientes.Font = new Font("Segoe UI", 24F, FontStyle.Regular, GraphicsUnit.Point);
             botaoClientes.ForeColor = Color.Black;
             botaoClientes.Location = new Point(336, 336);
@@ -82,6 +84,7 @@
             // 
             botaoIngredientes.BackColor = SystemColors.ActiveCaption;
             botaoIngredientes.Cursor = Cursors.Hand;
+            botaoIngredientes.FlatStyle = FlatStyle.Flat;
             botaoIngredientes.Font = new Font("Segoe UI", 24F, FontStyle.Regular, GraphicsUnit.Point);
             botaoIngredientes.ForeColor = Color.Black;
             botaoIngredientes.Location = new Point(336, 441);
@@ -96,6 +99,7 @@
             // 
             botaoSabores.BackColor = SystemColors.ActiveCaption;
             botaoSabores.Cursor = Cursors.Hand;
+            botaoSabores.FlatStyle = FlatStyle.Flat;
             botaoSabores.Font = new Font("Segoe UI", 24F, FontStyle.Regular, GraphicsUnit.Point);
             botaoSabores.ForeColor = Color.Black;
             botaoSabores.Location = new Point(336, 546);
@@ -106,17 +110,17 @@
             botaoSabores.UseVisualStyleBackColor = false;
             botaoSabores.Click += botaoSabores_Click;
             // 
-            // pictureBox1
+            // pictureBoxTitleLogo
             // 
-            pictureBox1.BackColor = Color.Transparent;
-            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(777, 134);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(75, 77);
-            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox1.TabIndex = 5;
-            pictureBox1.TabStop = false;
-            pictureBox1.Click += pictureBox1_Click;
+            pictureBoxTitleLogo.BackColor = Color.Transparent;
+            pictureBoxTitleLogo.Image = (Image)resources.GetObject("pictureBoxTitleLogo.Image");
+            pictureBoxTitleLogo.Location = new Point(777, 134);
+            pictureBoxTitleLogo.Name = "pictureBoxTitleLogo";
+            pictureBoxTitleLogo.Size = new Size(75, 77);
+            pictureBoxTitleLogo.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBoxTitleLogo.TabIndex = 5;
+            pictureBoxTitleLogo.TabStop = false;
+            pictureBoxTitleLogo.Click += pictureBox1_Click;
             // 
             // paginaInicial
             // 
@@ -124,7 +128,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(1370, 749);
-            Controls.Add(pictureBox1);
+            Controls.Add(pictureBoxTitleLogo);
             Controls.Add(botaoSabores);
             Controls.Add(botaoIngredientes);
             Controls.Add(botaoClientes);
@@ -132,7 +136,7 @@
             Controls.Add(Titulo);
             Name = "paginaInicial";
             Text = "Pizzaria do Zé 0.1";
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxTitleLogo).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -144,6 +148,6 @@
         private Button botaoClientes;
         private Button botaoIngredientes;
         private Button botaoSabores;
-        private PictureBox pictureBox1;
+        private PictureBox pictureBoxTitleLogo;
     }
 }
