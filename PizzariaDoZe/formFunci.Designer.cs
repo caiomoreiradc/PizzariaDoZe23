@@ -99,7 +99,7 @@
             // 
             // botaoEnderecoFunci
             // 
-            botaoEnderecoFunci.BackColor = Color.FromArgb(255, 192, 255);
+            botaoEnderecoFunci.BackColor = Color.PaleGoldenrod;
             botaoEnderecoFunci.Cursor = Cursors.Hand;
             botaoEnderecoFunci.FlatStyle = FlatStyle.Flat;
             botaoEnderecoFunci.Font = new Font("Nexa Heavy", 11.999999F, FontStyle.Bold, GraphicsUnit.Point);
