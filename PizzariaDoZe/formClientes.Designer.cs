@@ -60,7 +60,7 @@
             // 
             // panel1
             // 
-            panel1.BackColor = Color.LemonChiffon;
+            panel1.BackColor = Color.Silver;
             panel1.Controls.Add(comboBoxPaisClient);
             panel1.Controls.Add(textBoxCompleClient);
             panel1.Controls.Add(labelComplementeClient);

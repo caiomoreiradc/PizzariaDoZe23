@@ -52,7 +52,7 @@
             // 
             // panel1
             // 
-            panel1.BackColor = Color.LemonChiffon;
+            panel1.BackColor = Color.Silver;
             panel1.Controls.Add(textBoxDataVali);
             panel1.Controls.Add(labelDataIngre);
             panel1.Controls.Add(textBoxNomeIngre);

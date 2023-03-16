@@ -60,7 +60,7 @@
             // 
             // panelFunci1
             // 
-            panelFunci1.BackColor = Color.LemonChiffon;
+            panelFunci1.BackColor = Color.Silver;
             panelFunci1.Controls.Add(textBoxObservFunci);
             panelFunci1.Controls.Add(botaoEnderecoFunci);
             panelFunci1.Controls.Add(labelObservFunci);

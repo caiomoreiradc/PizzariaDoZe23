@@ -52,5 +52,10 @@ namespace PizzariaDoZe
         {
 
         }
+
+        private void comboBoxUFFunci_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

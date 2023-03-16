@@ -52,7 +52,7 @@
             // 
             // panel1
             // 
-            panel1.BackColor = Color.LemonChiffon;
+            panel1.BackColor = Color.Silver;
             panel1.Controls.Add(comboBoxPaisFunci);
             panel1.Controls.Add(comboBoxUFFunci);
             panel1.Controls.Add(labelPaisFunci);
@@ -99,6 +99,7 @@
             comboBoxUFFunci.Name = "comboBoxUFFunci";
             comboBoxUFFunci.Size = new Size(43, 24);
             comboBoxUFFunci.TabIndex = 16;
+            comboBoxUFFunci.SelectedIndexChanged += comboBoxUFFunci_SelectedIndexChanged;
             // 
             // labelPaisFunci
             // 
