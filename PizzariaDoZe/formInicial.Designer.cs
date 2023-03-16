@@ -48,7 +48,7 @@
             botaoFuncionarios.Name = "botaoFuncionarios";
             botaoFuncionarios.Size = new Size(699, 99);
             botaoFuncionarios.TabIndex = 1;
-            botaoFuncionarios.Text = "Cadastro de Funcinários";
+            botaoFuncionarios.Text = "Cadastro de Funcionários";
             botaoFuncionarios.UseMnemonic = false;
             botaoFuncionarios.UseVisualStyleBackColor = false;
             botaoFuncionarios.Click += botaoFuncionarios_Click;
