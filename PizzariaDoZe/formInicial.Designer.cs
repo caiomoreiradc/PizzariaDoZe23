@@ -29,34 +29,22 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(paginaInicial));
-            Titulo = new Label();
             botaoFuncionarios = new Button();
             botaoClientes = new Button();
             botaoIngredientes = new Button();
             botaoSabores = new Button();
-            pictureBoxTitleLogo = new PictureBox();
-            ((System.ComponentModel.ISupportInitialize)pictureBoxTitleLogo).BeginInit();
+            labelTitulo = new Label();
             SuspendLayout();
-            // 
-            // Titulo
-            // 
-            Titulo.AutoSize = true;
-            Titulo.Font = new Font("Segoe UI", 72F, FontStyle.Regular, GraphicsUnit.Point);
-            Titulo.Location = new Point(336, 104);
-            Titulo.Name = "Titulo";
-            Titulo.Size = new Size(699, 128);
-            Titulo.TabIndex = 0;
-            Titulo.Text = "Pizzaria D     Zé";
-            Titulo.Click += Titulo_Click;
             // 
             // botaoFuncionarios
             // 
-            botaoFuncionarios.BackColor = SystemColors.ActiveCaption;
+            botaoFuncionarios.BackColor = Color.WhiteSmoke;
             botaoFuncionarios.Cursor = Cursors.Hand;
             botaoFuncionarios.FlatStyle = FlatStyle.Flat;
-            botaoFuncionarios.Font = new Font("Segoe UI", 24F, FontStyle.Regular, GraphicsUnit.Point);
+            botaoFuncionarios.Font = new Font("Nexa Heavy", 23.9999981F, FontStyle.Bold, GraphicsUnit.Point);
             botaoFuncionarios.ForeColor = Color.Black;
-            botaoFuncionarios.Location = new Point(336, 231);
+            botaoFuncionarios.ImageAlign = ContentAlignment.MiddleLeft;
+            botaoFuncionarios.Location = new Point(603, 377);
             botaoFuncionarios.Name = "botaoFuncionarios";
             botaoFuncionarios.Size = new Size(699, 99);
             botaoFuncionarios.TabIndex = 1;
@@ -67,12 +55,12 @@
             // 
             // botaoClientes
             // 
-            botaoClientes.BackColor = SystemColors.ActiveCaption;
+            botaoClientes.BackColor = Color.WhiteSmoke;
             botaoClientes.Cursor = Cursors.Hand;
             botaoClientes.FlatStyle = FlatStyle.Flat;
-            botaoClientes.Font = new Font("Segoe UI", 24F, FontStyle.Regular, GraphicsUnit.Point);
+            botaoClientes.Font = new Font("Nexa Heavy", 23.9999981F, FontStyle.Bold, GraphicsUnit.Point);
             botaoClientes.ForeColor = Color.Black;
-            botaoClientes.Location = new Point(336, 336);
+            botaoClientes.Location = new Point(603, 482);
             botaoClientes.Name = "botaoClientes";
             botaoClientes.Size = new Size(699, 99);
             botaoClientes.TabIndex = 2;
@@ -82,12 +70,12 @@
             // 
             // botaoIngredientes
             // 
-            botaoIngredientes.BackColor = SystemColors.ActiveCaption;
+            botaoIngredientes.BackColor = Color.WhiteSmoke;
             botaoIngredientes.Cursor = Cursors.Hand;
             botaoIngredientes.FlatStyle = FlatStyle.Flat;
-            botaoIngredientes.Font = new Font("Segoe UI", 24F, FontStyle.Regular, GraphicsUnit.Point);
+            botaoIngredientes.Font = new Font("Nexa Heavy", 23.9999981F, FontStyle.Bold, GraphicsUnit.Point);
             botaoIngredientes.ForeColor = Color.Black;
-            botaoIngredientes.Location = new Point(336, 441);
+            botaoIngredientes.Location = new Point(603, 587);
             botaoIngredientes.Name = "botaoIngredientes";
             botaoIngredientes.Size = new Size(699, 99);
             botaoIngredientes.TabIndex = 3;
@@ -97,12 +85,12 @@
             // 
             // botaoSabores
             // 
-            botaoSabores.BackColor = SystemColors.ActiveCaption;
+            botaoSabores.BackColor = Color.WhiteSmoke;
             botaoSabores.Cursor = Cursors.Hand;
             botaoSabores.FlatStyle = FlatStyle.Flat;
-            botaoSabores.Font = new Font("Segoe UI", 24F, FontStyle.Regular, GraphicsUnit.Point);
+            botaoSabores.Font = new Font("Nexa Heavy", 23.9999981F, FontStyle.Bold, GraphicsUnit.Point);
             botaoSabores.ForeColor = Color.Black;
-            botaoSabores.Location = new Point(336, 546);
+            botaoSabores.Location = new Point(603, 692);
             botaoSabores.Name = "botaoSabores";
             botaoSabores.Size = new Size(699, 99);
             botaoSabores.TabIndex = 4;
@@ -110,44 +98,46 @@
             botaoSabores.UseVisualStyleBackColor = false;
             botaoSabores.Click += botaoSabores_Click;
             // 
-            // pictureBoxTitleLogo
+            // labelTitulo
             // 
-            pictureBoxTitleLogo.BackColor = Color.Transparent;
-            pictureBoxTitleLogo.Image = (Image)resources.GetObject("pictureBoxTitleLogo.Image");
-            pictureBoxTitleLogo.Location = new Point(777, 134);
-            pictureBoxTitleLogo.Name = "pictureBoxTitleLogo";
-            pictureBoxTitleLogo.Size = new Size(75, 77);
-            pictureBoxTitleLogo.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBoxTitleLogo.TabIndex = 5;
-            pictureBoxTitleLogo.TabStop = false;
-            pictureBoxTitleLogo.Click += pictureBox1_Click;
+            labelTitulo.AutoSize = true;
+            labelTitulo.BackColor = Color.Transparent;
+            labelTitulo.Font = new Font("Chickens Lovers", 124F, FontStyle.Regular, GraphicsUnit.Point);
+            labelTitulo.Location = new Point(535, 167);
+            labelTitulo.Name = "labelTitulo";
+            labelTitulo.Size = new Size(834, 207);
+            labelTitulo.TabIndex = 5;
+            labelTitulo.Text = "Pizzaria Do Zé";
+            labelTitulo.Click += labelTitulo_Click;
             // 
             // paginaInicial
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(1370, 749);
-            Controls.Add(pictureBoxTitleLogo);
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            ClientSize = new Size(1904, 1041);
+            Controls.Add(labelTitulo);
             Controls.Add(botaoSabores);
             Controls.Add(botaoIngredientes);
             Controls.Add(botaoClientes);
             Controls.Add(botaoFuncionarios);
-            Controls.Add(Titulo);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "paginaInicial";
-            Text = "Pizzaria do Zé 0.1";
-            ((System.ComponentModel.ISupportInitialize)pictureBoxTitleLogo).EndInit();
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Pizzaria do Zé 0.2";
+            TransparencyKey = Color.White;
+            Load += paginaInicial_Load;
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-        //TESTE
-        private Label Titulo;
         private Button botaoFuncionarios;
         private Button botaoClientes;
         private Button botaoIngredientes;
         private Button botaoSabores;
-        private PictureBox pictureBoxTitleLogo;
+        private Label labelTitulo;
     }
 }

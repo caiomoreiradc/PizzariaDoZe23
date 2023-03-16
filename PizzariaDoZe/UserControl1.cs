@@ -17,7 +17,22 @@ namespace PizzariaDoZe
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        public void buttonSalvar_Click(object sender, EventArgs e) //SALVAR
+        {
+
+        }
+
+        public void buttonExcluir_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        public void buttonEditar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        public void buttonSair_Click(object sender, EventArgs e)
         {
 
         }

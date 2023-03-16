@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            tituloFunci = new Label();
-            menuStrip1 = new MenuStrip();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formFunci));
             panelFunci1 = new Panel();
             textBoxObservFunci = new TextBox();
+            botaoEnderecoFunci = new Button();
             labelObservFunci = new Label();
             textBox3 = new TextBox();
             labelEmailFunci = new Label();
@@ -54,33 +54,15 @@
             labelNome = new Label();
             textBoxCod = new TextBox();
             labelCodigo = new Label();
-            botaoEnderecoFunci = new Button();
-            button1 = new Button();
+            userControl11 = new UserControl1();
             panelFunci1.SuspendLayout();
             SuspendLayout();
             // 
-            // tituloFunci
-            // 
-            tituloFunci.AutoSize = true;
-            tituloFunci.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            tituloFunci.Location = new Point(12, 9);
-            tituloFunci.Name = "tituloFunci";
-            tituloFunci.Size = new Size(170, 21);
-            tituloFunci.TabIndex = 0;
-            tituloFunci.Text = "Cadastrar Funcionários";
-            // 
-            // menuStrip1
-            // 
-            menuStrip1.Location = new Point(0, 0);
-            menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(800, 24);
-            menuStrip1.TabIndex = 1;
-            menuStrip1.Text = "menuStrip1";
-            // 
             // panelFunci1
             // 
-            panelFunci1.BackColor = Color.FromArgb(255, 255, 192);
+            panelFunci1.BackColor = Color.LemonChiffon;
             panelFunci1.Controls.Add(textBoxObservFunci);
+            panelFunci1.Controls.Add(botaoEnderecoFunci);
             panelFunci1.Controls.Add(labelObservFunci);
             panelFunci1.Controls.Add(textBox3);
             panelFunci1.Controls.Add(labelEmailFunci);
@@ -103,40 +85,56 @@
             panelFunci1.Controls.Add(labelNome);
             panelFunci1.Controls.Add(textBoxCod);
             panelFunci1.Controls.Add(labelCodigo);
-            panelFunci1.Location = new Point(12, 46);
+            panelFunci1.Location = new Point(11, 22);
             panelFunci1.Name = "panelFunci1";
-            panelFunci1.Size = new Size(776, 165);
+            panelFunci1.Size = new Size(916, 173);
             panelFunci1.TabIndex = 2;
             // 
             // textBoxObservFunci
             // 
-            textBoxObservFunci.Location = new Point(163, 128);
+            textBoxObservFunci.Location = new Point(14, 141);
             textBoxObservFunci.Name = "textBoxObservFunci";
-            textBoxObservFunci.Size = new Size(590, 23);
+            textBoxObservFunci.Size = new Size(522, 23);
             textBoxObservFunci.TabIndex = 22;
+            // 
+            // botaoEnderecoFunci
+            // 
+            botaoEnderecoFunci.BackColor = Color.FromArgb(255, 192, 255);
+            botaoEnderecoFunci.Cursor = Cursors.Hand;
+            botaoEnderecoFunci.FlatStyle = FlatStyle.Flat;
+            botaoEnderecoFunci.Font = new Font("Nexa Heavy", 11.999999F, FontStyle.Bold, GraphicsUnit.Point);
+            botaoEnderecoFunci.Location = new Point(559, 123);
+            botaoEnderecoFunci.Name = "botaoEnderecoFunci";
+            botaoEnderecoFunci.Size = new Size(345, 39);
+            botaoEnderecoFunci.TabIndex = 3;
+            botaoEnderecoFunci.Text = "Cadastrar Endereço";
+            botaoEnderecoFunci.UseVisualStyleBackColor = false;
+            botaoEnderecoFunci.Click += botaoEnderecoFunci_Click;
             // 
             // labelObservFunci
             // 
             labelObservFunci.AutoSize = true;
-            labelObservFunci.Location = new Point(163, 110);
+            labelObservFunci.Font = new Font("Nexa Heavy", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            labelObservFunci.Location = new Point(14, 122);
             labelObservFunci.Name = "labelObservFunci";
-            labelObservFunci.Size = new Size(74, 15);
+            labelObservFunci.Size = new Size(85, 16);
             labelObservFunci.TabIndex = 21;
             labelObservFunci.Text = "Observações";
             // 
             // textBox3
             // 
-            textBox3.Location = new Point(458, 81);
+            textBox3.Location = new Point(494, 81);
             textBox3.Name = "textBox3";
-            textBox3.Size = new Size(295, 23);
+            textBox3.Size = new Size(310, 23);
             textBox3.TabIndex = 20;
             // 
             // labelEmailFunci
             // 
             labelEmailFunci.AutoSize = true;
-            labelEmailFunci.Location = new Point(464, 63);
+            labelEmailFunci.Font = new Font("Nexa Heavy", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            labelEmailFunci.Location = new Point(500, 63);
             labelEmailFunci.Name = "labelEmailFunci";
-            labelEmailFunci.Size = new Size(36, 15);
+            labelEmailFunci.Size = new Size(40, 16);
             labelEmailFunci.TabIndex = 19;
             labelEmailFunci.Text = "Email";
             labelEmailFunci.Click += label1_Click;
@@ -145,15 +143,16 @@
             // 
             textBoxTelefoFunci.Location = new Point(273, 81);
             textBoxTelefoFunci.Name = "textBoxTelefoFunci";
-            textBoxTelefoFunci.Size = new Size(179, 23);
+            textBoxTelefoFunci.Size = new Size(189, 23);
             textBoxTelefoFunci.TabIndex = 18;
             // 
             // labelTelefoneFunc
             // 
             labelTelefoneFunc.AutoSize = true;
+            labelTelefoneFunc.Font = new Font("Nexa Heavy", 9F, FontStyle.Bold, GraphicsUnit.Point);
             labelTelefoneFunc.Location = new Point(273, 63);
             labelTelefoneFunc.Name = "labelTelefoneFunc";
-            labelTelefoneFunc.Size = new Size(51, 15);
+            labelTelefoneFunc.Size = new Size(56, 16);
             labelTelefoneFunc.TabIndex = 17;
             labelTelefoneFunc.Text = "Telefone";
             // 
@@ -167,18 +166,20 @@
             // labelValCnh
             // 
             labelValCnh.AutoSize = true;
+            labelValCnh.Font = new Font("Nexa Heavy", 9F, FontStyle.Bold, GraphicsUnit.Point);
             labelValCnh.Location = new Point(157, 63);
             labelValCnh.Name = "labelValCnh";
-            labelValCnh.Size = new Size(80, 15);
+            labelValCnh.Size = new Size(89, 16);
             labelValCnh.TabIndex = 15;
             labelValCnh.Text = "Validade CNH";
             // 
             // radioCnhNao
             // 
             radioCnhNao.AutoSize = true;
+            radioCnhNao.Font = new Font("Nexa Heavy", 9F, FontStyle.Bold, GraphicsUnit.Point);
             radioCnhNao.Location = new Point(98, 110);
             radioCnhNao.Name = "radioCnhNao";
-            radioCnhNao.Size = new Size(47, 19);
+            radioCnhNao.Size = new Size(49, 20);
             radioCnhNao.TabIndex = 14;
             radioCnhNao.TabStop = true;
             radioCnhNao.Text = "Não";
@@ -187,9 +188,10 @@
             // radioCnhSim
             // 
             radioCnhSim.AutoSize = true;
+            radioCnhSim.Font = new Font("Nexa Heavy", 9F, FontStyle.Bold, GraphicsUnit.Point);
             radioCnhSim.Location = new Point(98, 85);
             radioCnhSim.Name = "radioCnhSim";
-            radioCnhSim.Size = new Size(45, 19);
+            radioCnhSim.Size = new Size(47, 20);
             radioCnhSim.TabIndex = 13;
             radioCnhSim.TabStop = true;
             radioCnhSim.Text = "Sim";
@@ -198,9 +200,10 @@
             // labelCnh
             // 
             labelCnh.AutoSize = true;
+            labelCnh.Font = new Font("Nexa Heavy", 9F, FontStyle.Bold, GraphicsUnit.Point);
             labelCnh.Location = new Point(98, 63);
             labelCnh.Name = "labelCnh";
-            labelCnh.Size = new Size(33, 15);
+            labelCnh.Size = new Size(33, 16);
             labelCnh.TabIndex = 12;
             labelCnh.Text = "CNH";
             // 
@@ -217,25 +220,27 @@
             // labelGrupo
             // 
             labelGrupo.AutoSize = true;
+            labelGrupo.Font = new Font("Nexa Heavy", 9F, FontStyle.Bold, GraphicsUnit.Point);
             labelGrupo.Location = new Point(14, 63);
             labelGrupo.Name = "labelGrupo";
-            labelGrupo.Size = new Size(40, 15);
+            labelGrupo.Size = new Size(44, 16);
             labelGrupo.TabIndex = 10;
             labelGrupo.Text = "Grupo";
             // 
             // textBoxSenha
             // 
-            textBoxSenha.Location = new Point(613, 27);
+            textBoxSenha.Location = new Point(653, 27);
             textBoxSenha.Name = "textBoxSenha";
-            textBoxSenha.Size = new Size(140, 23);
+            textBoxSenha.Size = new Size(252, 23);
             textBoxSenha.TabIndex = 9;
             // 
             // labelSenha
             // 
             labelSenha.AutoSize = true;
-            labelSenha.Location = new Point(613, 9);
+            labelSenha.Font = new Font("Nexa Heavy", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            labelSenha.Location = new Point(662, 9);
             labelSenha.Name = "labelSenha";
-            labelSenha.Size = new Size(39, 15);
+            labelSenha.Size = new Size(44, 16);
             labelSenha.TabIndex = 8;
             labelSenha.Text = "Senha";
             // 
@@ -249,9 +254,10 @@
             // labelMatricula
             // 
             labelMatricula.AutoSize = true;
+            labelMatricula.Font = new Font("Nexa Heavy", 9F, FontStyle.Bold, GraphicsUnit.Point);
             labelMatricula.Location = new Point(514, 9);
             labelMatricula.Name = "labelMatricula";
-            labelMatricula.Size = new Size(57, 15);
+            labelMatricula.Size = new Size(64, 16);
             labelMatricula.TabIndex = 6;
             labelMatricula.Text = "Matrícula";
             // 
@@ -265,9 +271,10 @@
             // labelCpf
             // 
             labelCpf.AutoSize = true;
+            labelCpf.Font = new Font("Nexa Heavy", 9F, FontStyle.Bold, GraphicsUnit.Point);
             labelCpf.Location = new Point(358, 9);
             labelCpf.Name = "labelCpf";
-            labelCpf.Size = new Size(28, 15);
+            labelCpf.Size = new Size(31, 16);
             labelCpf.TabIndex = 4;
             labelCpf.Text = "CPF";
             // 
@@ -281,9 +288,10 @@
             // labelNome
             // 
             labelNome.AutoSize = true;
+            labelNome.Font = new Font("Nexa Heavy", 9F, FontStyle.Bold, GraphicsUnit.Point);
             labelNome.Location = new Point(72, 9);
             labelNome.Name = "labelNome";
-            labelNome.Size = new Size(40, 15);
+            labelNome.Size = new Size(41, 16);
             labelNome.TabIndex = 2;
             labelNome.Text = "Nome";
             // 
@@ -297,61 +305,41 @@
             // labelCodigo
             // 
             labelCodigo.AutoSize = true;
+            labelCodigo.Font = new Font("Nexa Heavy", 9F, FontStyle.Bold, GraphicsUnit.Point);
             labelCodigo.Location = new Point(14, 9);
             labelCodigo.Name = "labelCodigo";
-            labelCodigo.Size = new Size(46, 15);
+            labelCodigo.Size = new Size(47, 16);
             labelCodigo.TabIndex = 0;
             labelCodigo.Text = "Código";
             // 
-            // botaoEnderecoFunci
+            // userControl11
             // 
-            botaoEnderecoFunci.BackColor = Color.FromArgb(128, 255, 255);
-            botaoEnderecoFunci.Cursor = Cursors.Hand;
-            botaoEnderecoFunci.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            botaoEnderecoFunci.Location = new Point(110, 217);
-            botaoEnderecoFunci.Name = "botaoEnderecoFunci";
-            botaoEnderecoFunci.Size = new Size(592, 39);
-            botaoEnderecoFunci.TabIndex = 3;
-            botaoEnderecoFunci.Text = "Cadastrar Endereço";
-            botaoEnderecoFunci.UseVisualStyleBackColor = false;
-            botaoEnderecoFunci.Click += botaoEnderecoFunci_Click;
-            // 
-            // button1
-            // 
-            button1.BackColor = Color.FromArgb(128, 255, 128);
-            button1.Cursor = Cursors.Hand;
-            button1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            button1.Location = new Point(110, 262);
-            button1.Name = "button1";
-            button1.Size = new Size(592, 39);
-            button1.TabIndex = 4;
-            button1.Text = "Salvar Cadastro";
-            button1.UseVisualStyleBackColor = false;
-            button1.Click += button1_Click;
+            userControl11.BackColor = Color.Transparent;
+            userControl11.Location = new Point(231, 201);
+            userControl11.Name = "userControl11";
+            userControl11.Size = new Size(477, 91);
+            userControl11.TabIndex = 3;
+            userControl11.Load += userControl11_Load;
             // 
             // formFunci
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 315);
-            Controls.Add(button1);
-            Controls.Add(botaoEnderecoFunci);
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            ClientSize = new Size(939, 294);
+            Controls.Add(userControl11);
             Controls.Add(panelFunci1);
-            Controls.Add(tituloFunci);
-            Controls.Add(menuStrip1);
-            MainMenuStrip = menuStrip1;
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+            Icon = (Icon)resources.GetObject("$this.Icon");
+            MaximizeBox = false;
             Name = "formFunci";
             Text = "Cadastro de Funcionários";
             panelFunci1.ResumeLayout(false);
             panelFunci1.PerformLayout();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
-
-        private Label tituloFunci;
-        private MenuStrip menuStrip1;
         private Panel panelFunci1;
         private TextBox textBoxSenha;
         private Label labelSenha;
@@ -377,6 +365,6 @@
         private Button botaoEnderecoFunci;
         private TextBox textBoxObservFunci;
         private Label labelObservFunci;
-        private Button button1;
+        private UserControl1 userControl11;
     }
 }

@@ -15,7 +15,15 @@ namespace PizzariaDoZe
         public formFunci()
         {
             InitializeComponent();
+            this.ControlBox = false; //REMOVE BOTÕES DE MINIZAR E FECHAR
+            userControl11.buttonSair.Click += buttonSair_Click; //BOTAO SAIR
         }
+
+        public void buttonSair_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -35,6 +43,16 @@ namespace PizzariaDoZe
         }
 
         private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void userControl11_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
 
         }

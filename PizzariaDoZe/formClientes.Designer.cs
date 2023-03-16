@@ -28,10 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formClientes));
             panel1 = new Panel();
+            comboBoxPaisClient = new ComboBox();
             textBoxCompleClient = new TextBox();
             labelComplementeClient = new Label();
-            textBoxPaisClient = new TextBox();
             labelPaisClient = new Label();
             comboBoxUFClient = new ComboBox();
             labelEstadoClient = new Label();
@@ -53,17 +54,16 @@
             labelNomeCliente = new Label();
             textBoxCodCliente = new TextBox();
             labelCódigoCliente = new Label();
-            labelTituloClientesCadastro = new Label();
-            buttonSalvarCadastroClient = new Button();
+            userControl11 = new UserControl1();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
             // 
-            panel1.BackColor = Color.FromArgb(255, 255, 192);
+            panel1.BackColor = Color.LemonChiffon;
+            panel1.Controls.Add(comboBoxPaisClient);
             panel1.Controls.Add(textBoxCompleClient);
             panel1.Controls.Add(labelComplementeClient);
-            panel1.Controls.Add(textBoxPaisClient);
             panel1.Controls.Add(labelPaisClient);
             panel1.Controls.Add(comboBoxUFClient);
             panel1.Controls.Add(labelEstadoClient);
@@ -85,14 +85,26 @@
             panel1.Controls.Add(labelNomeCliente);
             panel1.Controls.Add(textBoxCodCliente);
             panel1.Controls.Add(labelCódigoCliente);
-            panel1.Location = new Point(12, 41);
+            panel1.Location = new Point(15, 10);
             panel1.Name = "panel1";
-            panel1.Size = new Size(761, 196);
+            panel1.Size = new Size(911, 196);
             panel1.TabIndex = 0;
+            // 
+            // comboBoxPaisClient
+            // 
+            comboBoxPaisClient.AutoCompleteCustomSource.AddRange(new string[] { "Afghanistan", "Albania", "Algeria", "Andorra", "Angola", "Antigua & Deps", "Argentina", "Armenia", "Australia", "Austria", "Azerbaijan", "Bahamas", "Bahrain", "Bangladesh", "Barbados", "Belarus", "Belgium", "Belize", "Benin", "Bhutan", "Bolivia", "Bosnia Herzegovina", "Botswana", "Brazil", "Brunei", "Bulgaria", "Burkina", "Burundi", "Cambodia", "Cameroon", "Canada", "Cape Verde", "Central African Rep", "Chad", "Chile", "China", "Colombia", "Comoros", "Congo", "Congo {Democratic Rep}", "Costa Rica", "Croatia", "Cuba", "Cyprus", "Czech Republic", "Denmark", "Djibouti", "Dominica", "Dominican Republic", "East Timor", "Ecuador", "Egypt", "El Salvador", "Equatorial Guinea", "Eritrea", "Estonia", "Ethiopia", "Fiji", "Finland", "France", "Gabon", "Gambia", "Georgia", "Germany", "Ghana", "Greece", "Grenada", "Guatemala", "Guinea", "Guinea-Bissau", "Guyana", "Haiti", "Honduras", "Hungary", "Iceland", "India", "Indonesia", "Iran", "Iraq", "Ireland {Republic}", "Israel", "Italy", "Ivory Coast", "Jamaica", "Japan", "Jordan", "Kazakhstan", "Kenya", "Kiribati", "Korea North", "Korea South", "Kosovo", "Kuwait", "Kyrgyzstan", "Laos", "Latvia", "Lebanon", "Lesotho", "Liberia", "Libya", "Liechtenstein", "Lithuania", "Luxembourg", "Macedonia", "Madagascar", "Malawi", "Malaysia", "Maldives", "Mali", "Malta", "Marshall Islands", "Mauritania", "Mauritius", "Mexico", "Micronesia", "Moldova", "Monaco", "Mongolia", "Montenegro", "Morocco", "Mozambique", "Myanmar, {Burma}", "Namibia", "Nauru", "Nepal", "Netherlands", "New Zealand", "Nicaragua", "Niger", "Nigeria", "Norway", "Oman", "Pakistan", "Palau", "Panama", "Papua New Guinea", "Paraguay", "Peru", "Philippines", "Poland", "Portugal", "Qatar", "Romania", "Russian Federation", "Rwanda", "St Kitts & Nevis", "St Lucia", "Saint Vincent & the Grenadines", "Samoa", "San Marino", "Sao Tome & Principe", "Saudi Arabia", "Senegal", "Serbia", "Seychelles", "Sierra Leone", "Singapore", "Slovakia", "Slovenia", "Solomon Islands", "Somalia", "South Africa", "South Sudan", "Spain", "Sri Lanka", "Sudan", "Suriname", "Swaziland", "Sweden", "Switzerland", "Syria", "Taiwan", "Tajikistan", "Tanzania", "Thailand", "Togo", "Tonga", "Trinidad & Tobago", "Tunisia", "Turkey", "Turkmenistan", "Tuvalu", "Uganda", "Ukraine", "United Arab Emirates", "United Kingdom", "United States", "Uruguay", "Uzbekistan", "Vanuatu", "Vatican City", "Venezuela", "Vietnam", "Yemen", "Zambia", "Zimbabwe" });
+            comboBoxPaisClient.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            comboBoxPaisClient.AutoCompleteSource = AutoCompleteSource.CustomSource;
+            comboBoxPaisClient.FormattingEnabled = true;
+            comboBoxPaisClient.Items.AddRange(new object[] { "Afghanistan", "Albania", "Algeria", "Andorra", "Angola", "Antigua & Deps", "Argentina", "Armenia", "Australia", "Austria", "Azerbaijan", "Bahamas", "Bahrain", "Bangladesh", "Barbados", "Belarus", "Belgium", "Belize", "Benin", "Bhutan", "Bolivia", "Bosnia Herzegovina", "Botswana", "Brasil", "Brunei", "Bulgaria", "Burkina", "Burundi", "Cambodia", "Cameroon", "Canada", "Cape Verde", "Central African Rep", "Chad", "Chile", "China", "Colombia", "Comoros", "Congo", "Congo {Democratic Rep}", "Costa Rica", "Croatia", "Cuba", "Cyprus", "Czech Republic", "Denmark", "Djibouti", "Dominica", "Dominican Republic", "East Timor", "Ecuador", "Egypt", "El Salvador", "Equatorial Guinea", "Eritrea", "Estonia", "Ethiopia", "Fiji", "Finland", "France", "Gabon", "Gambia", "Georgia", "Germany", "Ghana", "Greece", "Grenada", "Guatemala", "Guinea", "Guinea-Bissau", "Guyana", "Haiti", "Honduras", "Hungary", "Iceland", "India", "Indonesia", "Iran", "Iraq", "Ireland {Republic}", "Israel", "Italy", "Ivory Coast", "Jamaica", "Japan", "Jordan", "Kazakhstan", "Kenya", "Kiribati", "Korea North", "Korea South", "Kosovo", "Kuwait", "Kyrgyzstan", "Laos", "Latvia", "Lebanon", "Lesotho", "Liberia", "Libya", "Liechtenstein", "Lithuania", "Luxembourg", "Macedonia", "Madagascar", "Malawi", "Malaysia", "Maldives", "Mali", "Malta", "Marshall Islands", "Mauritania", "Mauritius", "Mexico", "Micronesia", "Moldova", "Monaco", "Mongolia", "Montenegro", "Morocco", "Mozambique", "Myanmar, {Burma}", "Namibia", "Nauru", "Nepal", "Netherlands", "New Zealand", "Nicaragua", "Niger", "Nigeria", "Norway", "Oman", "Pakistan", "Palau", "Panama", "Papua New Guinea", "Paraguay", "Peru", "Philippines", "Poland", "Portugal", "Qatar", "Romania", "Russian Federation", "Rwanda", "St Kitts & Nevis", "St Lucia", "Saint Vincent & the Grenadines", "Samoa", "San Marino", "Sao Tome & Principe", "Saudi Arabia", "Senegal", "Serbia", "Seychelles", "Sierra Leone", "Singapore", "Slovakia", "Slovenia", "Solomon Islands", "Somalia", "South Africa", "South Sudan", "Spain", "Sri Lanka", "Sudan", "Suriname", "Swaziland", "Sweden", "Switzerland", "Syria", "Taiwan", "Tajikistan", "Tanzania", "Thailand", "Togo", "Tonga", "Trinidad & Tobago", "Tunisia", "Turkey", "Turkmenistan", "Tuvalu", "Uganda", "Ukraine", "United Arab Emirates", "United Kingdom", "United States", "Uruguay", "Uzbekistan", "Vanuatu", "Vatican City", "Venezuela", "Vietnam", "Yemen", "Zambia", "Zimbabwe" });
+            comboBoxPaisClient.Location = new Point(268, 149);
+            comboBoxPaisClient.Name = "comboBoxPaisClient";
+            comboBoxPaisClient.Size = new Size(190, 23);
+            comboBoxPaisClient.TabIndex = 24;
             // 
             // textBoxCompleClient
             // 
-            textBoxCompleClient.Location = new Point(407, 152);
+            textBoxCompleClient.Location = new Point(490, 150);
             textBoxCompleClient.Name = "textBoxCompleClient";
             textBoxCompleClient.Size = new Size(336, 23);
             textBoxCompleClient.TabIndex = 23;
@@ -100,33 +112,31 @@
             // labelComplementeClient
             // 
             labelComplementeClient.AutoSize = true;
-            labelComplementeClient.Location = new Point(407, 134);
+            labelComplementeClient.Font = new Font("Nexa Heavy", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            labelComplementeClient.Location = new Point(507, 131);
             labelComplementeClient.Name = "labelComplementeClient";
-            labelComplementeClient.Size = new Size(84, 15);
+            labelComplementeClient.Size = new Size(88, 16);
             labelComplementeClient.TabIndex = 22;
             labelComplementeClient.Text = "Complemento";
-            // 
-            // textBoxPaisClient
-            // 
-            textBoxPaisClient.Location = new Point(236, 150);
-            textBoxPaisClient.Name = "textBoxPaisClient";
-            textBoxPaisClient.Size = new Size(150, 23);
-            textBoxPaisClient.TabIndex = 21;
             // 
             // labelPaisClient
             // 
             labelPaisClient.AutoSize = true;
-            labelPaisClient.Location = new Point(236, 132);
+            labelPaisClient.Font = new Font("Nexa Heavy", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            labelPaisClient.Location = new Point(268, 131);
             labelPaisClient.Name = "labelPaisClient";
-            labelPaisClient.Size = new Size(28, 15);
+            labelPaisClient.Size = new Size(32, 16);
             labelPaisClient.TabIndex = 20;
             labelPaisClient.Text = "País";
             // 
             // comboBoxUFClient
             // 
             comboBoxUFClient.AutoCompleteCustomSource.AddRange(new string[] { "AC", "AL", "AP", "AM", "BA", "CE", "DF", "ES", "GO", "MA", "MT", "MS", "MG", "PA", "PB", "PR", "PE", "PI", "RJ", "RN", "RS", "RO", "RR", "SC", "SP", "SE", "TO" });
+            comboBoxUFClient.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            comboBoxUFClient.AutoCompleteSource = AutoCompleteSource.CustomSource;
             comboBoxUFClient.FormattingEnabled = true;
-            comboBoxUFClient.Location = new Point(171, 150);
+            comboBoxUFClient.Items.AddRange(new object[] { "AC", "AL", "AP", "AM", "BA", "CE", "DF", "ES", "GO", "MA", "MT", "MS", "MG", "PA", "PB", "PR", "PE", "PI", "RJ", "RN", "RS", "RO", "RR", "SC", "SP", "SE", "TO" });
+            comboBoxUFClient.Location = new Point(202, 149);
             comboBoxUFClient.Name = "comboBoxUFClient";
             comboBoxUFClient.Size = new Size(42, 23);
             comboBoxUFClient.TabIndex = 19;
@@ -134,15 +144,16 @@
             // labelEstadoClient
             // 
             labelEstadoClient.AutoSize = true;
-            labelEstadoClient.Location = new Point(171, 132);
+            labelEstadoClient.Font = new Font("Nexa Heavy", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            labelEstadoClient.Location = new Point(202, 130);
             labelEstadoClient.Name = "labelEstadoClient";
-            labelEstadoClient.Size = new Size(21, 15);
+            labelEstadoClient.Size = new Size(24, 16);
             labelEstadoClient.TabIndex = 18;
             labelEstadoClient.Text = "UF";
             // 
             // textBoxCidadeClient
             // 
-            textBoxCidadeClient.Location = new Point(12, 150);
+            textBoxCidadeClient.Location = new Point(44, 149);
             textBoxCidadeClient.Name = "textBoxCidadeClient";
             textBoxCidadeClient.Size = new Size(137, 23);
             textBoxCidadeClient.TabIndex = 17;
@@ -150,31 +161,33 @@
             // labelCidadeClient
             // 
             labelCidadeClient.AutoSize = true;
-            labelCidadeClient.Location = new Point(14, 132);
+            labelCidadeClient.Font = new Font("Nexa Heavy", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            labelCidadeClient.Location = new Point(46, 131);
             labelCidadeClient.Name = "labelCidadeClient";
-            labelCidadeClient.Size = new Size(44, 15);
+            labelCidadeClient.Size = new Size(49, 16);
             labelCidadeClient.TabIndex = 16;
             labelCidadeClient.Text = "Cidade";
             // 
             // textBoxNumeroClient
             // 
-            textBoxNumeroClient.Location = new Point(643, 88);
+            textBoxNumeroClient.Location = new Point(766, 87);
             textBoxNumeroClient.Name = "textBoxNumeroClient";
-            textBoxNumeroClient.Size = new Size(100, 23);
+            textBoxNumeroClient.Size = new Size(84, 23);
             textBoxNumeroClient.TabIndex = 15;
             // 
             // labelNumeroCliente
             // 
             labelNumeroCliente.AutoSize = true;
-            labelNumeroCliente.Location = new Point(653, 70);
+            labelNumeroCliente.Font = new Font("Nexa Heavy", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            labelNumeroCliente.Location = new Point(764, 69);
             labelNumeroCliente.Name = "labelNumeroCliente";
-            labelNumeroCliente.Size = new Size(51, 15);
+            labelNumeroCliente.Size = new Size(54, 16);
             labelNumeroCliente.TabIndex = 14;
             labelNumeroCliente.Text = "Número";
             // 
             // textBoxLogradouroClie
             // 
-            textBoxLogradouroClie.Location = new Point(406, 88);
+            textBoxLogradouroClie.Location = new Point(507, 87);
             textBoxLogradouroClie.Name = "textBoxLogradouroClie";
             textBoxLogradouroClie.Size = new Size(216, 23);
             textBoxLogradouroClie.TabIndex = 13;
@@ -182,15 +195,16 @@
             // labelLogradouroClient
             // 
             labelLogradouroClient.AutoSize = true;
-            labelLogradouroClient.Location = new Point(406, 70);
+            labelLogradouroClient.Font = new Font("Nexa Heavy", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            labelLogradouroClient.Location = new Point(518, 68);
             labelLogradouroClient.Name = "labelLogradouroClient";
-            labelLogradouroClient.Size = new Size(69, 15);
+            labelLogradouroClient.Size = new Size(77, 16);
             labelLogradouroClient.TabIndex = 12;
             labelLogradouroClient.Text = "Logradouro";
             // 
             // textBoxCEPCliente
             // 
-            textBoxCEPCliente.Location = new Point(260, 88);
+            textBoxCEPCliente.Location = new Point(332, 87);
             textBoxCEPCliente.Name = "textBoxCEPCliente";
             textBoxCEPCliente.Size = new Size(126, 23);
             textBoxCEPCliente.TabIndex = 11;
@@ -198,31 +212,33 @@
             // labelCEPCliente
             // 
             labelCEPCliente.AutoSize = true;
-            labelCEPCliente.Location = new Point(260, 70);
+            labelCEPCliente.Font = new Font("Nexa Heavy", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            labelCEPCliente.Location = new Point(332, 68);
             labelCEPCliente.Name = "labelCEPCliente";
-            labelCEPCliente.Size = new Size(28, 15);
+            labelCEPCliente.Size = new Size(31, 16);
             labelCEPCliente.TabIndex = 10;
             labelCEPCliente.Text = "CEP";
             // 
             // textBoxEmaiLCliente
             // 
-            textBoxEmaiLCliente.Location = new Point(12, 88);
+            textBoxEmaiLCliente.Location = new Point(44, 87);
             textBoxEmaiLCliente.Name = "textBoxEmaiLCliente";
-            textBoxEmaiLCliente.Size = new Size(236, 23);
+            textBoxEmaiLCliente.Size = new Size(256, 23);
             textBoxEmaiLCliente.TabIndex = 9;
             // 
             // labelEmailCliente
             // 
             labelEmailCliente.AutoSize = true;
-            labelEmailCliente.Location = new Point(12, 70);
+            labelEmailCliente.Font = new Font("Nexa Heavy", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            labelEmailCliente.Location = new Point(44, 69);
             labelEmailCliente.Name = "labelEmailCliente";
-            labelEmailCliente.Size = new Size(36, 15);
+            labelEmailCliente.Size = new Size(40, 16);
             labelEmailCliente.TabIndex = 8;
             labelEmailCliente.Text = "Email";
             // 
             // textBoxTelefoneCliente
             // 
-            textBoxTelefoneCliente.Location = new Point(566, 30);
+            textBoxTelefoneCliente.Location = new Point(639, 29);
             textBoxTelefoneCliente.Name = "textBoxTelefoneCliente";
             textBoxTelefoneCliente.Size = new Size(177, 23);
             textBoxTelefoneCliente.TabIndex = 7;
@@ -230,31 +246,33 @@
             // labelTelefoneClient
             // 
             labelTelefoneClient.AutoSize = true;
-            labelTelefoneClient.Location = new Point(566, 12);
+            labelTelefoneClient.Font = new Font("Nexa Heavy", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            labelTelefoneClient.Location = new Point(639, 11);
             labelTelefoneClient.Name = "labelTelefoneClient";
-            labelTelefoneClient.Size = new Size(51, 15);
+            labelTelefoneClient.Size = new Size(56, 16);
             labelTelefoneClient.TabIndex = 6;
             labelTelefoneClient.Text = "Telefone";
             // 
             // textBoxCPFCliente
             // 
-            textBoxCPFCliente.Location = new Point(406, 30);
+            textBoxCPFCliente.Location = new Point(438, 29);
             textBoxCPFCliente.Name = "textBoxCPFCliente";
-            textBoxCPFCliente.Size = new Size(137, 23);
+            textBoxCPFCliente.Size = new Size(157, 23);
             textBoxCPFCliente.TabIndex = 5;
             // 
             // labelCpfCliente
             // 
             labelCpfCliente.AutoSize = true;
-            labelCpfCliente.Location = new Point(406, 12);
+            labelCpfCliente.Font = new Font("Nexa Heavy", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            labelCpfCliente.Location = new Point(438, 11);
             labelCpfCliente.Name = "labelCpfCliente";
-            labelCpfCliente.Size = new Size(28, 15);
+            labelCpfCliente.Size = new Size(31, 16);
             labelCpfCliente.TabIndex = 4;
             labelCpfCliente.Text = "CPF";
             // 
             // textBoxNomeCliente
             // 
-            textBoxNomeCliente.Location = new Point(109, 30);
+            textBoxNomeCliente.Location = new Point(141, 29);
             textBoxNomeCliente.Name = "textBoxNomeCliente";
             textBoxNomeCliente.Size = new Size(277, 23);
             textBoxNomeCliente.TabIndex = 3;
@@ -262,15 +280,16 @@
             // labelNomeCliente
             // 
             labelNomeCliente.AutoSize = true;
-            labelNomeCliente.Location = new Point(109, 12);
+            labelNomeCliente.Font = new Font("Nexa Heavy", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            labelNomeCliente.Location = new Point(141, 11);
             labelNomeCliente.Name = "labelNomeCliente";
-            labelNomeCliente.Size = new Size(40, 15);
+            labelNomeCliente.Size = new Size(41, 16);
             labelNomeCliente.TabIndex = 2;
             labelNomeCliente.Text = "Nome";
             // 
             // textBoxCodCliente
             // 
-            textBoxCodCliente.Location = new Point(12, 30);
+            textBoxCodCliente.Location = new Point(44, 29);
             textBoxCodCliente.Name = "textBoxCodCliente";
             textBoxCodCliente.Size = new Size(78, 23);
             textBoxCodCliente.TabIndex = 1;
@@ -278,53 +297,44 @@
             // labelCódigoCliente
             // 
             labelCódigoCliente.AutoSize = true;
-            labelCódigoCliente.Location = new Point(12, 12);
+            labelCódigoCliente.Font = new Font("Nexa Heavy", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            labelCódigoCliente.Location = new Point(44, 11);
             labelCódigoCliente.Name = "labelCódigoCliente";
-            labelCódigoCliente.Size = new Size(46, 15);
+            labelCódigoCliente.Size = new Size(47, 16);
             labelCódigoCliente.TabIndex = 0;
             labelCódigoCliente.Text = "Código";
             // 
-            // labelTituloClientesCadastro
+            // userControl11
             // 
-            labelTituloClientesCadastro.AutoSize = true;
-            labelTituloClientesCadastro.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            labelTituloClientesCadastro.Location = new Point(12, 9);
-            labelTituloClientesCadastro.Name = "labelTituloClientesCadastro";
-            labelTituloClientesCadastro.Size = new Size(136, 21);
-            labelTituloClientesCadastro.TabIndex = 1;
-            labelTituloClientesCadastro.Text = "Cadastrar Clientes";
-            // 
-            // buttonSalvarCadastroClient
-            // 
-            buttonSalvarCadastroClient.BackColor = Color.FromArgb(128, 255, 128);
-            buttonSalvarCadastroClient.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            buttonSalvarCadastroClient.Location = new Point(121, 243);
-            buttonSalvarCadastroClient.Name = "buttonSalvarCadastroClient";
-            buttonSalvarCadastroClient.Size = new Size(540, 43);
-            buttonSalvarCadastroClient.TabIndex = 2;
-            buttonSalvarCadastroClient.Text = "Salvar Cadastro";
-            buttonSalvarCadastroClient.UseVisualStyleBackColor = false;
+            userControl11.BackColor = Color.Transparent;
+            userControl11.Location = new Point(230, 211);
+            userControl11.Name = "userControl11";
+            userControl11.Size = new Size(481, 91);
+            userControl11.TabIndex = 24;
+            userControl11.Load += userControl11_Load;
             // 
             // formClientes
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 298);
-            Controls.Add(buttonSalvarCadastroClient);
-            Controls.Add(labelTituloClientesCadastro);
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            ClientSize = new Size(940, 314);
+            Controls.Add(userControl11);
             Controls.Add(panel1);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+            Icon = (Icon)resources.GetObject("$this.Icon");
+            MaximizeBox = false;
             Name = "formClientes";
             Text = "Cadastro de Clientes";
+            Load += formClientes_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
 
         private Panel panel1;
-        private Label labelTituloClientesCadastro;
         private Label labelEstadoClient;
         private TextBox textBoxCidadeClient;
         private Label labelCidadeClient;
@@ -346,9 +356,9 @@
         private Label labelCódigoCliente;
         private TextBox textBoxCompleClient;
         private Label labelComplementeClient;
-        private TextBox textBoxPaisClient;
         private Label labelPaisClient;
         private ComboBox comboBoxUFClient;
-        private Button buttonSalvarCadastroClient;
+        private UserControl1 userControl11;
+        private ComboBox comboBoxPaisClient;
     }
 }

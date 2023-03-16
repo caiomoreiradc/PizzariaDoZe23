@@ -28,9 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formFunciEndereco));
             panel1 = new Panel();
             comboBoxPaisFunci = new ComboBox();
-            textBoxPaisFunci = new TextBox();
+            comboBoxUFFunci = new ComboBox();
             labelPaisFunci = new Label();
             labelEstadoFunci = new Label();
             textBoxCidadeFunci = new TextBox();
@@ -45,16 +46,15 @@
             labelLogradouroFunci = new Label();
             textBoxCepFunci = new TextBox();
             labelCepFunci = new Label();
-            buttonEnviarEndFunci = new Button();
-            labelTituloCadastroEndFunci = new Label();
+            userControl11 = new UserControl1();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
             // 
-            panel1.BackColor = Color.FromArgb(255, 255, 192);
+            panel1.BackColor = Color.LemonChiffon;
             panel1.Controls.Add(comboBoxPaisFunci);
-            panel1.Controls.Add(textBoxPaisFunci);
+            panel1.Controls.Add(comboBoxUFFunci);
             panel1.Controls.Add(labelPaisFunci);
             panel1.Controls.Add(labelEstadoFunci);
             panel1.Controls.Add(textBoxCidadeFunci);
@@ -69,181 +69,189 @@
             panel1.Controls.Add(labelLogradouroFunci);
             panel1.Controls.Add(textBoxCepFunci);
             panel1.Controls.Add(labelCepFunci);
-            panel1.Location = new Point(23, 40);
+            panel1.Location = new Point(29, 18);
             panel1.Name = "panel1";
-            panel1.Size = new Size(607, 150);
+            panel1.Size = new Size(694, 160);
             panel1.TabIndex = 0;
             panel1.Paint += panel1_Paint;
             // 
             // comboBoxPaisFunci
             // 
-            comboBoxPaisFunci.AutoCompleteCustomSource.AddRange(new string[] { "AC", "AL", "AP", "AM", "BA", "CE", "DF", "ES", "GO", "MA", "MT", "MS", "MG", "PA", "PB", "PR", "PE", "PI", "RJ", "RN", "RS", "RO", "RR", "SC", "SP", "SE", "TO" });
+            comboBoxPaisFunci.AutoCompleteCustomSource.AddRange(new string[] { "Afghanistan", "Albania", "Algeria", "Andorra", "Angola", "Antigua & Deps", "Argentina", "Armenia", "Australia", "Austria", "Azerbaijan", "Bahamas", "Bahrain", "Bangladesh", "Barbados", "Belarus", "Belgium", "Belize", "Benin", "Bhutan", "Bolivia", "Bosnia Herzegovina", "Botswana", "Brasil", "Brunei", "Bulgaria", "Burkina", "Burundi", "Cambodia", "Cameroon", "Canada", "Cape Verde", "Central African Rep", "Chad", "Chile", "China", "Colombia", "Comoros", "Congo", "Congo {Democratic Rep}", "Costa Rica", "Croatia", "Cuba", "Cyprus", "Czech Republic", "Denmark", "Djibouti", "Dominica", "Dominican Republic", "East Timor", "Ecuador", "Egypt", "El Salvador", "Equatorial Guinea", "Eritrea", "Estonia", "Ethiopia", "Fiji", "Finland", "France", "Gabon", "Gambia", "Georgia", "Germany", "Ghana", "Greece", "Grenada", "Guatemala", "Guinea", "Guinea-Bissau", "Guyana", "Haiti", "Honduras", "Hungary", "Iceland", "India", "Indonesia", "Iran", "Iraq", "Ireland {Republic}", "Israel", "Italy", "Ivory Coast", "Jamaica", "Japan", "Jordan", "Kazakhstan", "Kenya", "Kiribati", "Korea North", "Korea South", "Kosovo", "Kuwait", "Kyrgyzstan", "Laos", "Latvia", "Lebanon", "Lesotho", "Liberia", "Libya", "Liechtenstein", "Lithuania", "Luxembourg", "Macedonia", "Madagascar", "Malawi", "Malaysia", "Maldives", "Mali", "Malta", "Marshall Islands", "Mauritania", "Mauritius", "Mexico", "Micronesia", "Moldova", "Monaco", "Mongolia", "Montenegro", "Morocco", "Mozambique", "Myanmar, {Burma}", "Namibia", "Nauru", "Nepal", "Netherlands", "New Zealand", "Nicaragua", "Niger", "Nigeria", "Norway", "Oman", "Pakistan", "Palau", "Panama", "Papua New Guinea", "Paraguay", "Peru", "Philippines", "Poland", "Portugal", "Qatar", "Romania", "Russian Federation", "Rwanda", "St Kitts & Nevis", "St Lucia", "Saint Vincent & the Grenadines", "Samoa", "San Marino", "Sao Tome & Principe", "Saudi Arabia", "Senegal", "Serbia", "Seychelles", "Sierra Leone", "Singapore", "Slovakia", "Slovenia", "Solomon Islands", "Somalia", "South Africa", "South Sudan", "Spain", "Sri Lanka", "Sudan", "Suriname", "Swaziland", "Sweden", "Switzerland", "Syria", "Taiwan", "Tajikistan", "Tanzania", "Thailand", "Togo", "Tonga", "Trinidad & Tobago", "Tunisia", "Turkey", "Turkmenistan", "Tuvalu", "Uganda", "Ukraine", "United Arab Emirates", "United Kingdom", "United States", "Uruguay", "Uzbekistan", "Vanuatu", "Vatican City", "Venezuela", "Vietnam", "Yemen", "Zambia", "Zimbabwe" });
+            comboBoxPaisFunci.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            comboBoxPaisFunci.AutoCompleteSource = AutoCompleteSource.CustomSource;
             comboBoxPaisFunci.FormattingEnabled = true;
-            comboBoxPaisFunci.Location = new Point(407, 84);
+            comboBoxPaisFunci.Items.AddRange(new object[] { "Afghanistan", "Albania", "Algeria", "Andorra", "Angola", "Antigua & Deps", "Argentina", "Armenia", "Australia", "Austria", "Azerbaijan", "Bahamas", "Bahrain", "Bangladesh", "Barbados", "Belarus", "Belgium", "Belize", "Benin", "Bhutan", "Bolivia", "Bosnia Herzegovina", "Botswana", "Brasil", "Brunei", "Bulgaria", "Burkina", "Burundi", "Cambodia", "Cameroon", "Canada", "Cape Verde", "Central African Rep", "Chad", "Chile", "China", "Colombia", "Comoros", "Congo", "Congo {Democratic Rep}", "Costa Rica", "Croatia", "Cuba", "Cyprus", "Czech Republic", "Denmark", "Djibouti", "Dominica", "Dominican Republic", "East Timor", "Ecuador", "Egypt", "El Salvador", "Equatorial Guinea", "Eritrea", "Estonia", "Ethiopia", "Fiji", "Finland", "France", "Gabon", "Gambia", "Georgia", "Germany", "Ghana", "Greece", "Grenada", "Guatemala", "Guinea", "Guinea-Bissau", "Guyana", "Haiti", "Honduras", "Hungary", "Iceland", "India", "Indonesia", "Iran", "Iraq", "Ireland {Republic}", "Israel", "Italy", "Ivory Coast", "Jamaica", "Japan", "Jordan", "Kazakhstan", "Kenya", "Kiribati", "Korea North", "Korea South", "Kosovo", "Kuwait", "Kyrgyzstan", "Laos", "Latvia", "Lebanon", "Lesotho", "Liberia", "Libya", "Liechtenstein", "Lithuania", "Luxembourg", "Macedonia", "Madagascar", "Malawi", "Malaysia", "Maldives", "Mali", "Malta", "Marshall Islands", "Mauritania", "Mauritius", "Mexico", "Micronesia", "Moldova", "Monaco", "Mongolia", "Montenegro", "Morocco", "Mozambique", "Myanmar, {Burma}", "Namibia", "Nauru", "Nepal", "Netherlands", "New Zealand", "Nicaragua", "Niger", "Nigeria", "Norway", "Oman", "Pakistan", "Palau", "Panama", "Papua New Guinea", "Paraguay", "Peru", "Philippines", "Poland", "Portugal", "Qatar", "Romania", "Russian Federation", "Rwanda", "St Kitts & Nevis", "St Lucia", "Saint Vincent & the Grenadines", "Samoa", "San Marino", "Sao Tome & Principe", "Saudi Arabia", "Senegal", "Serbia", "Seychelles", "Sierra Leone", "Singapore", "Slovakia", "Slovenia", "Solomon Islands", "Somalia", "South Africa", "South Sudan", "Spain", "Sri Lanka", "Sudan", "Suriname", "Swaziland", "Sweden", "Switzerland", "Syria", "Taiwan", "Tajikistan", "Tanzania", "Thailand", "Togo", "Tonga", "Trinidad & Tobago", "Tunisia", "Turkey", "Turkmenistan", "Tuvalu", "Uganda", "Ukraine", "United Arab Emirates", "United Kingdom", "United States", "Uruguay", "Uzbekistan", "Vanuatu", "Vatican City", "Venezuela", "Vietnam", "Yemen", "Zambia", "Zimbabwe" });
+            comboBoxPaisFunci.Location = new Point(515, 89);
             comboBoxPaisFunci.Name = "comboBoxPaisFunci";
-            comboBoxPaisFunci.Size = new Size(38, 23);
-            comboBoxPaisFunci.TabIndex = 16;
+            comboBoxPaisFunci.Size = new Size(167, 24);
+            comboBoxPaisFunci.TabIndex = 17;
+            comboBoxPaisFunci.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
             // 
-            // textBoxPaisFunci
+            // comboBoxUFFunci
             // 
-            textBoxPaisFunci.Location = new Point(451, 84);
-            textBoxPaisFunci.Name = "textBoxPaisFunci";
-            textBoxPaisFunci.Size = new Size(153, 23);
-            textBoxPaisFunci.TabIndex = 15;
+            comboBoxUFFunci.AutoCompleteCustomSource.AddRange(new string[] { "AC", "AL", "AP", "AM", "BA", "CE", "DF", "ES", "GO", "MA", "MT", "MS", "MG", "PA", "PB", "PR", "PE", "PI", "RJ", "RN", "RS", "RO", "RR", "SC", "SP", "SE", "TO" });
+            comboBoxUFFunci.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            comboBoxUFFunci.AutoCompleteSource = AutoCompleteSource.CustomSource;
+            comboBoxUFFunci.FormattingEnabled = true;
+            comboBoxUFFunci.Items.AddRange(new object[] { "AC", "AL", "AP", "AM", "BA", "CE", "DF", "ES", "GO", "MA", "MT", "MS", "MG", "PA", "PB", "PR", "PE", "PI", "RJ", "RN", "RS", "RO", "RR", "SC", "SP", "SE", "TO" });
+            comboBoxUFFunci.Location = new Point(465, 90);
+            comboBoxUFFunci.Name = "comboBoxUFFunci";
+            comboBoxUFFunci.Size = new Size(43, 24);
+            comboBoxUFFunci.TabIndex = 16;
             // 
             // labelPaisFunci
             // 
             labelPaisFunci.AutoSize = true;
-            labelPaisFunci.Location = new Point(451, 66);
+            labelPaisFunci.Font = new Font("Nexa Heavy", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            labelPaisFunci.Location = new Point(515, 70);
             labelPaisFunci.Name = "labelPaisFunci";
-            labelPaisFunci.Size = new Size(28, 15);
+            labelPaisFunci.Size = new Size(32, 16);
             labelPaisFunci.TabIndex = 14;
             labelPaisFunci.Text = "País";
             // 
             // labelEstadoFunci
             // 
             labelEstadoFunci.AutoSize = true;
-            labelEstadoFunci.Location = new Point(407, 66);
+            labelEstadoFunci.Font = new Font("Nexa Heavy", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            labelEstadoFunci.Location = new Point(465, 70);
             labelEstadoFunci.Name = "labelEstadoFunci";
-            labelEstadoFunci.Size = new Size(21, 15);
+            labelEstadoFunci.Size = new Size(24, 16);
             labelEstadoFunci.TabIndex = 12;
             labelEstadoFunci.Text = "UF";
             // 
             // textBoxCidadeFunci
             // 
-            textBoxCidadeFunci.Location = new Point(270, 84);
+            textBoxCidadeFunci.Location = new Point(309, 90);
             textBoxCidadeFunci.Name = "textBoxCidadeFunci";
-            textBoxCidadeFunci.Size = new Size(129, 23);
+            textBoxCidadeFunci.Size = new Size(147, 26);
             textBoxCidadeFunci.TabIndex = 11;
             // 
             // labelCidadeFunci
             // 
             labelCidadeFunci.AutoSize = true;
-            labelCidadeFunci.Location = new Point(282, 66);
+            labelCidadeFunci.Font = new Font("Nexa Heavy", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            labelCidadeFunci.Location = new Point(322, 70);
             labelCidadeFunci.Name = "labelCidadeFunci";
-            labelCidadeFunci.Size = new Size(44, 15);
+            labelCidadeFunci.Size = new Size(49, 16);
             labelCidadeFunci.TabIndex = 10;
             labelCidadeFunci.Text = "Cidade";
             // 
             // textBoxCompleFunci
             // 
-            textBoxCompleFunci.Location = new Point(16, 84);
+            textBoxCompleFunci.Location = new Point(18, 90);
             textBoxCompleFunci.Multiline = true;
             textBoxCompleFunci.Name = "textBoxCompleFunci";
-            textBoxCompleFunci.Size = new Size(248, 45);
+            textBoxCompleFunci.Size = new Size(283, 48);
             textBoxCompleFunci.TabIndex = 9;
             // 
             // labelComplemFunci
             // 
             labelComplemFunci.AutoSize = true;
-            labelComplemFunci.Location = new Point(16, 66);
+            labelComplemFunci.Font = new Font("Nexa Heavy", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            labelComplemFunci.Location = new Point(18, 70);
             labelComplemFunci.Name = "labelComplemFunci";
-            labelComplemFunci.Size = new Size(84, 15);
+            labelComplemFunci.Size = new Size(88, 16);
             labelComplemFunci.TabIndex = 8;
             labelComplemFunci.Text = "Complemento";
             // 
             // textBoxBairroFunci
             // 
-            textBoxBairroFunci.Location = new Point(510, 29);
+            textBoxBairroFunci.Location = new Point(583, 31);
             textBoxBairroFunci.Name = "textBoxBairroFunci";
-            textBoxBairroFunci.Size = new Size(87, 23);
+            textBoxBairroFunci.Size = new Size(99, 26);
             textBoxBairroFunci.TabIndex = 7;
             // 
             // labelBairroFunci
             // 
             labelBairroFunci.AutoSize = true;
-            labelBairroFunci.Location = new Point(510, 11);
+            labelBairroFunci.Font = new Font("Nexa Heavy", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            labelBairroFunci.Location = new Point(583, 12);
             labelBairroFunci.Name = "labelBairroFunci";
-            labelBairroFunci.Size = new Size(38, 15);
+            labelBairroFunci.Size = new Size(46, 16);
             labelBairroFunci.TabIndex = 6;
             labelBairroFunci.Text = "Bairro";
             labelBairroFunci.Click += label1_Click_1;
             // 
             // textBoxNumFunci
             // 
-            textBoxNumFunci.Location = new Point(441, 29);
+            textBoxNumFunci.Location = new Point(504, 31);
             textBoxNumFunci.Name = "textBoxNumFunci";
-            textBoxNumFunci.Size = new Size(51, 23);
+            textBoxNumFunci.Size = new Size(58, 26);
             textBoxNumFunci.TabIndex = 5;
             // 
             // labelNumeroFunci
             // 
             labelNumeroFunci.AutoSize = true;
-            labelNumeroFunci.Location = new Point(441, 11);
+            labelNumeroFunci.Font = new Font("Nexa Heavy", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            labelNumeroFunci.Location = new Point(504, 12);
             labelNumeroFunci.Name = "labelNumeroFunci";
-            labelNumeroFunci.Size = new Size(51, 15);
+            labelNumeroFunci.Size = new Size(54, 16);
             labelNumeroFunci.TabIndex = 4;
             labelNumeroFunci.Text = "Número";
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(159, 29);
+            textBox1.Location = new Point(182, 31);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(267, 23);
+            textBox1.Size = new Size(305, 26);
             textBox1.TabIndex = 3;
             // 
             // labelLogradouroFunci
             // 
             labelLogradouroFunci.AutoSize = true;
-            labelLogradouroFunci.Location = new Point(159, 11);
+            labelLogradouroFunci.Font = new Font("Nexa Heavy", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            labelLogradouroFunci.Location = new Point(182, 12);
             labelLogradouroFunci.Name = "labelLogradouroFunci";
-            labelLogradouroFunci.Size = new Size(69, 15);
+            labelLogradouroFunci.Size = new Size(77, 16);
             labelLogradouroFunci.TabIndex = 2;
             labelLogradouroFunci.Text = "Logradouro";
             // 
             // textBoxCepFunci
             // 
-            textBoxCepFunci.Location = new Point(16, 29);
+            textBoxCepFunci.Location = new Point(18, 31);
             textBoxCepFunci.Name = "textBoxCepFunci";
-            textBoxCepFunci.Size = new Size(110, 23);
+            textBoxCepFunci.Size = new Size(125, 26);
             textBoxCepFunci.TabIndex = 1;
             // 
             // labelCepFunci
             // 
             labelCepFunci.AutoSize = true;
-            labelCepFunci.Location = new Point(16, 11);
+            labelCepFunci.Font = new Font("Nexa Heavy", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            labelCepFunci.Location = new Point(18, 12);
             labelCepFunci.Name = "labelCepFunci";
-            labelCepFunci.Size = new Size(28, 15);
+            labelCepFunci.Size = new Size(31, 16);
             labelCepFunci.TabIndex = 0;
             labelCepFunci.Text = "CEP";
             labelCepFunci.Click += label1_Click;
             // 
-            // buttonEnviarEndFunci
+            // userControl11
             // 
-            buttonEnviarEndFunci.BackColor = Color.FromArgb(128, 255, 128);
-            buttonEnviarEndFunci.Cursor = Cursors.Hand;
-            buttonEnviarEndFunci.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            buttonEnviarEndFunci.Location = new Point(91, 196);
-            buttonEnviarEndFunci.Name = "buttonEnviarEndFunci";
-            buttonEnviarEndFunci.Size = new Size(462, 41);
-            buttonEnviarEndFunci.TabIndex = 1;
-            buttonEnviarEndFunci.Text = "Salvar Endereço";
-            buttonEnviarEndFunci.UseVisualStyleBackColor = false;
-            // 
-            // labelTituloCadastroEndFunci
-            // 
-            labelTituloCadastroEndFunci.AutoSize = true;
-            labelTituloCadastroEndFunci.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            labelTituloCadastroEndFunci.Location = new Point(23, 9);
-            labelTituloCadastroEndFunci.Name = "labelTituloCadastroEndFunci";
-            labelTituloCadastroEndFunci.Size = new Size(144, 21);
-            labelTituloCadastroEndFunci.TabIndex = 2;
-            labelTituloCadastroEndFunci.Text = "Cadastro Endereço ";
+            userControl11.BackColor = Color.Transparent;
+            userControl11.Location = new Point(103, 186);
+            userControl11.Name = "userControl11";
+            userControl11.Size = new Size(547, 97);
+            userControl11.TabIndex = 1;
+            userControl11.Load += userControl11_Load;
             // 
             // formFunciEndereco
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 16F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(658, 246);
-            Controls.Add(labelTituloCadastroEndFunci);
-            Controls.Add(buttonEnviarEndFunci);
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            ClientSize = new Size(752, 284);
+            Controls.Add(userControl11);
             Controls.Add(panel1);
+            Font = new Font("Nexa Heavy", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+            Icon = (Icon)resources.GetObject("$this.Icon");
+            MaximizeBox = false;
             Name = "formFunciEndereco";
-            Text = "Cadastro do Endereço dos Funcionários";
+            Text = "Cadastro de Endereço dos Funcionários";
+            Load += formFunciEndereco_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
@@ -262,10 +270,9 @@
         private TextBox textBoxCompleFunci;
         private Label labelComplemFunci;
         private TextBox textBoxBairroFunci;
-        private TextBox textBoxPaisFunci;
         private Label labelPaisFunci;
-        private Button buttonEnviarEndFunci;
+        private ComboBox comboBoxUFFunci;
+        private UserControl1 userControl11;
         private ComboBox comboBoxPaisFunci;
-        private Label labelTituloCadastroEndFunci;
     }
 }

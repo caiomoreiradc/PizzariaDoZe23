@@ -15,6 +15,24 @@ namespace PizzariaDoZe
         public formClientes()
         {
             InitializeComponent();
+            this.ControlBox = false; //REMOVE BOTÕES DE MINIZAR E FECHAR
+
+            userControl11.buttonSair.Click += buttonSair_Click;
+        }
+        public void buttonSair_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+
+        public void userControl11_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void formClientes_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

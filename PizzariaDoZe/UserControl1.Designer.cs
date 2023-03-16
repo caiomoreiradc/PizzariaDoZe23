@@ -28,61 +28,69 @@
         /// </summary>
         private void InitializeComponent()
         {
-            buttonSalvar = new Button();
+            Button buttonSalvar;
             buttonEditar = new Button();
             buttonExcluir = new Button();
             buttonSair = new Button();
+            buttonSalvar = new Button();
             SuspendLayout();
             // 
             // buttonSalvar
             // 
             buttonSalvar.BackColor = Color.Lime;
+            buttonSalvar.Cursor = Cursors.Hand;
             buttonSalvar.FlatStyle = FlatStyle.Flat;
-            buttonSalvar.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point);
+            buttonSalvar.Font = new Font("Nexa Heavy", 15.7499981F, FontStyle.Bold, GraphicsUnit.Point);
             buttonSalvar.Location = new Point(4, 10);
             buttonSalvar.Name = "buttonSalvar";
-            buttonSalvar.Size = new Size(169, 113);
+            buttonSalvar.Size = new Size(113, 73);
             buttonSalvar.TabIndex = 0;
             buttonSalvar.Text = "Salvar";
             buttonSalvar.UseVisualStyleBackColor = false;
-            buttonSalvar.Click += button1_Click;
+            buttonSalvar.Click += buttonSalvar_Click;
             // 
             // buttonEditar
             // 
             buttonEditar.BackColor = Color.Cyan;
+            buttonEditar.Cursor = Cursors.Hand;
             buttonEditar.FlatStyle = FlatStyle.Flat;
-            buttonEditar.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point);
-            buttonEditar.Location = new Point(179, 10);
+            buttonEditar.Font = new Font("Nexa Heavy", 15.7499981F, FontStyle.Bold, GraphicsUnit.Point);
+            buttonEditar.Location = new Point(122, 10);
             buttonEditar.Name = "buttonEditar";
-            buttonEditar.Size = new Size(169, 113);
+            buttonEditar.Size = new Size(113, 73);
             buttonEditar.TabIndex = 1;
             buttonEditar.Text = "Editar";
             buttonEditar.UseVisualStyleBackColor = false;
+            buttonEditar.Click += buttonEditar_Click;
             // 
             // buttonExcluir
             // 
             buttonExcluir.BackColor = Color.Red;
+            buttonExcluir.Cursor = Cursors.Hand;
             buttonExcluir.FlatStyle = FlatStyle.Flat;
-            buttonExcluir.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point);
-            buttonExcluir.Location = new Point(354, 10);
+            buttonExcluir.Font = new Font("Nexa Heavy", 15.7499981F, FontStyle.Bold, GraphicsUnit.Point);
+            buttonExcluir.Location = new Point(241, 10);
             buttonExcluir.Name = "buttonExcluir";
-            buttonExcluir.Size = new Size(169, 113);
+            buttonExcluir.Size = new Size(113, 73);
             buttonExcluir.TabIndex = 2;
             buttonExcluir.Text = "Excluir";
             buttonExcluir.UseVisualStyleBackColor = false;
+            buttonExcluir.Click += buttonExcluir_Click;
             // 
             // buttonSair
             // 
             buttonSair.BackColor = Color.Black;
+            buttonSair.Cursor = Cursors.Hand;
             buttonSair.FlatStyle = FlatStyle.Flat;
-            buttonSair.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point);
-            buttonSair.ForeColor = Color.White;
-            buttonSair.Location = new Point(529, 10);
+            buttonSair.Font = new Font("Nexa Heavy", 15.7499981F, FontStyle.Bold, GraphicsUnit.Point);
+            buttonSair.ForeColor = Color.Ivory;
+            buttonSair.Location = new Point(359, 10);
             buttonSair.Name = "buttonSair";
-            buttonSair.Size = new Size(169, 113);
+            buttonSair.Size = new Size(113, 73);
             buttonSair.TabIndex = 3;
             buttonSair.Text = "Sair";
             buttonSair.UseVisualStyleBackColor = false;
+            buttonSair.Click += buttonSair_Click;
             // 
             // UserControl1
             // 
@@ -93,15 +101,15 @@
             Controls.Add(buttonEditar);
             Controls.Add(buttonSalvar);
             Name = "UserControl1";
-            Size = new Size(702, 132);
+            Size = new Size(479, 91);
             ResumeLayout(false);
         }
 
         #endregion
 
-        private Button buttonSalvar;
-        private Button buttonEditar;
-        private Button buttonExcluir;
-        private Button buttonSair;
+        public Button buttonSalvar;
+        public Button buttonEditar;
+        public Button buttonExcluir;
+        public Button buttonSair;
     }
 }

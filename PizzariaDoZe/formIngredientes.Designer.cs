@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formIngredientes));
             labelCodigoIngre = new Label();
             panel1 = new Panel();
             textBoxDataVali = new TextBox();
@@ -35,32 +36,32 @@
             textBoxNomeIngre = new TextBox();
             labelNomeIngre = new Label();
             textBox1 = new TextBox();
-            labelTituloIngredi = new Label();
-            buttonCadastraIngre = new Button();
+            userControl11 = new UserControl1();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
             // labelCodigoIngre
             // 
             labelCodigoIngre.AutoSize = true;
+            labelCodigoIngre.Font = new Font("Nexa Heavy", 9F, FontStyle.Bold, GraphicsUnit.Point);
             labelCodigoIngre.Location = new Point(16, 13);
             labelCodigoIngre.Name = "labelCodigoIngre";
-            labelCodigoIngre.Size = new Size(46, 15);
+            labelCodigoIngre.Size = new Size(47, 16);
             labelCodigoIngre.TabIndex = 0;
             labelCodigoIngre.Text = "Código";
             // 
             // panel1
             // 
-            panel1.BackColor = Color.FromArgb(255, 255, 192);
+            panel1.BackColor = Color.LemonChiffon;
             panel1.Controls.Add(textBoxDataVali);
             panel1.Controls.Add(labelDataIngre);
             panel1.Controls.Add(textBoxNomeIngre);
             panel1.Controls.Add(labelNomeIngre);
             panel1.Controls.Add(textBox1);
             panel1.Controls.Add(labelCodigoIngre);
-            panel1.Location = new Point(12, 39);
+            panel1.Location = new Point(10, 10);
             panel1.Name = "panel1";
-            panel1.Size = new Size(539, 87);
+            panel1.Size = new Size(550, 87);
             panel1.TabIndex = 1;
             // 
             // textBoxDataVali
@@ -73,9 +74,10 @@
             // labelDataIngre
             // 
             labelDataIngre.AutoSize = true;
+            labelDataIngre.Font = new Font("Nexa Heavy", 9F, FontStyle.Bold, GraphicsUnit.Point);
             labelDataIngre.Location = new Point(377, 13);
             labelDataIngre.Name = "labelDataIngre";
-            labelDataIngre.Size = new Size(94, 15);
+            labelDataIngre.Size = new Size(111, 16);
             labelDataIngre.TabIndex = 4;
             labelDataIngre.Text = "Data de Validade";
             // 
@@ -89,9 +91,10 @@
             // labelNomeIngre
             // 
             labelNomeIngre.AutoSize = true;
+            labelNomeIngre.Font = new Font("Nexa Heavy", 9F, FontStyle.Bold, GraphicsUnit.Point);
             labelNomeIngre.Location = new Point(137, 13);
             labelNomeIngre.Name = "labelNomeIngre";
-            labelNomeIngre.Size = new Size(40, 15);
+            labelNomeIngre.Size = new Size(41, 16);
             labelNomeIngre.TabIndex = 2;
             labelNomeIngre.Text = "Nome";
             // 
@@ -102,54 +105,43 @@
             textBox1.Size = new Size(79, 23);
             textBox1.TabIndex = 1;
             // 
-            // labelTituloIngredi
+            // userControl11
             // 
-            labelTituloIngredi.AutoSize = true;
-            labelTituloIngredi.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            labelTituloIngredi.Location = new Point(12, 9);
-            labelTituloIngredi.Name = "labelTituloIngredi";
-            labelTituloIngredi.Size = new Size(167, 21);
-            labelTituloIngredi.TabIndex = 2;
-            labelTituloIngredi.Text = "Cadastrar Ingredientes";
-            // 
-            // buttonCadastraIngre
-            // 
-            buttonCadastraIngre.BackColor = Color.FromArgb(128, 255, 128);
-            buttonCadastraIngre.Cursor = Cursors.Hand;
-            buttonCadastraIngre.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            buttonCadastraIngre.Location = new Point(65, 132);
-            buttonCadastraIngre.Name = "buttonCadastraIngre";
-            buttonCadastraIngre.Size = new Size(433, 40);
-            buttonCadastraIngre.TabIndex = 3;
-            buttonCadastraIngre.Text = "Salvar Cadastro";
-            buttonCadastraIngre.UseVisualStyleBackColor = false;
+            userControl11.BackColor = Color.Transparent;
+            userControl11.Location = new Point(41, 103);
+            userControl11.Name = "userControl11";
+            userControl11.Size = new Size(488, 93);
+            userControl11.TabIndex = 3;
+            userControl11.Load += userControl11_Load;
             // 
             // formIngredientes
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(563, 184);
-            Controls.Add(buttonCadastraIngre);
-            Controls.Add(labelTituloIngredi);
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            ClientSize = new Size(570, 196);
+            Controls.Add(userControl11);
             Controls.Add(panel1);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+            Icon = (Icon)resources.GetObject("$this.Icon");
+            MaximizeBox = false;
             Name = "formIngredientes";
             Text = "Cadastro de Ingredientes";
+            Load += formIngredientes_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
 
         private Label labelCodigoIngre;
         private Panel panel1;
-        private Label labelTituloIngredi;
         private TextBox textBoxDataVali;
         private Label labelDataIngre;
         private TextBox textBoxNomeIngre;
         private Label labelNomeIngre;
         private TextBox textBox1;
-        private Button buttonCadastraIngre;
+        private UserControl1 userControl11;
     }
 }
