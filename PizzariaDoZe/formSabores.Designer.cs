@@ -47,12 +47,12 @@
             checkBoxTomate = new CheckBox();
             pictureBoxPizza = new PictureBox();
             labelIngredientes = new Label();
-            comboBoxCategoriaPizza = new ComboBox();
-            labelCategoriaPizza = new Label();
-            comboBoxTipoPizza = new ComboBox();
-            labelTipoPizza = new Label();
-            textBoxCodigSabores = new TextBox();
-            labelCodigSabor = new Label();
+            comboBoxCategoria = new ComboBox();
+            labelCategoria = new Label();
+            comboBoxTipo = new ComboBox();
+            labelTipo = new Label();
+            textBoxCodigo = new TextBox();
+            labelCodigo = new Label();
             userControl11 = new UserControl1();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBoxPizza).BeginInit();
@@ -78,12 +78,12 @@
             panel1.Controls.Add(checkBoxTomate);
             panel1.Controls.Add(pictureBoxPizza);
             panel1.Controls.Add(labelIngredientes);
-            panel1.Controls.Add(comboBoxCategoriaPizza);
-            panel1.Controls.Add(labelCategoriaPizza);
-            panel1.Controls.Add(comboBoxTipoPizza);
-            panel1.Controls.Add(labelTipoPizza);
-            panel1.Controls.Add(textBoxCodigSabores);
-            panel1.Controls.Add(labelCodigSabor);
+            panel1.Controls.Add(comboBoxCategoria);
+            panel1.Controls.Add(labelCategoria);
+            panel1.Controls.Add(comboBoxTipo);
+            panel1.Controls.Add(labelTipo);
+            panel1.Controls.Add(textBoxCodigo);
+            panel1.Controls.Add(labelCodigo);
             panel1.Location = new Point(16, 10);
             panel1.Name = "panel1";
             panel1.Size = new Size(567, 262);
@@ -275,62 +275,62 @@
             labelIngredientes.TabIndex = 6;
             labelIngredientes.Text = "Ingredientes";
             // 
-            // comboBoxCategoriaPizza
+            // comboBoxCategoria
             // 
-            comboBoxCategoriaPizza.AutoCompleteCustomSource.AddRange(new string[] { "Tradicional", "Premium" });
-            comboBoxCategoriaPizza.FormattingEnabled = true;
-            comboBoxCategoriaPizza.Items.AddRange(new object[] { "Tradicional", "Premium" });
-            comboBoxCategoriaPizza.Location = new Point(349, 28);
-            comboBoxCategoriaPizza.Name = "comboBoxCategoriaPizza";
-            comboBoxCategoriaPizza.Size = new Size(132, 23);
-            comboBoxCategoriaPizza.TabIndex = 5;
+            comboBoxCategoria.AutoCompleteCustomSource.AddRange(new string[] { "Tradicional", "Premium" });
+            comboBoxCategoria.FormattingEnabled = true;
+            comboBoxCategoria.Items.AddRange(new object[] { "Tradicional", "Premium" });
+            comboBoxCategoria.Location = new Point(349, 28);
+            comboBoxCategoria.Name = "comboBoxCategoria";
+            comboBoxCategoria.Size = new Size(132, 23);
+            comboBoxCategoria.TabIndex = 5;
             // 
-            // labelCategoriaPizza
+            // labelCategoria
             // 
-            labelCategoriaPizza.AutoSize = true;
-            labelCategoriaPizza.Font = new Font("Nexa Heavy", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            labelCategoriaPizza.Location = new Point(349, 10);
-            labelCategoriaPizza.Name = "labelCategoriaPizza";
-            labelCategoriaPizza.Size = new Size(66, 16);
-            labelCategoriaPizza.TabIndex = 4;
-            labelCategoriaPizza.Text = "Categoria";
+            labelCategoria.AutoSize = true;
+            labelCategoria.Font = new Font("Nexa Heavy", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            labelCategoria.Location = new Point(349, 10);
+            labelCategoria.Name = "labelCategoria";
+            labelCategoria.Size = new Size(66, 16);
+            labelCategoria.TabIndex = 4;
+            labelCategoria.Text = "Categoria";
             // 
-            // comboBoxTipoPizza
+            // comboBoxTipo
             // 
-            comboBoxTipoPizza.AutoCompleteCustomSource.AddRange(new string[] { "Doce", "Salgada" });
-            comboBoxTipoPizza.FormattingEnabled = true;
-            comboBoxTipoPizza.Items.AddRange(new object[] { "Doce", "Salgada" });
-            comboBoxTipoPizza.Location = new Point(144, 28);
-            comboBoxTipoPizza.Name = "comboBoxTipoPizza";
-            comboBoxTipoPizza.Size = new Size(133, 23);
-            comboBoxTipoPizza.TabIndex = 3;
+            comboBoxTipo.AutoCompleteCustomSource.AddRange(new string[] { "Doce", "Salgada" });
+            comboBoxTipo.FormattingEnabled = true;
+            comboBoxTipo.Items.AddRange(new object[] { "Doce", "Salgada" });
+            comboBoxTipo.Location = new Point(144, 28);
+            comboBoxTipo.Name = "comboBoxTipo";
+            comboBoxTipo.Size = new Size(133, 23);
+            comboBoxTipo.TabIndex = 3;
             // 
-            // labelTipoPizza
+            // labelTipo
             // 
-            labelTipoPizza.AutoSize = true;
-            labelTipoPizza.Font = new Font("Nexa Heavy", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            labelTipoPizza.Location = new Point(155, 10);
-            labelTipoPizza.Name = "labelTipoPizza";
-            labelTipoPizza.Size = new Size(32, 16);
-            labelTipoPizza.TabIndex = 2;
-            labelTipoPizza.Text = "Tipo";
+            labelTipo.AutoSize = true;
+            labelTipo.Font = new Font("Nexa Heavy", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            labelTipo.Location = new Point(155, 10);
+            labelTipo.Name = "labelTipo";
+            labelTipo.Size = new Size(32, 16);
+            labelTipo.TabIndex = 2;
+            labelTipo.Text = "Tipo";
             // 
-            // textBoxCodigSabores
+            // textBoxCodigo
             // 
-            textBoxCodigSabores.Location = new Point(14, 28);
-            textBoxCodigSabores.Name = "textBoxCodigSabores";
-            textBoxCodigSabores.Size = new Size(100, 23);
-            textBoxCodigSabores.TabIndex = 1;
+            textBoxCodigo.Location = new Point(14, 28);
+            textBoxCodigo.Name = "textBoxCodigo";
+            textBoxCodigo.Size = new Size(100, 23);
+            textBoxCodigo.TabIndex = 1;
             // 
-            // labelCodigSabor
+            // labelCodigo
             // 
-            labelCodigSabor.AutoSize = true;
-            labelCodigSabor.Font = new Font("Nexa Heavy", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            labelCodigSabor.Location = new Point(14, 10);
-            labelCodigSabor.Name = "labelCodigSabor";
-            labelCodigSabor.Size = new Size(47, 16);
-            labelCodigSabor.TabIndex = 0;
-            labelCodigSabor.Text = "Código";
+            labelCodigo.AutoSize = true;
+            labelCodigo.Font = new Font("Nexa Heavy", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            labelCodigo.Location = new Point(14, 10);
+            labelCodigo.Name = "labelCodigo";
+            labelCodigo.Size = new Size(47, 16);
+            labelCodigo.TabIndex = 0;
+            labelCodigo.Text = "Código";
             // 
             // userControl11
             // 
@@ -366,12 +366,12 @@
         private Panel panel1;
         private PictureBox pictureBoxPizza;
         private Label labelIngredientes;
-        private ComboBox comboBoxCategoriaPizza;
-        private Label labelCategoriaPizza;
-        private ComboBox comboBoxTipoPizza;
-        private Label labelTipoPizza;
-        private TextBox textBoxCodigSabores;
-        private Label labelCodigSabor;
+        private ComboBox comboBoxCategoria;
+        private Label labelCategoria;
+        private ComboBox comboBoxTipo;
+        private Label labelTipo;
+        private TextBox textBoxCodigo;
+        private Label labelCodigo;
         private UserControl1 userControl11;
         private CheckBox checkBoxRucula;
         private CheckBox checkBoxPresunto;

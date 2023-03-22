@@ -30,13 +30,13 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formFunci));
             panelFunci1 = new Panel();
-            textBoxObservFunci = new TextBox();
+            textBoxObservacoes = new TextBox();
             botaoEnderecoFunci = new Button();
-            labelObservFunci = new Label();
-            textBox3 = new TextBox();
-            labelEmailFunci = new Label();
-            textBoxTelefoFunci = new TextBox();
-            labelTelefoneFunc = new Label();
+            labelObservacoes = new Label();
+            textBoxEmail = new TextBox();
+            labelEmail = new Label();
+            textBoxTelefone = new TextBox();
+            labelTelefone = new Label();
             textBoxValCnh = new TextBox();
             labelValCnh = new Label();
             radioCnhNao = new RadioButton();
@@ -46,13 +46,13 @@
             labelGrupo = new Label();
             textBoxSenha = new TextBox();
             labelSenha = new Label();
-            textBox2 = new TextBox();
+            textBoxMatricula = new TextBox();
             labelMatricula = new Label();
-            textBox1 = new TextBox();
+            textBoxCPF = new TextBox();
             labelCpf = new Label();
             textBoxNome = new TextBox();
             labelNome = new Label();
-            textBoxCod = new TextBox();
+            textBoxCodigo = new TextBox();
             labelCodigo = new Label();
             userControl11 = new UserControl1();
             panelFunci1.SuspendLayout();
@@ -61,13 +61,13 @@
             // panelFunci1
             // 
             panelFunci1.BackColor = Color.Silver;
-            panelFunci1.Controls.Add(textBoxObservFunci);
+            panelFunci1.Controls.Add(textBoxObservacoes);
             panelFunci1.Controls.Add(botaoEnderecoFunci);
-            panelFunci1.Controls.Add(labelObservFunci);
-            panelFunci1.Controls.Add(textBox3);
-            panelFunci1.Controls.Add(labelEmailFunci);
-            panelFunci1.Controls.Add(textBoxTelefoFunci);
-            panelFunci1.Controls.Add(labelTelefoneFunc);
+            panelFunci1.Controls.Add(labelObservacoes);
+            panelFunci1.Controls.Add(textBoxEmail);
+            panelFunci1.Controls.Add(labelEmail);
+            panelFunci1.Controls.Add(textBoxTelefone);
+            panelFunci1.Controls.Add(labelTelefone);
             panelFunci1.Controls.Add(textBoxValCnh);
             panelFunci1.Controls.Add(labelValCnh);
             panelFunci1.Controls.Add(radioCnhNao);
@@ -77,25 +77,26 @@
             panelFunci1.Controls.Add(labelGrupo);
             panelFunci1.Controls.Add(textBoxSenha);
             panelFunci1.Controls.Add(labelSenha);
-            panelFunci1.Controls.Add(textBox2);
+            panelFunci1.Controls.Add(textBoxMatricula);
             panelFunci1.Controls.Add(labelMatricula);
-            panelFunci1.Controls.Add(textBox1);
+            panelFunci1.Controls.Add(textBoxCPF);
             panelFunci1.Controls.Add(labelCpf);
             panelFunci1.Controls.Add(textBoxNome);
             panelFunci1.Controls.Add(labelNome);
-            panelFunci1.Controls.Add(textBoxCod);
+            panelFunci1.Controls.Add(textBoxCodigo);
             panelFunci1.Controls.Add(labelCodigo);
             panelFunci1.Location = new Point(11, 22);
             panelFunci1.Name = "panelFunci1";
             panelFunci1.Size = new Size(916, 173);
             panelFunci1.TabIndex = 2;
+            panelFunci1.Paint += panelFunci1_Paint;
             // 
-            // textBoxObservFunci
+            // textBoxObservacoes
             // 
-            textBoxObservFunci.Location = new Point(14, 141);
-            textBoxObservFunci.Name = "textBoxObservFunci";
-            textBoxObservFunci.Size = new Size(522, 23);
-            textBoxObservFunci.TabIndex = 22;
+            textBoxObservacoes.Location = new Point(14, 141);
+            textBoxObservacoes.Name = "textBoxObservacoes";
+            textBoxObservacoes.Size = new Size(522, 23);
+            textBoxObservacoes.TabIndex = 22;
             // 
             // botaoEnderecoFunci
             // 
@@ -111,50 +112,50 @@
             botaoEnderecoFunci.UseVisualStyleBackColor = false;
             botaoEnderecoFunci.Click += botaoEnderecoFunci_Click;
             // 
-            // labelObservFunci
+            // labelObservacoes
             // 
-            labelObservFunci.AutoSize = true;
-            labelObservFunci.Font = new Font("Nexa Heavy", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            labelObservFunci.Location = new Point(14, 122);
-            labelObservFunci.Name = "labelObservFunci";
-            labelObservFunci.Size = new Size(85, 16);
-            labelObservFunci.TabIndex = 21;
-            labelObservFunci.Text = "Observações";
+            labelObservacoes.AutoSize = true;
+            labelObservacoes.Font = new Font("Nexa Heavy", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            labelObservacoes.Location = new Point(14, 122);
+            labelObservacoes.Name = "labelObservacoes";
+            labelObservacoes.Size = new Size(85, 16);
+            labelObservacoes.TabIndex = 21;
+            labelObservacoes.Text = "Observações";
             // 
-            // textBox3
+            // textBoxEmail
             // 
-            textBox3.Location = new Point(494, 81);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(310, 23);
-            textBox3.TabIndex = 20;
+            textBoxEmail.Location = new Point(494, 81);
+            textBoxEmail.Name = "textBoxEmail";
+            textBoxEmail.Size = new Size(310, 23);
+            textBoxEmail.TabIndex = 20;
             // 
-            // labelEmailFunci
+            // labelEmail
             // 
-            labelEmailFunci.AutoSize = true;
-            labelEmailFunci.Font = new Font("Nexa Heavy", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            labelEmailFunci.Location = new Point(500, 63);
-            labelEmailFunci.Name = "labelEmailFunci";
-            labelEmailFunci.Size = new Size(40, 16);
-            labelEmailFunci.TabIndex = 19;
-            labelEmailFunci.Text = "Email";
-            labelEmailFunci.Click += label1_Click;
+            labelEmail.AutoSize = true;
+            labelEmail.Font = new Font("Nexa Heavy", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            labelEmail.Location = new Point(500, 63);
+            labelEmail.Name = "labelEmail";
+            labelEmail.Size = new Size(40, 16);
+            labelEmail.TabIndex = 19;
+            labelEmail.Text = "Email";
+            labelEmail.Click += label1_Click;
             // 
-            // textBoxTelefoFunci
+            // textBoxTelefone
             // 
-            textBoxTelefoFunci.Location = new Point(273, 81);
-            textBoxTelefoFunci.Name = "textBoxTelefoFunci";
-            textBoxTelefoFunci.Size = new Size(189, 23);
-            textBoxTelefoFunci.TabIndex = 18;
+            textBoxTelefone.Location = new Point(273, 81);
+            textBoxTelefone.Name = "textBoxTelefone";
+            textBoxTelefone.Size = new Size(189, 23);
+            textBoxTelefone.TabIndex = 18;
             // 
-            // labelTelefoneFunc
+            // labelTelefone
             // 
-            labelTelefoneFunc.AutoSize = true;
-            labelTelefoneFunc.Font = new Font("Nexa Heavy", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            labelTelefoneFunc.Location = new Point(273, 63);
-            labelTelefoneFunc.Name = "labelTelefoneFunc";
-            labelTelefoneFunc.Size = new Size(56, 16);
-            labelTelefoneFunc.TabIndex = 17;
-            labelTelefoneFunc.Text = "Telefone";
+            labelTelefone.AutoSize = true;
+            labelTelefone.Font = new Font("Nexa Heavy", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            labelTelefone.Location = new Point(273, 63);
+            labelTelefone.Name = "labelTelefone";
+            labelTelefone.Size = new Size(56, 16);
+            labelTelefone.TabIndex = 17;
+            labelTelefone.Text = "Telefone";
             // 
             // textBoxValCnh
             // 
@@ -244,12 +245,12 @@
             labelSenha.TabIndex = 8;
             labelSenha.Text = "Senha";
             // 
-            // textBox2
+            // textBoxMatricula
             // 
-            textBox2.Location = new Point(514, 27);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(78, 23);
-            textBox2.TabIndex = 7;
+            textBoxMatricula.Location = new Point(514, 27);
+            textBoxMatricula.Name = "textBoxMatricula";
+            textBoxMatricula.Size = new Size(78, 23);
+            textBoxMatricula.TabIndex = 7;
             // 
             // labelMatricula
             // 
@@ -261,12 +262,12 @@
             labelMatricula.TabIndex = 6;
             labelMatricula.Text = "Matrícula";
             // 
-            // textBox1
+            // textBoxCPF
             // 
-            textBox1.Location = new Point(358, 27);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(142, 23);
-            textBox1.TabIndex = 5;
+            textBoxCPF.Location = new Point(358, 27);
+            textBoxCPF.Name = "textBoxCPF";
+            textBoxCPF.Size = new Size(142, 23);
+            textBoxCPF.TabIndex = 5;
             // 
             // labelCpf
             // 
@@ -295,12 +296,13 @@
             labelNome.TabIndex = 2;
             labelNome.Text = "Nome";
             // 
-            // textBoxCod
+            // textBoxCodigo
             // 
-            textBoxCod.Location = new Point(14, 27);
-            textBoxCod.Name = "textBoxCod";
-            textBoxCod.Size = new Size(46, 23);
-            textBoxCod.TabIndex = 1;
+            textBoxCodigo.Location = new Point(14, 27);
+            textBoxCodigo.Name = "textBoxCodigo";
+            textBoxCodigo.Size = new Size(46, 23);
+            textBoxCodigo.TabIndex = 1;
+            textBoxCodigo.TextChanged += textBoxCod_TextChanged;
             // 
             // labelCodigo
             // 
@@ -343,28 +345,28 @@
         private Panel panelFunci1;
         private TextBox textBoxSenha;
         private Label labelSenha;
-        private TextBox textBox2;
+        private TextBox textBoxMatricula;
         private Label labelMatricula;
-        private TextBox textBox1;
+        private TextBox textBoxCPF;
         private Label labelCpf;
         private TextBox textBoxNome;
         private Label labelNome;
-        private TextBox textBoxCod;
+        private TextBox textBoxCodigo;
         private Label labelCodigo;
         private Label labelGrupo;
         private ComboBox comboBoxGrupo;
         private RadioButton radioCnhNao;
         private RadioButton radioCnhSim;
         private Label labelCnh;
-        private Label labelEmailFunci;
-        private TextBox textBoxTelefoFunci;
-        private Label labelTelefoneFunc;
+        private Label labelEmail;
+        private TextBox textBoxTelefone;
+        private Label labelTelefone;
         private TextBox textBoxValCnh;
         private Label labelValCnh;
-        private TextBox textBox3;
+        private TextBox textBoxEmail;
         private Button botaoEnderecoFunci;
-        private TextBox textBoxObservFunci;
-        private Label labelObservFunci;
+        private TextBox textBoxObservacoes;
+        private Label labelObservacoes;
         private UserControl1 userControl11;
     }
 }

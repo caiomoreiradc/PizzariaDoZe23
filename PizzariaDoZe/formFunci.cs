@@ -56,5 +56,15 @@ namespace PizzariaDoZe
         {
 
         }
+
+        private void textBoxCod_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panelFunci1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

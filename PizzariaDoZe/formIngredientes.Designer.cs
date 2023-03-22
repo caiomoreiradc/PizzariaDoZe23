@@ -29,81 +29,81 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formIngredientes));
-            labelCodigoIngre = new Label();
+            labelCodigo = new Label();
             panel1 = new Panel();
-            textBoxDataVali = new TextBox();
-            labelDataIngre = new Label();
-            textBoxNomeIngre = new TextBox();
-            labelNomeIngre = new Label();
-            textBox1 = new TextBox();
+            textBoxValidade = new TextBox();
+            labelValidade = new Label();
+            textBoxNome = new TextBox();
+            labelNome = new Label();
+            textBoxCodigo = new TextBox();
             userControl11 = new UserControl1();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
-            // labelCodigoIngre
+            // labelCodigo
             // 
-            labelCodigoIngre.AutoSize = true;
-            labelCodigoIngre.Font = new Font("Nexa Heavy", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            labelCodigoIngre.Location = new Point(16, 13);
-            labelCodigoIngre.Name = "labelCodigoIngre";
-            labelCodigoIngre.Size = new Size(47, 16);
-            labelCodigoIngre.TabIndex = 0;
-            labelCodigoIngre.Text = "Código";
+            labelCodigo.AutoSize = true;
+            labelCodigo.Font = new Font("Nexa Heavy", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            labelCodigo.Location = new Point(16, 13);
+            labelCodigo.Name = "labelCodigo";
+            labelCodigo.Size = new Size(47, 16);
+            labelCodigo.TabIndex = 0;
+            labelCodigo.Text = "Código";
             // 
             // panel1
             // 
             panel1.BackColor = Color.Silver;
-            panel1.Controls.Add(textBoxDataVali);
-            panel1.Controls.Add(labelDataIngre);
-            panel1.Controls.Add(textBoxNomeIngre);
-            panel1.Controls.Add(labelNomeIngre);
-            panel1.Controls.Add(textBox1);
-            panel1.Controls.Add(labelCodigoIngre);
+            panel1.Controls.Add(textBoxValidade);
+            panel1.Controls.Add(labelValidade);
+            panel1.Controls.Add(textBoxNome);
+            panel1.Controls.Add(labelNome);
+            panel1.Controls.Add(textBoxCodigo);
+            panel1.Controls.Add(labelCodigo);
             panel1.Location = new Point(10, 10);
             panel1.Name = "panel1";
             panel1.Size = new Size(550, 87);
             panel1.TabIndex = 1;
             // 
-            // textBoxDataVali
+            // textBoxValidade
             // 
-            textBoxDataVali.Location = new Point(368, 31);
-            textBoxDataVali.Name = "textBoxDataVali";
-            textBoxDataVali.Size = new Size(154, 23);
-            textBoxDataVali.TabIndex = 5;
+            textBoxValidade.Location = new Point(368, 31);
+            textBoxValidade.Name = "textBoxValidade";
+            textBoxValidade.Size = new Size(154, 23);
+            textBoxValidade.TabIndex = 5;
             // 
-            // labelDataIngre
+            // labelValidade
             // 
-            labelDataIngre.AutoSize = true;
-            labelDataIngre.Font = new Font("Nexa Heavy", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            labelDataIngre.Location = new Point(377, 13);
-            labelDataIngre.Name = "labelDataIngre";
-            labelDataIngre.Size = new Size(111, 16);
-            labelDataIngre.TabIndex = 4;
-            labelDataIngre.Text = "Data de Validade";
+            labelValidade.AutoSize = true;
+            labelValidade.Font = new Font("Nexa Heavy", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            labelValidade.Location = new Point(377, 13);
+            labelValidade.Name = "labelValidade";
+            labelValidade.Size = new Size(111, 16);
+            labelValidade.TabIndex = 4;
+            labelValidade.Text = "Data de Validade";
             // 
-            // textBoxNomeIngre
+            // textBoxNome
             // 
-            textBoxNomeIngre.Location = new Point(137, 31);
-            textBoxNomeIngre.Name = "textBoxNomeIngre";
-            textBoxNomeIngre.Size = new Size(208, 23);
-            textBoxNomeIngre.TabIndex = 3;
+            textBoxNome.Location = new Point(137, 31);
+            textBoxNome.Name = "textBoxNome";
+            textBoxNome.Size = new Size(208, 23);
+            textBoxNome.TabIndex = 3;
             // 
-            // labelNomeIngre
+            // labelNome
             // 
-            labelNomeIngre.AutoSize = true;
-            labelNomeIngre.Font = new Font("Nexa Heavy", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            labelNomeIngre.Location = new Point(137, 13);
-            labelNomeIngre.Name = "labelNomeIngre";
-            labelNomeIngre.Size = new Size(41, 16);
-            labelNomeIngre.TabIndex = 2;
-            labelNomeIngre.Text = "Nome";
+            labelNome.AutoSize = true;
+            labelNome.Font = new Font("Nexa Heavy", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            labelNome.Location = new Point(137, 13);
+            labelNome.Name = "labelNome";
+            labelNome.Size = new Size(41, 16);
+            labelNome.TabIndex = 2;
+            labelNome.Text = "Nome";
             // 
-            // textBox1
+            // textBoxCodigo
             // 
-            textBox1.Location = new Point(16, 31);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(79, 23);
-            textBox1.TabIndex = 1;
+            textBoxCodigo.Location = new Point(16, 31);
+            textBoxCodigo.Name = "textBoxCodigo";
+            textBoxCodigo.Size = new Size(79, 23);
+            textBoxCodigo.TabIndex = 1;
             // 
             // userControl11
             // 
@@ -135,13 +135,13 @@
 
         #endregion
 
-        private Label labelCodigoIngre;
+        private Label labelCodigo;
         private Panel panel1;
-        private TextBox textBoxDataVali;
-        private Label labelDataIngre;
-        private TextBox textBoxNomeIngre;
-        private Label labelNomeIngre;
-        private TextBox textBox1;
+        private TextBox textBoxValidade;
+        private Label labelValidade;
+        private TextBox textBoxNome;
+        private Label labelNome;
+        private TextBox textBoxCodigo;
         private UserControl1 userControl11;
     }
 }
