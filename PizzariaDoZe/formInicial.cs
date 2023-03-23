@@ -59,5 +59,19 @@ namespace PizzariaDoZe
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            formValores valores = new formValores();
+            valores.StartPosition = FormStartPosition.CenterScreen;
+            valores.Show();
+        }
+
+        private void botaoProdutos_Click(object sender, EventArgs e)
+        {
+            formProdutos produtos = new formProdutos();
+            produtos.StartPosition = FormStartPosition.CenterScreen;
+            produtos.Show();
+        }
     }
 }

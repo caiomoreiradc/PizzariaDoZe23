@@ -10,38 +10,18 @@ using System.Windows.Forms;
 
 namespace PizzariaDoZe
 {
-    public partial class formFunciEndereco : Form
+    public partial class formValores : Form
     {
-        public formFunciEndereco()
+        public formValores()
         {
             InitializeComponent();
             this.ControlBox = false; //REMOVE BOTÕES DE MINIZAR E FECHAR
-
             userControl.buttonSair.Click += buttonSair_Click;
         }
+
         public void buttonSair_Click(object sender, EventArgs e)
         {
             Close();
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void formFunciEndereco_Load(object sender, EventArgs e)
-        {
-
         }
 
         private void userControl11_Load(object sender, EventArgs e)
@@ -49,12 +29,7 @@ namespace PizzariaDoZe
 
         }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBoxUFFunci_SelectedIndexChanged(object sender, EventArgs e)
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

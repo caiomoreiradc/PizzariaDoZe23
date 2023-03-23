@@ -30,14 +30,14 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formIngredientes));
             labelCodigo = new Label();
-            panel1 = new Panel();
+            panel = new Panel();
             textBoxValidade = new TextBox();
             labelValidade = new Label();
             textBoxNome = new TextBox();
             labelNome = new Label();
             textBoxCodigo = new TextBox();
-            userControl11 = new UserControl1();
-            panel1.SuspendLayout();
+            userControl = new UserControl1();
+            panel.SuspendLayout();
             SuspendLayout();
             // 
             // labelCodigo
@@ -50,19 +50,19 @@
             labelCodigo.TabIndex = 0;
             labelCodigo.Text = "Código";
             // 
-            // panel1
+            // panel
             // 
-            panel1.BackColor = Color.Silver;
-            panel1.Controls.Add(textBoxValidade);
-            panel1.Controls.Add(labelValidade);
-            panel1.Controls.Add(textBoxNome);
-            panel1.Controls.Add(labelNome);
-            panel1.Controls.Add(textBoxCodigo);
-            panel1.Controls.Add(labelCodigo);
-            panel1.Location = new Point(10, 10);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(550, 87);
-            panel1.TabIndex = 1;
+            panel.BackColor = Color.Silver;
+            panel.Controls.Add(textBoxValidade);
+            panel.Controls.Add(labelValidade);
+            panel.Controls.Add(textBoxNome);
+            panel.Controls.Add(labelNome);
+            panel.Controls.Add(textBoxCodigo);
+            panel.Controls.Add(labelCodigo);
+            panel.Location = new Point(10, 10);
+            panel.Name = "panel";
+            panel.Size = new Size(550, 87);
+            panel.TabIndex = 1;
             // 
             // textBoxValidade
             // 
@@ -105,43 +105,44 @@
             textBoxCodigo.Size = new Size(79, 23);
             textBoxCodigo.TabIndex = 1;
             // 
-            // userControl11
+            // userControl
             // 
-            userControl11.BackColor = Color.Transparent;
-            userControl11.Location = new Point(41, 103);
-            userControl11.Name = "userControl11";
-            userControl11.Size = new Size(488, 93);
-            userControl11.TabIndex = 3;
-            userControl11.Load += userControl11_Load;
+            userControl.BackColor = Color.Transparent;
+            userControl.Location = new Point(44, 90);
+            userControl.Margin = new Padding(3, 4, 3, 4);
+            userControl.Name = "userControl";
+            userControl.Size = new Size(488, 93);
+            userControl.TabIndex = 3;
+            userControl.Load += userControl11_Load;
             // 
             // formIngredientes
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
-            ClientSize = new Size(570, 196);
-            Controls.Add(userControl11);
-            Controls.Add(panel1);
+            ClientSize = new Size(570, 184);
+            Controls.Add(panel);
+            Controls.Add(userControl);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Icon = (Icon)resources.GetObject("$this.Icon");
             MaximizeBox = false;
             Name = "formIngredientes";
             Text = "Cadastro de Ingredientes";
             Load += formIngredientes_Load;
-            panel1.ResumeLayout(false);
-            panel1.PerformLayout();
+            panel.ResumeLayout(false);
+            panel.PerformLayout();
             ResumeLayout(false);
         }
 
         #endregion
 
         private Label labelCodigo;
-        private Panel panel1;
+        private Panel panel;
         private TextBox textBoxValidade;
         private Label labelValidade;
         private TextBox textBoxNome;
         private Label labelNome;
         private TextBox textBoxCodigo;
-        private UserControl1 userControl11;
+        private UserControl1 userControl;
     }
 }

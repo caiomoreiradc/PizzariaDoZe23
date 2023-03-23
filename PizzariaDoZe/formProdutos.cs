@@ -10,13 +10,13 @@ using System.Windows.Forms;
 
 namespace PizzariaDoZe
 {
-    public partial class formIngredientes : Form
+    public partial class formProdutos : Form
     {
-        public formIngredientes()
+        public formProdutos()
         {
             InitializeComponent();
             this.ControlBox = false; //REMOVE BOTÕES DE MINIZAR E FECHAR
-            userControl.buttonSair.Click += buttonSair_Click;
+            userControl.buttonSair.Click += buttonSair_Click; //BOTAO SAIR
         }
 
         public void buttonSair_Click(object sender, EventArgs e)
@@ -24,14 +24,12 @@ namespace PizzariaDoZe
             Close();
         }
 
-
-
         private void userControl11_Load(object sender, EventArgs e)
         {
 
         }
 
-        private void formIngredientes_Load(object sender, EventArgs e)
+        private void panel_Paint(object sender, PaintEventArgs e)
         {
 
         }

@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formFunci));
-            panelFunci1 = new Panel();
+            panel = new Panel();
             textBoxObservacoes = new TextBox();
             botaoEnderecoFunci = new Button();
             labelObservacoes = new Label();
@@ -54,42 +54,42 @@
             labelNome = new Label();
             textBoxCodigo = new TextBox();
             labelCodigo = new Label();
-            userControl11 = new UserControl1();
-            panelFunci1.SuspendLayout();
+            userControl = new UserControl1();
+            panel.SuspendLayout();
             SuspendLayout();
             // 
-            // panelFunci1
+            // panel
             // 
-            panelFunci1.BackColor = Color.Silver;
-            panelFunci1.Controls.Add(textBoxObservacoes);
-            panelFunci1.Controls.Add(botaoEnderecoFunci);
-            panelFunci1.Controls.Add(labelObservacoes);
-            panelFunci1.Controls.Add(textBoxEmail);
-            panelFunci1.Controls.Add(labelEmail);
-            panelFunci1.Controls.Add(textBoxTelefone);
-            panelFunci1.Controls.Add(labelTelefone);
-            panelFunci1.Controls.Add(textBoxValCnh);
-            panelFunci1.Controls.Add(labelValCnh);
-            panelFunci1.Controls.Add(radioCnhNao);
-            panelFunci1.Controls.Add(radioCnhSim);
-            panelFunci1.Controls.Add(labelCnh);
-            panelFunci1.Controls.Add(comboBoxGrupo);
-            panelFunci1.Controls.Add(labelGrupo);
-            panelFunci1.Controls.Add(textBoxSenha);
-            panelFunci1.Controls.Add(labelSenha);
-            panelFunci1.Controls.Add(textBoxMatricula);
-            panelFunci1.Controls.Add(labelMatricula);
-            panelFunci1.Controls.Add(textBoxCPF);
-            panelFunci1.Controls.Add(labelCpf);
-            panelFunci1.Controls.Add(textBoxNome);
-            panelFunci1.Controls.Add(labelNome);
-            panelFunci1.Controls.Add(textBoxCodigo);
-            panelFunci1.Controls.Add(labelCodigo);
-            panelFunci1.Location = new Point(11, 22);
-            panelFunci1.Name = "panelFunci1";
-            panelFunci1.Size = new Size(916, 173);
-            panelFunci1.TabIndex = 2;
-            panelFunci1.Paint += panelFunci1_Paint;
+            panel.BackColor = Color.Silver;
+            panel.Controls.Add(textBoxObservacoes);
+            panel.Controls.Add(botaoEnderecoFunci);
+            panel.Controls.Add(labelObservacoes);
+            panel.Controls.Add(textBoxEmail);
+            panel.Controls.Add(labelEmail);
+            panel.Controls.Add(textBoxTelefone);
+            panel.Controls.Add(labelTelefone);
+            panel.Controls.Add(textBoxValCnh);
+            panel.Controls.Add(labelValCnh);
+            panel.Controls.Add(radioCnhNao);
+            panel.Controls.Add(radioCnhSim);
+            panel.Controls.Add(labelCnh);
+            panel.Controls.Add(comboBoxGrupo);
+            panel.Controls.Add(labelGrupo);
+            panel.Controls.Add(textBoxSenha);
+            panel.Controls.Add(labelSenha);
+            panel.Controls.Add(textBoxMatricula);
+            panel.Controls.Add(labelMatricula);
+            panel.Controls.Add(textBoxCPF);
+            panel.Controls.Add(labelCpf);
+            panel.Controls.Add(textBoxNome);
+            panel.Controls.Add(labelNome);
+            panel.Controls.Add(textBoxCodigo);
+            panel.Controls.Add(labelCodigo);
+            panel.Location = new Point(11, 22);
+            panel.Name = "panel";
+            panel.Size = new Size(916, 173);
+            panel.TabIndex = 2;
+            panel.Paint += panelFunci1_Paint;
             // 
             // textBoxObservacoes
             // 
@@ -104,9 +104,9 @@
             botaoEnderecoFunci.Cursor = Cursors.Hand;
             botaoEnderecoFunci.FlatStyle = FlatStyle.Flat;
             botaoEnderecoFunci.Font = new Font("Nexa Heavy", 11.999999F, FontStyle.Bold, GraphicsUnit.Point);
-            botaoEnderecoFunci.Location = new Point(559, 123);
+            botaoEnderecoFunci.Location = new Point(559, 110);
             botaoEnderecoFunci.Name = "botaoEnderecoFunci";
-            botaoEnderecoFunci.Size = new Size(345, 39);
+            botaoEnderecoFunci.Size = new Size(345, 52);
             botaoEnderecoFunci.TabIndex = 3;
             botaoEnderecoFunci.Text = "Cadastrar Endereço";
             botaoEnderecoFunci.UseVisualStyleBackColor = false;
@@ -124,16 +124,16 @@
             // 
             // textBoxEmail
             // 
-            textBoxEmail.Location = new Point(494, 81);
+            textBoxEmail.Location = new Point(559, 81);
             textBoxEmail.Name = "textBoxEmail";
-            textBoxEmail.Size = new Size(310, 23);
+            textBoxEmail.Size = new Size(288, 23);
             textBoxEmail.TabIndex = 20;
             // 
             // labelEmail
             // 
             labelEmail.AutoSize = true;
             labelEmail.Font = new Font("Nexa Heavy", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            labelEmail.Location = new Point(500, 63);
+            labelEmail.Location = new Point(565, 63);
             labelEmail.Name = "labelEmail";
             labelEmail.Size = new Size(40, 16);
             labelEmail.TabIndex = 19;
@@ -142,7 +142,7 @@
             // 
             // textBoxTelefone
             // 
-            textBoxTelefone.Location = new Point(273, 81);
+            textBoxTelefone.Location = new Point(335, 81);
             textBoxTelefone.Name = "textBoxTelefone";
             textBoxTelefone.Size = new Size(189, 23);
             textBoxTelefone.TabIndex = 18;
@@ -151,7 +151,7 @@
             // 
             labelTelefone.AutoSize = true;
             labelTelefone.Font = new Font("Nexa Heavy", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            labelTelefone.Location = new Point(273, 63);
+            labelTelefone.Location = new Point(335, 63);
             labelTelefone.Name = "labelTelefone";
             labelTelefone.Size = new Size(56, 16);
             labelTelefone.TabIndex = 17;
@@ -159,7 +159,7 @@
             // 
             // textBoxValCnh
             // 
-            textBoxValCnh.Location = new Point(157, 81);
+            textBoxValCnh.Location = new Point(193, 81);
             textBoxValCnh.Name = "textBoxValCnh";
             textBoxValCnh.Size = new Size(100, 23);
             textBoxValCnh.TabIndex = 16;
@@ -168,7 +168,7 @@
             // 
             labelValCnh.AutoSize = true;
             labelValCnh.Font = new Font("Nexa Heavy", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            labelValCnh.Location = new Point(157, 63);
+            labelValCnh.Location = new Point(193, 63);
             labelValCnh.Name = "labelValCnh";
             labelValCnh.Size = new Size(89, 16);
             labelValCnh.TabIndex = 15;
@@ -178,7 +178,7 @@
             // 
             radioCnhNao.AutoSize = true;
             radioCnhNao.Font = new Font("Nexa Heavy", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            radioCnhNao.Location = new Point(98, 110);
+            radioCnhNao.Location = new Point(140, 110);
             radioCnhNao.Name = "radioCnhNao";
             radioCnhNao.Size = new Size(49, 20);
             radioCnhNao.TabIndex = 14;
@@ -190,7 +190,7 @@
             // 
             radioCnhSim.AutoSize = true;
             radioCnhSim.Font = new Font("Nexa Heavy", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            radioCnhSim.Location = new Point(98, 85);
+            radioCnhSim.Location = new Point(140, 85);
             radioCnhSim.Name = "radioCnhSim";
             radioCnhSim.Size = new Size(47, 20);
             radioCnhSim.TabIndex = 13;
@@ -202,7 +202,7 @@
             // 
             labelCnh.AutoSize = true;
             labelCnh.Font = new Font("Nexa Heavy", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            labelCnh.Location = new Point(98, 63);
+            labelCnh.Location = new Point(140, 63);
             labelCnh.Name = "labelCnh";
             labelCnh.Size = new Size(33, 16);
             labelCnh.TabIndex = 12;
@@ -210,11 +210,12 @@
             // 
             // comboBoxGrupo
             // 
+            comboBoxGrupo.Font = new Font("Nexa Heavy", 9.749999F, FontStyle.Bold, GraphicsUnit.Point);
             comboBoxGrupo.FormattingEnabled = true;
             comboBoxGrupo.Items.AddRange(new object[] { "Admin", "Atendente", "Entregador" });
             comboBoxGrupo.Location = new Point(14, 81);
             comboBoxGrupo.Name = "comboBoxGrupo";
-            comboBoxGrupo.Size = new Size(75, 23);
+            comboBoxGrupo.Size = new Size(120, 25);
             comboBoxGrupo.TabIndex = 11;
             comboBoxGrupo.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
             // 
@@ -232,7 +233,7 @@
             // 
             textBoxSenha.Location = new Point(653, 27);
             textBoxSenha.Name = "textBoxSenha";
-            textBoxSenha.Size = new Size(252, 23);
+            textBoxSenha.Size = new Size(241, 23);
             textBoxSenha.TabIndex = 9;
             // 
             // labelSenha
@@ -249,7 +250,7 @@
             // 
             textBoxMatricula.Location = new Point(514, 27);
             textBoxMatricula.Name = "textBoxMatricula";
-            textBoxMatricula.Size = new Size(78, 23);
+            textBoxMatricula.Size = new Size(97, 23);
             textBoxMatricula.TabIndex = 7;
             // 
             // labelMatricula
@@ -314,35 +315,37 @@
             labelCodigo.TabIndex = 0;
             labelCodigo.Text = "Código";
             // 
-            // userControl11
+            // userControl
             // 
-            userControl11.BackColor = Color.Transparent;
-            userControl11.Location = new Point(231, 201);
-            userControl11.Name = "userControl11";
-            userControl11.Size = new Size(477, 91);
-            userControl11.TabIndex = 3;
-            userControl11.Load += userControl11_Load;
+            userControl.BackColor = Color.Transparent;
+            userControl.Location = new Point(231, 190);
+            userControl.Margin = new Padding(3, 4, 3, 4);
+            userControl.Name = "userControl";
+            userControl.Size = new Size(477, 91);
+            userControl.TabIndex = 3;
+            userControl.Load += userControl11_Load;
             // 
             // formFunci
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
-            ClientSize = new Size(939, 294);
-            Controls.Add(userControl11);
-            Controls.Add(panelFunci1);
+            ClientSize = new Size(939, 283);
+            Controls.Add(panel);
+            Controls.Add(userControl);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Icon = (Icon)resources.GetObject("$this.Icon");
             MaximizeBox = false;
             Name = "formFunci";
             Text = "Cadastro de Funcionários";
-            panelFunci1.ResumeLayout(false);
-            panelFunci1.PerformLayout();
+            Load += formFunci_Load;
+            panel.ResumeLayout(false);
+            panel.PerformLayout();
             ResumeLayout(false);
         }
 
         #endregion
-        private Panel panelFunci1;
+        private Panel panel;
         private TextBox textBoxSenha;
         private Label labelSenha;
         private TextBox textBoxMatricula;
@@ -367,6 +370,6 @@
         private Button botaoEnderecoFunci;
         private TextBox textBoxObservacoes;
         private Label labelObservacoes;
-        private UserControl1 userControl11;
+        private UserControl1 userControl;
     }
 }

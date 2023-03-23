@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formFunciEndereco));
-            panel1 = new Panel();
+            panel = new Panel();
             comboBoxPais = new ComboBox();
             comboBoxUF = new ComboBox();
             labelPais = new Label();
@@ -46,34 +46,34 @@
             labelLogradouro = new Label();
             textBoxCep = new TextBox();
             labelCep = new Label();
-            userControl11 = new UserControl1();
-            panel1.SuspendLayout();
+            userControl = new UserControl1();
+            panel.SuspendLayout();
             SuspendLayout();
             // 
-            // panel1
+            // panel
             // 
-            panel1.BackColor = Color.Silver;
-            panel1.Controls.Add(comboBoxPais);
-            panel1.Controls.Add(comboBoxUF);
-            panel1.Controls.Add(labelPais);
-            panel1.Controls.Add(labelUF);
-            panel1.Controls.Add(textBoxCidade);
-            panel1.Controls.Add(labelCidade);
-            panel1.Controls.Add(textBoxComplemento);
-            panel1.Controls.Add(labelComplemento);
-            panel1.Controls.Add(textBoxBairro);
-            panel1.Controls.Add(labelBairro);
-            panel1.Controls.Add(textBoxNumero);
-            panel1.Controls.Add(labelNumero);
-            panel1.Controls.Add(textBoxLogradouro);
-            panel1.Controls.Add(labelLogradouro);
-            panel1.Controls.Add(textBoxCep);
-            panel1.Controls.Add(labelCep);
-            panel1.Location = new Point(29, 18);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(694, 160);
-            panel1.TabIndex = 0;
-            panel1.Paint += panel1_Paint;
+            panel.BackColor = Color.Silver;
+            panel.Controls.Add(comboBoxPais);
+            panel.Controls.Add(comboBoxUF);
+            panel.Controls.Add(labelPais);
+            panel.Controls.Add(labelUF);
+            panel.Controls.Add(textBoxCidade);
+            panel.Controls.Add(labelCidade);
+            panel.Controls.Add(textBoxComplemento);
+            panel.Controls.Add(labelComplemento);
+            panel.Controls.Add(textBoxBairro);
+            panel.Controls.Add(labelBairro);
+            panel.Controls.Add(textBoxNumero);
+            panel.Controls.Add(labelNumero);
+            panel.Controls.Add(textBoxLogradouro);
+            panel.Controls.Add(labelLogradouro);
+            panel.Controls.Add(textBoxCep);
+            panel.Controls.Add(labelCep);
+            panel.Location = new Point(12, 7);
+            panel.Name = "panel";
+            panel.Size = new Size(694, 160);
+            panel.TabIndex = 0;
+            panel.Paint += panel1_Paint;
             // 
             // comboBoxPais
             // 
@@ -95,9 +95,9 @@
             comboBoxUF.AutoCompleteSource = AutoCompleteSource.CustomSource;
             comboBoxUF.FormattingEnabled = true;
             comboBoxUF.Items.AddRange(new object[] { "AC", "AL", "AP", "AM", "BA", "CE", "DF", "ES", "GO", "MA", "MT", "MS", "MG", "PA", "PB", "PR", "PE", "PI", "RJ", "RN", "RS", "RO", "RR", "SC", "SP", "SE", "TO" });
-            comboBoxUF.Location = new Point(465, 90);
+            comboBoxUF.Location = new Point(453, 90);
             comboBoxUF.Name = "comboBoxUF";
-            comboBoxUF.Size = new Size(43, 24);
+            comboBoxUF.Size = new Size(56, 24);
             comboBoxUF.TabIndex = 16;
             comboBoxUF.SelectedIndexChanged += comboBoxUFFunci_SelectedIndexChanged;
             // 
@@ -123,7 +123,7 @@
             // 
             // textBoxCidade
             // 
-            textBoxCidade.Location = new Point(309, 90);
+            textBoxCidade.Location = new Point(300, 90);
             textBoxCidade.Name = "textBoxCidade";
             textBoxCidade.Size = new Size(147, 26);
             textBoxCidade.TabIndex = 11;
@@ -132,7 +132,7 @@
             // 
             labelCidade.AutoSize = true;
             labelCidade.Font = new Font("Nexa Heavy", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            labelCidade.Location = new Point(322, 70);
+            labelCidade.Location = new Point(300, 71);
             labelCidade.Name = "labelCidade";
             labelCidade.Size = new Size(49, 16);
             labelCidade.TabIndex = 10;
@@ -143,7 +143,7 @@
             textBoxComplemento.Location = new Point(18, 90);
             textBoxComplemento.Multiline = true;
             textBoxComplemento.Name = "textBoxComplemento";
-            textBoxComplemento.Size = new Size(283, 48);
+            textBoxComplemento.Size = new Size(263, 48);
             textBoxComplemento.TabIndex = 9;
             // 
             // labelComplemento
@@ -226,23 +226,24 @@
             labelCep.Text = "CEP";
             labelCep.Click += label1_Click;
             // 
-            // userControl11
+            // userControl
             // 
-            userControl11.BackColor = Color.Transparent;
-            userControl11.Location = new Point(103, 186);
-            userControl11.Name = "userControl11";
-            userControl11.Size = new Size(547, 97);
-            userControl11.TabIndex = 1;
-            userControl11.Load += userControl11_Load;
+            userControl.BackColor = Color.Transparent;
+            userControl.Location = new Point(79, 163);
+            userControl.Margin = new Padding(3, 4, 3, 4);
+            userControl.Name = "userControl";
+            userControl.Size = new Size(547, 108);
+            userControl.TabIndex = 1;
+            userControl.Load += userControl11_Load;
             // 
             // formFunciEndereco
             // 
             AutoScaleDimensions = new SizeF(8F, 16F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
-            ClientSize = new Size(752, 284);
-            Controls.Add(userControl11);
-            Controls.Add(panel1);
+            ClientSize = new Size(719, 265);
+            Controls.Add(panel);
+            Controls.Add(userControl);
             Font = new Font("Nexa Heavy", 9F, FontStyle.Bold, GraphicsUnit.Point);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Icon = (Icon)resources.GetObject("$this.Icon");
@@ -250,14 +251,14 @@
             Name = "formFunciEndereco";
             Text = "Cadastro de Endereço dos Funcionários";
             Load += formFunciEndereco_Load;
-            panel1.ResumeLayout(false);
-            panel1.PerformLayout();
+            panel.ResumeLayout(false);
+            panel.PerformLayout();
             ResumeLayout(false);
         }
 
         #endregion
 
-        private Panel panel1;
+        private Panel panel;
         private Label labelCep;
         private TextBox textBoxCep;
         private Label labelBairro;
@@ -273,7 +274,7 @@
         private TextBox textBoxBairro;
         private Label labelPais;
         private ComboBox comboBoxUF;
-        private UserControl1 userControl11;
+        private UserControl1 userControl;
         private ComboBox comboBoxPais;
     }
 }

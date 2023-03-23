@@ -16,7 +16,7 @@ namespace PizzariaDoZe
         {
             InitializeComponent();
             this.ControlBox = false; //REMOVE BOTÕES DE MINIZAR E FECHAR
-            userControl11.buttonSair.Click += buttonSair_Click; //BOTAO SAIR
+            userControl.buttonSair.Click += buttonSair_Click; //BOTAO SAIR
         }
 
         public void buttonSair_Click(object sender, EventArgs e)
@@ -38,7 +38,7 @@ namespace PizzariaDoZe
         private void botaoEnderecoFunci_Click(object sender, EventArgs e)
         {
             formFunciEndereco funcionarioEndereco = new formFunciEndereco();
-            funcionarioEndereco.StartPosition = FormStartPosition.CenterParent;
+            funcionarioEndereco.StartPosition = FormStartPosition.CenterScreen;
             funcionarioEndereco.Show();
         }
 
@@ -63,6 +63,11 @@ namespace PizzariaDoZe
         }
 
         private void panelFunci1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void formFunci_Load(object sender, EventArgs e)
         {
 
         }
