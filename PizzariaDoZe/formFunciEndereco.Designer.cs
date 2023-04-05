@@ -45,7 +45,7 @@
             textBoxLogradouro = new TextBox();
             labelLogradouro = new Label();
             textBoxCep = new TextBox();
-            labelCep = new Label();
+            labelCEP = new Label();
             userControl = new UserControl1();
             panel.SuspendLayout();
             SuspendLayout();
@@ -68,7 +68,7 @@
             panel.Controls.Add(textBoxLogradouro);
             panel.Controls.Add(labelLogradouro);
             panel.Controls.Add(textBoxCep);
-            panel.Controls.Add(labelCep);
+            panel.Controls.Add(labelCEP);
             panel.Location = new Point(12, 7);
             panel.Name = "panel";
             panel.Size = new Size(694, 160);
@@ -215,16 +215,16 @@
             textBoxCep.Size = new Size(125, 26);
             textBoxCep.TabIndex = 1;
             // 
-            // labelCep
+            // labelCEP
             // 
-            labelCep.AutoSize = true;
-            labelCep.Font = new Font("Nexa Heavy", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            labelCep.Location = new Point(18, 12);
-            labelCep.Name = "labelCep";
-            labelCep.Size = new Size(31, 16);
-            labelCep.TabIndex = 0;
-            labelCep.Text = "CEP";
-            labelCep.Click += label1_Click;
+            labelCEP.AutoSize = true;
+            labelCEP.Font = new Font("Nexa Heavy", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            labelCEP.Location = new Point(18, 12);
+            labelCEP.Name = "labelCEP";
+            labelCEP.Size = new Size(31, 16);
+            labelCEP.TabIndex = 0;
+            labelCEP.Text = "CEP";
+            labelCEP.Click += label1_Click;
             // 
             // userControl
             // 
@@ -232,7 +232,7 @@
             userControl.Location = new Point(79, 163);
             userControl.Margin = new Padding(3, 4, 3, 4);
             userControl.Name = "userControl";
-            userControl.Size = new Size(547, 108);
+            userControl.Size = new Size(547, 89);
             userControl.TabIndex = 1;
             userControl.Load += userControl11_Load;
             // 
@@ -259,7 +259,7 @@
         #endregion
 
         private Panel panel;
-        private Label labelCep;
+        private Label labelCEP;
         private TextBox textBoxCep;
         private Label labelBairro;
         private TextBox textBoxNumero;

@@ -118,58 +118,58 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="botaoClientes.Text" xml:space="preserve">
-    <value>Cadastro de Clientes</value>
+    <value>Customer base</value>
   </data>
   <data name="botaoEnderecoFunci.Text" xml:space="preserve">
-    <value>Cadastrar Endereço</value>
+    <value>Register Address</value>
   </data>
   <data name="botaoFuncionarios.Text" xml:space="preserve">
-    <value>Cadastro de Funcionários</value>
+    <value>Employee Registration</value>
   </data>
   <data name="botaoIngredientes.Text" xml:space="preserve">
-    <value>Cadastro de Ingredientes</value>
+    <value>Ingredients Registration</value>
   </data>
   <data name="botaoProdutos.Text" xml:space="preserve">
-    <value>Cadastro de Produtos</value>
+    <value>Product Registration</value>
   </data>
   <data name="botaoSabores.Text" xml:space="preserve">
-    <value>Cadastro de Sabores</value>
+    <value>Register of Flavors</value>
   </data>
   <data name="botaoValores.Text" xml:space="preserve">
-    <value>Cadastro de Valores</value>
+    <value>Register of Values</value>
   </data>
   <data name="buttonEditar.Text" xml:space="preserve">
-    <value>Editar</value>
+    <value>Edit</value>
   </data>
   <data name="buttonExcluir.Text" xml:space="preserve">
-    <value>Excluir</value>
+    <value>Delete</value>
   </data>
   <data name="buttonSair.Text" xml:space="preserve">
-    <value>Sair</value>
+    <value>Exit</value>
   </data>
   <data name="buttonSalvar.Text" xml:space="preserve">
-    <value>Salvar</value>
+    <value>Save</value>
   </data>
   <data name="labelBairro.Text" xml:space="preserve">
-    <value>Bairro</value>
+    <value>Neighborhood</value>
   </data>
   <data name="labelCategoria.Text" xml:space="preserve">
-    <value>Categoria</value>
+    <value>Category</value>
   </data>
   <data name="labelCEP.Text" xml:space="preserve">
-    <value>CEP</value>
+    <value>Zip code</value>
   </data>
   <data name="labelCidade.Text" xml:space="preserve">
-    <value>Cidade</value>
+    <value>City</value>
   </data>
   <data name="labelCNH.Text" xml:space="preserve">
-    <value>CNH</value>
+    <value>Driver's license</value>
   </data>
   <data name="labelCodigo.Text" xml:space="preserve">
-    <value>Código</value>
+    <value>Code</value>
   </data>
   <data name="labelComplemento.Text" xml:space="preserve">
-    <value>Complemento</value>
+    <value>Complement</value>
   </data>
   <data name="labelCPF.Text" xml:space="preserve">
     <value>CPF</value>
@@ -178,66 +178,66 @@
     <value>Email</value>
   </data>
   <data name="labelGrupo.Text" xml:space="preserve">
-    <value>Grupo</value>
+    <value>Group</value>
   </data>
   <data name="labelIngredientes.Text" xml:space="preserve">
-    <value>Ingredientes</value>
+    <value>Ingredients</value>
   </data>
   <data name="labelLogradouro.Text" xml:space="preserve">
-    <value>Logradouro</value>
+    <value>Address</value>
   </data>
   <data name="labelMatricula.Text" xml:space="preserve">
-    <value>Matrícula</value>
+    <value>Registration</value>
   </data>
   <data name="labelML.Text" xml:space="preserve">
     <value>ML</value>
   </data>
   <data name="labelNome.Text" xml:space="preserve">
-    <value>Nome</value>
+    <value>Name</value>
   </data>
   <data name="labelNumero.Text" xml:space="preserve">
-    <value>Número</value>
+    <value>Number</value>
   </data>
   <data name="labelObservacoes.Text" xml:space="preserve">
-    <value>Observações</value>
+    <value>Comments</value>
   </data>
   <data name="labelPais.Text" xml:space="preserve">
-    <value>País</value>
+    <value>Country</value>
   </data>
   <data name="labelSenha.Text" xml:space="preserve">
-    <value>Senha</value>
+    <value>Password</value>
   </data>
   <data name="labelTamanho.Text" xml:space="preserve">
-    <value>Tamanho</value>
+    <value>Size</value>
   </data>
   <data name="labelTelefone.Text" xml:space="preserve">
-    <value>Telefone</value>
+    <value>Telephone</value>
   </data>
   <data name="labelTipo.Text" xml:space="preserve">
-    <value>Tipo</value>
+    <value>Type</value>
   </data>
   <data name="labelTitulo.Text" xml:space="preserve">
-    <value>Pizzaria do Zé</value>
+    <value>Ze's Pizzeria</value>
   </data>
   <data name="labelUF.Text" xml:space="preserve">
-    <value>UF</value>
+    <value>State</value>
   </data>
   <data name="labelValidade.Text" xml:space="preserve">
-    <value>Data de Validade</value>
+    <value>Expiration Date</value>
   </data>
   <data name="labelValidadeCNH.Text" xml:space="preserve">
-    <value>Validade CNH</value>
+    <value>Validity</value>
   </data>
   <data name="labelValor.Text" xml:space="preserve">
-    <value>Valor</value>
+    <value>Bravery</value>
   </data>
   <data name="labelValorBorda.Text" xml:space="preserve">
-    <value>Valor da Borda</value>
+    <value>Edge Value</value>
   </data>
   <data name="radioCnhNao.Text" xml:space="preserve">
-    <value>Não</value>
+    <value>No</value>
   </data>
   <data name="radioCnhSim.Text" xml:space="preserve">
-    <value>Sim</value>
+    <value>Yes</value>
   </data>
 </root>

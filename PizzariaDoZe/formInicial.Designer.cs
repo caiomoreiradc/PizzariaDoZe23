@@ -160,7 +160,7 @@
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "paginaInicial";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Pizzaria do Zé 0.3";
+            Text = "Pizzaria do Zé 0.4";
             TransparencyKey = Color.White;
             Load += paginaInicial_Load;
             ResumeLayout(false);

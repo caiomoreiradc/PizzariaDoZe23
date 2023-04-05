@@ -38,10 +38,10 @@
             textBoxTelefone = new TextBox();
             labelTelefone = new Label();
             textBoxValCnh = new TextBox();
-            labelValCnh = new Label();
+            labelValidadeCNH = new Label();
             radioCnhNao = new RadioButton();
             radioCnhSim = new RadioButton();
-            labelCnh = new Label();
+            labelCNH = new Label();
             comboBoxGrupo = new ComboBox();
             labelGrupo = new Label();
             textBoxSenha = new TextBox();
@@ -49,7 +49,7 @@
             textBoxMatricula = new TextBox();
             labelMatricula = new Label();
             textBoxCPF = new TextBox();
-            labelCpf = new Label();
+            labelCPF = new Label();
             textBoxNome = new TextBox();
             labelNome = new Label();
             textBoxCodigo = new TextBox();
@@ -69,10 +69,10 @@
             panel.Controls.Add(textBoxTelefone);
             panel.Controls.Add(labelTelefone);
             panel.Controls.Add(textBoxValCnh);
-            panel.Controls.Add(labelValCnh);
+            panel.Controls.Add(labelValidadeCNH);
             panel.Controls.Add(radioCnhNao);
             panel.Controls.Add(radioCnhSim);
-            panel.Controls.Add(labelCnh);
+            panel.Controls.Add(labelCNH);
             panel.Controls.Add(comboBoxGrupo);
             panel.Controls.Add(labelGrupo);
             panel.Controls.Add(textBoxSenha);
@@ -80,22 +80,24 @@
             panel.Controls.Add(textBoxMatricula);
             panel.Controls.Add(labelMatricula);
             panel.Controls.Add(textBoxCPF);
-            panel.Controls.Add(labelCpf);
+            panel.Controls.Add(labelCPF);
             panel.Controls.Add(textBoxNome);
             panel.Controls.Add(labelNome);
             panel.Controls.Add(textBoxCodigo);
             panel.Controls.Add(labelCodigo);
-            panel.Location = new Point(11, 22);
+            panel.Location = new Point(13, 28);
+            panel.Margin = new Padding(3, 4, 3, 4);
             panel.Name = "panel";
-            panel.Size = new Size(916, 173);
+            panel.Size = new Size(1047, 219);
             panel.TabIndex = 2;
             panel.Paint += panelFunci1_Paint;
             // 
             // textBoxObservacoes
             // 
-            textBoxObservacoes.Location = new Point(14, 141);
+            textBoxObservacoes.Location = new Point(16, 179);
+            textBoxObservacoes.Margin = new Padding(3, 4, 3, 4);
             textBoxObservacoes.Name = "textBoxObservacoes";
-            textBoxObservacoes.Size = new Size(522, 23);
+            textBoxObservacoes.Size = new Size(596, 26);
             textBoxObservacoes.TabIndex = 22;
             // 
             // botaoEnderecoFunci
@@ -104,9 +106,10 @@
             botaoEnderecoFunci.Cursor = Cursors.Hand;
             botaoEnderecoFunci.FlatStyle = FlatStyle.Flat;
             botaoEnderecoFunci.Font = new Font("Nexa Heavy", 11.999999F, FontStyle.Bold, GraphicsUnit.Point);
-            botaoEnderecoFunci.Location = new Point(559, 110);
+            botaoEnderecoFunci.Location = new Point(639, 139);
+            botaoEnderecoFunci.Margin = new Padding(3, 4, 3, 4);
             botaoEnderecoFunci.Name = "botaoEnderecoFunci";
-            botaoEnderecoFunci.Size = new Size(345, 52);
+            botaoEnderecoFunci.Size = new Size(394, 66);
             botaoEnderecoFunci.TabIndex = 3;
             botaoEnderecoFunci.Text = "Cadastrar Endereço";
             botaoEnderecoFunci.UseVisualStyleBackColor = false;
@@ -116,7 +119,7 @@
             // 
             labelObservacoes.AutoSize = true;
             labelObservacoes.Font = new Font("Nexa Heavy", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            labelObservacoes.Location = new Point(14, 122);
+            labelObservacoes.Location = new Point(16, 155);
             labelObservacoes.Name = "labelObservacoes";
             labelObservacoes.Size = new Size(85, 16);
             labelObservacoes.TabIndex = 21;
@@ -124,16 +127,17 @@
             // 
             // textBoxEmail
             // 
-            textBoxEmail.Location = new Point(559, 81);
+            textBoxEmail.Location = new Point(639, 103);
+            textBoxEmail.Margin = new Padding(3, 4, 3, 4);
             textBoxEmail.Name = "textBoxEmail";
-            textBoxEmail.Size = new Size(288, 23);
+            textBoxEmail.Size = new Size(329, 26);
             textBoxEmail.TabIndex = 20;
             // 
             // labelEmail
             // 
             labelEmail.AutoSize = true;
             labelEmail.Font = new Font("Nexa Heavy", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            labelEmail.Location = new Point(565, 63);
+            labelEmail.Location = new Point(646, 80);
             labelEmail.Name = "labelEmail";
             labelEmail.Size = new Size(40, 16);
             labelEmail.TabIndex = 19;
@@ -142,16 +146,17 @@
             // 
             // textBoxTelefone
             // 
-            textBoxTelefone.Location = new Point(335, 81);
+            textBoxTelefone.Location = new Point(383, 103);
+            textBoxTelefone.Margin = new Padding(3, 4, 3, 4);
             textBoxTelefone.Name = "textBoxTelefone";
-            textBoxTelefone.Size = new Size(189, 23);
+            textBoxTelefone.Size = new Size(215, 26);
             textBoxTelefone.TabIndex = 18;
             // 
             // labelTelefone
             // 
             labelTelefone.AutoSize = true;
             labelTelefone.Font = new Font("Nexa Heavy", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            labelTelefone.Location = new Point(335, 63);
+            labelTelefone.Location = new Point(383, 80);
             labelTelefone.Name = "labelTelefone";
             labelTelefone.Size = new Size(56, 16);
             labelTelefone.TabIndex = 17;
@@ -159,26 +164,28 @@
             // 
             // textBoxValCnh
             // 
-            textBoxValCnh.Location = new Point(193, 81);
+            textBoxValCnh.Location = new Point(221, 103);
+            textBoxValCnh.Margin = new Padding(3, 4, 3, 4);
             textBoxValCnh.Name = "textBoxValCnh";
-            textBoxValCnh.Size = new Size(100, 23);
+            textBoxValCnh.Size = new Size(114, 26);
             textBoxValCnh.TabIndex = 16;
             // 
-            // labelValCnh
+            // labelValidadeCNH
             // 
-            labelValCnh.AutoSize = true;
-            labelValCnh.Font = new Font("Nexa Heavy", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            labelValCnh.Location = new Point(193, 63);
-            labelValCnh.Name = "labelValCnh";
-            labelValCnh.Size = new Size(89, 16);
-            labelValCnh.TabIndex = 15;
-            labelValCnh.Text = "Validade CNH";
+            labelValidadeCNH.AutoSize = true;
+            labelValidadeCNH.Font = new Font("Nexa Heavy", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            labelValidadeCNH.Location = new Point(221, 80);
+            labelValidadeCNH.Name = "labelValidadeCNH";
+            labelValidadeCNH.Size = new Size(89, 16);
+            labelValidadeCNH.TabIndex = 15;
+            labelValidadeCNH.Text = "Validade CNH";
             // 
             // radioCnhNao
             // 
             radioCnhNao.AutoSize = true;
             radioCnhNao.Font = new Font("Nexa Heavy", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            radioCnhNao.Location = new Point(140, 110);
+            radioCnhNao.Location = new Point(160, 139);
+            radioCnhNao.Margin = new Padding(3, 4, 3, 4);
             radioCnhNao.Name = "radioCnhNao";
             radioCnhNao.Size = new Size(49, 20);
             radioCnhNao.TabIndex = 14;
@@ -190,7 +197,8 @@
             // 
             radioCnhSim.AutoSize = true;
             radioCnhSim.Font = new Font("Nexa Heavy", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            radioCnhSim.Location = new Point(140, 85);
+            radioCnhSim.Location = new Point(160, 108);
+            radioCnhSim.Margin = new Padding(3, 4, 3, 4);
             radioCnhSim.Name = "radioCnhSim";
             radioCnhSim.Size = new Size(47, 20);
             radioCnhSim.TabIndex = 13;
@@ -198,24 +206,25 @@
             radioCnhSim.Text = "Sim";
             radioCnhSim.UseVisualStyleBackColor = true;
             // 
-            // labelCnh
+            // labelCNH
             // 
-            labelCnh.AutoSize = true;
-            labelCnh.Font = new Font("Nexa Heavy", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            labelCnh.Location = new Point(140, 63);
-            labelCnh.Name = "labelCnh";
-            labelCnh.Size = new Size(33, 16);
-            labelCnh.TabIndex = 12;
-            labelCnh.Text = "CNH";
+            labelCNH.AutoSize = true;
+            labelCNH.Font = new Font("Nexa Heavy", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            labelCNH.Location = new Point(160, 80);
+            labelCNH.Name = "labelCNH";
+            labelCNH.Size = new Size(33, 16);
+            labelCNH.TabIndex = 12;
+            labelCNH.Text = "CNH";
             // 
             // comboBoxGrupo
             // 
             comboBoxGrupo.Font = new Font("Nexa Heavy", 9.749999F, FontStyle.Bold, GraphicsUnit.Point);
             comboBoxGrupo.FormattingEnabled = true;
             comboBoxGrupo.Items.AddRange(new object[] { "Admin", "Atendente", "Entregador" });
-            comboBoxGrupo.Location = new Point(14, 81);
+            comboBoxGrupo.Location = new Point(16, 103);
+            comboBoxGrupo.Margin = new Padding(3, 4, 3, 4);
             comboBoxGrupo.Name = "comboBoxGrupo";
-            comboBoxGrupo.Size = new Size(120, 25);
+            comboBoxGrupo.Size = new Size(137, 25);
             comboBoxGrupo.TabIndex = 11;
             comboBoxGrupo.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
             // 
@@ -223,7 +232,7 @@
             // 
             labelGrupo.AutoSize = true;
             labelGrupo.Font = new Font("Nexa Heavy", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            labelGrupo.Location = new Point(14, 63);
+            labelGrupo.Location = new Point(16, 80);
             labelGrupo.Name = "labelGrupo";
             labelGrupo.Size = new Size(44, 16);
             labelGrupo.TabIndex = 10;
@@ -231,16 +240,17 @@
             // 
             // textBoxSenha
             // 
-            textBoxSenha.Location = new Point(653, 27);
+            textBoxSenha.Location = new Point(746, 34);
+            textBoxSenha.Margin = new Padding(3, 4, 3, 4);
             textBoxSenha.Name = "textBoxSenha";
-            textBoxSenha.Size = new Size(241, 23);
+            textBoxSenha.Size = new Size(275, 26);
             textBoxSenha.TabIndex = 9;
             // 
             // labelSenha
             // 
             labelSenha.AutoSize = true;
             labelSenha.Font = new Font("Nexa Heavy", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            labelSenha.Location = new Point(662, 9);
+            labelSenha.Location = new Point(757, 11);
             labelSenha.Name = "labelSenha";
             labelSenha.Size = new Size(44, 16);
             labelSenha.TabIndex = 8;
@@ -248,16 +258,17 @@
             // 
             // textBoxMatricula
             // 
-            textBoxMatricula.Location = new Point(514, 27);
+            textBoxMatricula.Location = new Point(587, 34);
+            textBoxMatricula.Margin = new Padding(3, 4, 3, 4);
             textBoxMatricula.Name = "textBoxMatricula";
-            textBoxMatricula.Size = new Size(97, 23);
+            textBoxMatricula.Size = new Size(110, 26);
             textBoxMatricula.TabIndex = 7;
             // 
             // labelMatricula
             // 
             labelMatricula.AutoSize = true;
             labelMatricula.Font = new Font("Nexa Heavy", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            labelMatricula.Location = new Point(514, 9);
+            labelMatricula.Location = new Point(587, 11);
             labelMatricula.Name = "labelMatricula";
             labelMatricula.Size = new Size(64, 16);
             labelMatricula.TabIndex = 6;
@@ -265,33 +276,35 @@
             // 
             // textBoxCPF
             // 
-            textBoxCPF.Location = new Point(358, 27);
+            textBoxCPF.Location = new Point(409, 34);
+            textBoxCPF.Margin = new Padding(3, 4, 3, 4);
             textBoxCPF.Name = "textBoxCPF";
-            textBoxCPF.Size = new Size(142, 23);
+            textBoxCPF.Size = new Size(162, 26);
             textBoxCPF.TabIndex = 5;
             // 
-            // labelCpf
+            // labelCPF
             // 
-            labelCpf.AutoSize = true;
-            labelCpf.Font = new Font("Nexa Heavy", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            labelCpf.Location = new Point(358, 9);
-            labelCpf.Name = "labelCpf";
-            labelCpf.Size = new Size(31, 16);
-            labelCpf.TabIndex = 4;
-            labelCpf.Text = "CPF";
+            labelCPF.AutoSize = true;
+            labelCPF.Font = new Font("Nexa Heavy", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            labelCPF.Location = new Point(409, 11);
+            labelCPF.Name = "labelCPF";
+            labelCPF.Size = new Size(31, 16);
+            labelCPF.TabIndex = 4;
+            labelCPF.Text = "CPF";
             // 
             // textBoxNome
             // 
-            textBoxNome.Location = new Point(72, 27);
+            textBoxNome.Location = new Point(82, 34);
+            textBoxNome.Margin = new Padding(3, 4, 3, 4);
             textBoxNome.Name = "textBoxNome";
-            textBoxNome.Size = new Size(280, 23);
+            textBoxNome.Size = new Size(319, 26);
             textBoxNome.TabIndex = 3;
             // 
             // labelNome
             // 
             labelNome.AutoSize = true;
             labelNome.Font = new Font("Nexa Heavy", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            labelNome.Location = new Point(72, 9);
+            labelNome.Location = new Point(82, 11);
             labelNome.Name = "labelNome";
             labelNome.Size = new Size(41, 16);
             labelNome.TabIndex = 2;
@@ -299,9 +312,10 @@
             // 
             // textBoxCodigo
             // 
-            textBoxCodigo.Location = new Point(14, 27);
+            textBoxCodigo.Location = new Point(16, 34);
+            textBoxCodigo.Margin = new Padding(3, 4, 3, 4);
             textBoxCodigo.Name = "textBoxCodigo";
-            textBoxCodigo.Size = new Size(46, 23);
+            textBoxCodigo.Size = new Size(52, 26);
             textBoxCodigo.TabIndex = 1;
             textBoxCodigo.TextChanged += textBoxCod_TextChanged;
             // 
@@ -309,7 +323,7 @@
             // 
             labelCodigo.AutoSize = true;
             labelCodigo.Font = new Font("Nexa Heavy", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            labelCodigo.Location = new Point(14, 9);
+            labelCodigo.Location = new Point(16, 11);
             labelCodigo.Name = "labelCodigo";
             labelCodigo.Size = new Size(47, 16);
             labelCodigo.TabIndex = 0;
@@ -318,23 +332,24 @@
             // userControl
             // 
             userControl.BackColor = Color.Transparent;
-            userControl.Location = new Point(231, 190);
-            userControl.Margin = new Padding(3, 4, 3, 4);
+            userControl.Location = new Point(264, 241);
+            userControl.Margin = new Padding(3, 5, 3, 5);
             userControl.Name = "userControl";
-            userControl.Size = new Size(477, 91);
+            userControl.Size = new Size(545, 115);
             userControl.TabIndex = 3;
             userControl.Load += userControl11_Load;
             // 
             // formFunci
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 19F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
-            ClientSize = new Size(939, 283);
+            ClientSize = new Size(1073, 358);
             Controls.Add(panel);
             Controls.Add(userControl);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Icon = (Icon)resources.GetObject("$this.Icon");
+            Margin = new Padding(3, 4, 3, 4);
             MaximizeBox = false;
             Name = "formFunci";
             Text = "Cadastro de Funcionários";
@@ -351,7 +366,7 @@
         private TextBox textBoxMatricula;
         private Label labelMatricula;
         private TextBox textBoxCPF;
-        private Label labelCpf;
+        private Label labelCPF;
         private TextBox textBoxNome;
         private Label labelNome;
         private TextBox textBoxCodigo;
@@ -360,12 +375,12 @@
         private ComboBox comboBoxGrupo;
         private RadioButton radioCnhNao;
         private RadioButton radioCnhSim;
-        private Label labelCnh;
+        private Label labelCNH;
         private Label labelEmail;
         private TextBox textBoxTelefone;
         private Label labelTelefone;
         private TextBox textBoxValCnh;
-        private Label labelValCnh;
+        private Label labelValidadeCNH;
         private TextBox textBoxEmail;
         private Button botaoEnderecoFunci;
         private TextBox textBoxObservacoes;

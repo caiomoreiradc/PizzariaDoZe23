@@ -1,17 +1,21 @@
+using System.Globalization;
+
 namespace PizzariaDoZe
 {
-    internal static class Program
+    static class Program
     {
-        /// <summary>
-        ///  The main entry point for the application.
-        /// </summary>
         [STAThread]
-        static void Main()
+         static void Main()
         {
-            // To customize application configuration such as set high DPI settings or default font,
-            // see https://aka.ms/applicationconfiguration.
+            #region Idioma
+            string auxIdiomaRegiao = "en-US"; 
+                                              
+            Thread.CurrentThread.CurrentUICulture = new CultureInfo(auxIdiomaRegiao);
+            Thread.CurrentThread.CurrentCulture = new CultureInfo(auxIdiomaRegiao);
+            #endregion
             ApplicationConfiguration.Initialize();
             Application.Run(new paginaInicial());
         }
+
     }
 }

@@ -32,7 +32,7 @@
             panel = new Panel();
             comboBoxPais = new ComboBox();
             textBoxComplemento = new TextBox();
-            labelComplemente = new Label();
+            labelComplemento = new Label();
             labelPais = new Label();
             comboBoxUF = new ComboBox();
             labelUF = new Label();
@@ -63,7 +63,7 @@
             panel.BackColor = Color.Silver;
             panel.Controls.Add(comboBoxPais);
             panel.Controls.Add(textBoxComplemento);
-            panel.Controls.Add(labelComplemente);
+            panel.Controls.Add(labelComplemento);
             panel.Controls.Add(labelPais);
             panel.Controls.Add(comboBoxUF);
             panel.Controls.Add(labelUF);
@@ -85,9 +85,10 @@
             panel.Controls.Add(labelNome);
             panel.Controls.Add(textBoxCodigo);
             panel.Controls.Add(labelCodigo);
-            panel.Location = new Point(11, 17);
+            panel.Location = new Point(13, 22);
+            panel.Margin = new Padding(3, 4, 3, 4);
             panel.Name = "panel";
-            panel.Size = new Size(842, 196);
+            panel.Size = new Size(962, 248);
             panel.TabIndex = 0;
             panel.Paint += panel_Paint;
             // 
@@ -99,33 +100,35 @@
             comboBoxPais.Font = new Font("Nexa Heavy", 9.749999F, FontStyle.Bold, GraphicsUnit.Point);
             comboBoxPais.FormattingEnabled = true;
             comboBoxPais.Items.AddRange(new object[] { "Afghanistan", "Albania", "Algeria", "Andorra", "Angola", "Antigua & Deps", "Argentina", "Armenia", "Australia", "Austria", "Azerbaijan", "Bahamas", "Bahrain", "Bangladesh", "Barbados", "Belarus", "Belgium", "Belize", "Benin", "Bhutan", "Bolivia", "Bosnia Herzegovina", "Botswana", "Brasil", "Brunei", "Bulgaria", "Burkina", "Burundi", "Cambodia", "Cameroon", "Canada", "Cape Verde", "Central African Rep", "Chad", "Chile", "China", "Colombia", "Comoros", "Congo", "Congo {Democratic Rep}", "Costa Rica", "Croatia", "Cuba", "Cyprus", "Czech Republic", "Denmark", "Djibouti", "Dominica", "Dominican Republic", "East Timor", "Ecuador", "Egypt", "El Salvador", "Equatorial Guinea", "Eritrea", "Estonia", "Ethiopia", "Fiji", "Finland", "France", "Gabon", "Gambia", "Georgia", "Germany", "Ghana", "Greece", "Grenada", "Guatemala", "Guinea", "Guinea-Bissau", "Guyana", "Haiti", "Honduras", "Hungary", "Iceland", "India", "Indonesia", "Iran", "Iraq", "Ireland {Republic}", "Israel", "Italy", "Ivory Coast", "Jamaica", "Japan", "Jordan", "Kazakhstan", "Kenya", "Kiribati", "Korea North", "Korea South", "Kosovo", "Kuwait", "Kyrgyzstan", "Laos", "Latvia", "Lebanon", "Lesotho", "Liberia", "Libya", "Liechtenstein", "Lithuania", "Luxembourg", "Macedonia", "Madagascar", "Malawi", "Malaysia", "Maldives", "Mali", "Malta", "Marshall Islands", "Mauritania", "Mauritius", "Mexico", "Micronesia", "Moldova", "Monaco", "Mongolia", "Montenegro", "Morocco", "Mozambique", "Myanmar, {Burma}", "Namibia", "Nauru", "Nepal", "Netherlands", "New Zealand", "Nicaragua", "Niger", "Nigeria", "Norway", "Oman", "Pakistan", "Palau", "Panama", "Papua New Guinea", "Paraguay", "Peru", "Philippines", "Poland", "Portugal", "Qatar", "Romania", "Russian Federation", "Rwanda", "St Kitts & Nevis", "St Lucia", "Saint Vincent & the Grenadines", "Samoa", "San Marino", "Sao Tome & Principe", "Saudi Arabia", "Senegal", "Serbia", "Seychelles", "Sierra Leone", "Singapore", "Slovakia", "Slovenia", "Solomon Islands", "Somalia", "South Africa", "South Sudan", "Spain", "Sri Lanka", "Sudan", "Suriname", "Swaziland", "Sweden", "Switzerland", "Syria", "Taiwan", "Tajikistan", "Tanzania", "Thailand", "Togo", "Tonga", "Trinidad & Tobago", "Tunisia", "Turkey", "Turkmenistan", "Tuvalu", "Uganda", "Ukraine", "United Arab Emirates", "United Kingdom", "United States", "Uruguay", "Uzbekistan", "Vanuatu", "Vatican City", "Venezuela", "Vietnam", "Yemen", "Zambia", "Zimbabwe" });
-            comboBoxPais.Location = new Point(247, 148);
+            comboBoxPais.Location = new Point(282, 187);
+            comboBoxPais.Margin = new Padding(3, 4, 3, 4);
             comboBoxPais.Name = "comboBoxPais";
-            comboBoxPais.Size = new Size(190, 25);
+            comboBoxPais.Size = new Size(217, 25);
             comboBoxPais.TabIndex = 24;
             // 
             // textBoxComplemento
             // 
-            textBoxComplemento.Location = new Point(458, 150);
+            textBoxComplemento.Location = new Point(523, 190);
+            textBoxComplemento.Margin = new Padding(3, 4, 3, 4);
             textBoxComplemento.Name = "textBoxComplemento";
-            textBoxComplemento.Size = new Size(336, 23);
+            textBoxComplemento.Size = new Size(383, 26);
             textBoxComplemento.TabIndex = 23;
             // 
-            // labelComplemente
+            // labelComplemento
             // 
-            labelComplemente.AutoSize = true;
-            labelComplemente.Font = new Font("Nexa Heavy", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            labelComplemente.Location = new Point(475, 131);
-            labelComplemente.Name = "labelComplemente";
-            labelComplemente.Size = new Size(88, 16);
-            labelComplemente.TabIndex = 22;
-            labelComplemente.Text = "Complemento";
+            labelComplemento.AutoSize = true;
+            labelComplemento.Font = new Font("Nexa Heavy", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            labelComplemento.Location = new Point(543, 166);
+            labelComplemento.Name = "labelComplemento";
+            labelComplemento.Size = new Size(88, 16);
+            labelComplemento.TabIndex = 22;
+            labelComplemento.Text = "Complemento";
             // 
             // labelPais
             // 
             labelPais.AutoSize = true;
             labelPais.Font = new Font("Nexa Heavy", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            labelPais.Location = new Point(247, 131);
+            labelPais.Location = new Point(282, 166);
             labelPais.Name = "labelPais";
             labelPais.Size = new Size(32, 16);
             labelPais.TabIndex = 20;
@@ -139,16 +142,17 @@
             comboBoxUF.Font = new Font("Nexa Heavy", 9.749999F, FontStyle.Bold, GraphicsUnit.Point);
             comboBoxUF.FormattingEnabled = true;
             comboBoxUF.Items.AddRange(new object[] { "AC", "AL", "AP", "AM", "BA", "CE", "DF", "ES", "GO", "MA", "MT", "MS", "MG", "PA", "PB", "PR", "PE", "PI", "RJ", "RN", "RS", "RO", "RR", "SC", "SP", "SE", "TO" });
-            comboBoxUF.Location = new Point(170, 149);
+            comboBoxUF.Location = new Point(194, 189);
+            comboBoxUF.Margin = new Padding(3, 4, 3, 4);
             comboBoxUF.Name = "comboBoxUF";
-            comboBoxUF.Size = new Size(60, 25);
+            comboBoxUF.Size = new Size(68, 25);
             comboBoxUF.TabIndex = 19;
             // 
             // labelUF
             // 
             labelUF.AutoSize = true;
             labelUF.Font = new Font("Nexa Heavy", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            labelUF.Location = new Point(170, 130);
+            labelUF.Location = new Point(194, 165);
             labelUF.Name = "labelUF";
             labelUF.Size = new Size(24, 16);
             labelUF.TabIndex = 18;
@@ -156,16 +160,17 @@
             // 
             // textBoxCidade
             // 
-            textBoxCidade.Location = new Point(12, 149);
+            textBoxCidade.Location = new Point(14, 189);
+            textBoxCidade.Margin = new Padding(3, 4, 3, 4);
             textBoxCidade.Name = "textBoxCidade";
-            textBoxCidade.Size = new Size(137, 23);
+            textBoxCidade.Size = new Size(156, 26);
             textBoxCidade.TabIndex = 17;
             // 
             // labelCidade
             // 
             labelCidade.AutoSize = true;
             labelCidade.Font = new Font("Nexa Heavy", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            labelCidade.Location = new Point(14, 131);
+            labelCidade.Location = new Point(16, 166);
             labelCidade.Name = "labelCidade";
             labelCidade.Size = new Size(49, 16);
             labelCidade.TabIndex = 16;
@@ -173,16 +178,17 @@
             // 
             // textBoxNumero
             // 
-            textBoxNumero.Location = new Point(734, 87);
+            textBoxNumero.Location = new Point(839, 110);
+            textBoxNumero.Margin = new Padding(3, 4, 3, 4);
             textBoxNumero.Name = "textBoxNumero";
-            textBoxNumero.Size = new Size(84, 23);
+            textBoxNumero.Size = new Size(95, 26);
             textBoxNumero.TabIndex = 15;
             // 
             // labelNumero
             // 
             labelNumero.AutoSize = true;
             labelNumero.Font = new Font("Nexa Heavy", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            labelNumero.Location = new Point(732, 69);
+            labelNumero.Location = new Point(837, 87);
             labelNumero.Name = "labelNumero";
             labelNumero.Size = new Size(54, 16);
             labelNumero.TabIndex = 14;
@@ -190,16 +196,17 @@
             // 
             // textBoxLogradouro
             // 
-            textBoxLogradouro.Location = new Point(475, 87);
+            textBoxLogradouro.Location = new Point(543, 110);
+            textBoxLogradouro.Margin = new Padding(3, 4, 3, 4);
             textBoxLogradouro.Name = "textBoxLogradouro";
-            textBoxLogradouro.Size = new Size(216, 23);
+            textBoxLogradouro.Size = new Size(246, 26);
             textBoxLogradouro.TabIndex = 13;
             // 
             // labelLogradouro
             // 
             labelLogradouro.AutoSize = true;
             labelLogradouro.Font = new Font("Nexa Heavy", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            labelLogradouro.Location = new Point(486, 68);
+            labelLogradouro.Location = new Point(555, 86);
             labelLogradouro.Name = "labelLogradouro";
             labelLogradouro.Size = new Size(77, 16);
             labelLogradouro.TabIndex = 12;
@@ -207,16 +214,17 @@
             // 
             // textBoxCEP
             // 
-            textBoxCEP.Location = new Point(300, 87);
+            textBoxCEP.Location = new Point(343, 110);
+            textBoxCEP.Margin = new Padding(3, 4, 3, 4);
             textBoxCEP.Name = "textBoxCEP";
-            textBoxCEP.Size = new Size(126, 23);
+            textBoxCEP.Size = new Size(143, 26);
             textBoxCEP.TabIndex = 11;
             // 
             // labelCEP
             // 
             labelCEP.AutoSize = true;
             labelCEP.Font = new Font("Nexa Heavy", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            labelCEP.Location = new Point(300, 68);
+            labelCEP.Location = new Point(343, 86);
             labelCEP.Name = "labelCEP";
             labelCEP.Size = new Size(31, 16);
             labelCEP.TabIndex = 10;
@@ -224,16 +232,17 @@
             // 
             // textBoxEmaiL
             // 
-            textBoxEmaiL.Location = new Point(12, 87);
+            textBoxEmaiL.Location = new Point(14, 110);
+            textBoxEmaiL.Margin = new Padding(3, 4, 3, 4);
             textBoxEmaiL.Name = "textBoxEmaiL";
-            textBoxEmaiL.Size = new Size(256, 23);
+            textBoxEmaiL.Size = new Size(292, 26);
             textBoxEmaiL.TabIndex = 9;
             // 
             // labelEmail
             // 
             labelEmail.AutoSize = true;
             labelEmail.Font = new Font("Nexa Heavy", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            labelEmail.Location = new Point(12, 69);
+            labelEmail.Location = new Point(14, 87);
             labelEmail.Name = "labelEmail";
             labelEmail.Size = new Size(40, 16);
             labelEmail.TabIndex = 8;
@@ -241,33 +250,36 @@
             // 
             // textBoxTelefone
             // 
-            textBoxTelefone.Location = new Point(607, 29);
+            textBoxTelefone.Location = new Point(694, 37);
+            textBoxTelefone.Margin = new Padding(3, 4, 3, 4);
             textBoxTelefone.Name = "textBoxTelefone";
-            textBoxTelefone.Size = new Size(177, 23);
+            textBoxTelefone.Size = new Size(202, 26);
             textBoxTelefone.TabIndex = 7;
             // 
             // labelTelefone
             // 
             labelTelefone.AutoSize = true;
             labelTelefone.Font = new Font("Nexa Heavy", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            labelTelefone.Location = new Point(607, 11);
+            labelTelefone.Location = new Point(694, 14);
             labelTelefone.Name = "labelTelefone";
             labelTelefone.Size = new Size(56, 16);
             labelTelefone.TabIndex = 6;
             labelTelefone.Text = "Telefone";
+            labelTelefone.Click += labelTelefone_Click;
             // 
             // textBoxCPF
             // 
-            textBoxCPF.Location = new Point(406, 29);
+            textBoxCPF.Location = new Point(464, 37);
+            textBoxCPF.Margin = new Padding(3, 4, 3, 4);
             textBoxCPF.Name = "textBoxCPF";
-            textBoxCPF.Size = new Size(157, 23);
+            textBoxCPF.Size = new Size(179, 26);
             textBoxCPF.TabIndex = 5;
             // 
             // labelCpf
             // 
             labelCpf.AutoSize = true;
             labelCpf.Font = new Font("Nexa Heavy", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            labelCpf.Location = new Point(406, 11);
+            labelCpf.Location = new Point(464, 14);
             labelCpf.Name = "labelCpf";
             labelCpf.Size = new Size(31, 16);
             labelCpf.TabIndex = 4;
@@ -275,33 +287,36 @@
             // 
             // textBoxNome
             // 
-            textBoxNome.Location = new Point(109, 29);
+            textBoxNome.Location = new Point(125, 37);
+            textBoxNome.Margin = new Padding(3, 4, 3, 4);
             textBoxNome.Name = "textBoxNome";
-            textBoxNome.Size = new Size(277, 23);
+            textBoxNome.Size = new Size(316, 26);
             textBoxNome.TabIndex = 3;
             // 
             // labelNome
             // 
             labelNome.AutoSize = true;
             labelNome.Font = new Font("Nexa Heavy", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            labelNome.Location = new Point(109, 11);
+            labelNome.Location = new Point(125, 14);
             labelNome.Name = "labelNome";
             labelNome.Size = new Size(41, 16);
             labelNome.TabIndex = 2;
             labelNome.Text = "Nome";
+            labelNome.Click += labelNome_Click;
             // 
             // textBoxCodigo
             // 
-            textBoxCodigo.Location = new Point(12, 29);
+            textBoxCodigo.Location = new Point(14, 37);
+            textBoxCodigo.Margin = new Padding(3, 4, 3, 4);
             textBoxCodigo.Name = "textBoxCodigo";
-            textBoxCodigo.Size = new Size(78, 23);
+            textBoxCodigo.Size = new Size(89, 26);
             textBoxCodigo.TabIndex = 1;
             // 
             // labelCodigo
             // 
             labelCodigo.AutoSize = true;
             labelCodigo.Font = new Font("Nexa Heavy", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            labelCodigo.Location = new Point(12, 11);
+            labelCodigo.Location = new Point(14, 14);
             labelCodigo.Name = "labelCodigo";
             labelCodigo.Size = new Size(47, 16);
             labelCodigo.TabIndex = 0;
@@ -310,23 +325,24 @@
             // userControl
             // 
             userControl.BackColor = Color.Transparent;
-            userControl.Location = new Point(204, 208);
-            userControl.Margin = new Padding(3, 4, 3, 4);
+            userControl.Location = new Point(233, 263);
+            userControl.Margin = new Padding(3, 5, 3, 5);
             userControl.Name = "userControl";
-            userControl.Size = new Size(481, 91);
+            userControl.Size = new Size(550, 115);
             userControl.TabIndex = 24;
             userControl.Load += userControl11_Load;
             // 
             // formClientes
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 19F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
-            ClientSize = new Size(864, 301);
+            ClientSize = new Size(987, 381);
             Controls.Add(panel);
             Controls.Add(userControl);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Icon = (Icon)resources.GetObject("$this.Icon");
+            Margin = new Padding(3, 4, 3, 4);
             MaximizeBox = false;
             Name = "formClientes";
             Text = "Cadastro de Clientes";
@@ -359,7 +375,7 @@
         private TextBox textBoxCodigo;
         private Label labelCodigo;
         private TextBox textBoxComplemento;
-        private Label labelComplemente;
+        private Label labelComplemento;
         private Label labelPais;
         private ComboBox comboBoxUF;
         private UserControl1 userControl;
