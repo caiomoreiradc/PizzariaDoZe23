@@ -90,5 +90,12 @@ namespace PizzariaDoZe
         {
 
         }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            formConfiguracoes configuracoes = new formConfiguracoes();
+            configuracoes.StartPosition = FormStartPosition.CenterScreen;
+            configuracoes.Show();
+        }
     }
 }

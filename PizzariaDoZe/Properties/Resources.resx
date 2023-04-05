@@ -117,127 +117,140 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="botaoClientes.Text" xml:space="preserve">
-    <value>Cadastro de Clientes</value>
-  </data>
-  <data name="botaoEnderecoFunci.Text" xml:space="preserve">
-    <value>Cadastrar Endereço</value>
-  </data>
-  <data name="botaoFuncionarios.Text" xml:space="preserve">
-    <value>Cadastro de Funcionários</value>
-  </data>
-  <data name="botaoIngredientes.Text" xml:space="preserve">
-    <value>Cadastro de Ingredientes</value>
-  </data>
-  <data name="botaoProdutos.Text" xml:space="preserve">
-    <value>Cadastro de Produtos</value>
-  </data>
-  <data name="botaoSabores.Text" xml:space="preserve">
-    <value>Cadastro de Sabores</value>
-  </data>
-  <data name="botaoValores.Text" xml:space="preserve">
-    <value>Cadastro de Valores</value>
-  </data>
-  <data name="buttonEditar.Text" xml:space="preserve">
-    <value>Editar</value>
-  </data>
-  <data name="buttonExcluir.Text" xml:space="preserve">
-    <value>Excluir</value>
-  </data>
   <data name="buttonSair.Text" xml:space="preserve">
     <value>Sair</value>
-  </data>
-  <data name="buttonSalvar.Text" xml:space="preserve">
-    <value>Salvar</value>
-  </data>
-  <data name="labelBairro.Text" xml:space="preserve">
-    <value>Bairro</value>
-  </data>
-  <data name="labelCategoria.Text" xml:space="preserve">
-    <value>Categoria</value>
-  </data>
-  <data name="labelCEP.Text" xml:space="preserve">
-    <value>CEP</value>
-  </data>
-  <data name="labelCidade.Text" xml:space="preserve">
-    <value>Cidade</value>
-  </data>
-  <data name="labelCNH.Text" xml:space="preserve">
-    <value>CNH</value>
-  </data>
-  <data name="labelCodigo.Text" xml:space="preserve">
-    <value>Código</value>
-  </data>
-  <data name="labelComplemento.Text" xml:space="preserve">
-    <value>Complemento</value>
-  </data>
-  <data name="labelCPF.Text" xml:space="preserve">
-    <value>CPF</value>
-  </data>
-  <data name="labelEmail.Text" xml:space="preserve">
-    <value>Email</value>
-  </data>
-  <data name="labelGrupo.Text" xml:space="preserve">
-    <value>Grupo</value>
-  </data>
-  <data name="labelIngredientes.Text" xml:space="preserve">
-    <value>Ingredientes</value>
-  </data>
-  <data name="labelLogradouro.Text" xml:space="preserve">
-    <value>Logradouro</value>
-  </data>
-  <data name="labelMatricula.Text" xml:space="preserve">
-    <value>Matrícula</value>
-  </data>
-  <data name="labelML.Text" xml:space="preserve">
-    <value>ML</value>
-  </data>
-  <data name="labelNome.Text" xml:space="preserve">
-    <value>Nome</value>
-  </data>
-  <data name="labelNumero.Text" xml:space="preserve">
-    <value>Número</value>
-  </data>
-  <data name="labelObservacoes.Text" xml:space="preserve">
-    <value>Observações</value>
-  </data>
-  <data name="labelPais.Text" xml:space="preserve">
-    <value>País</value>
-  </data>
-  <data name="labelSenha.Text" xml:space="preserve">
-    <value>Senha</value>
-  </data>
-  <data name="labelTamanho.Text" xml:space="preserve">
-    <value>Tamanho</value>
-  </data>
-  <data name="labelTelefone.Text" xml:space="preserve">
-    <value>Telefone</value>
   </data>
   <data name="labelTipo.Text" xml:space="preserve">
     <value>Tipo</value>
   </data>
-  <data name="labelTitulo.Text" xml:space="preserve">
-    <value>Pizzaria do Zé</value>
-  </data>
-  <data name="labelUF.Text" xml:space="preserve">
-    <value>UF</value>
-  </data>
-  <data name="labelValidade.Text" xml:space="preserve">
-    <value>Data de Validade</value>
-  </data>
-  <data name="labelValidadeCNH.Text" xml:space="preserve">
-    <value>Validade CNH</value>
-  </data>
-  <data name="labelValor.Text" xml:space="preserve">
-    <value>Valor</value>
+  <data name="botaoProdutos.Text" xml:space="preserve">
+    <value>Cadastro de Produtos</value>
   </data>
   <data name="labelValorBorda.Text" xml:space="preserve">
     <value>Valor da Borda</value>
   </data>
+  <data name="labelPais.Text" xml:space="preserve">
+    <value>País</value>
+  </data>
+  <data name="labelLogradouro.Text" xml:space="preserve">
+    <value>Logradouro</value>
+  </data>
+  <data name="labelNome.Text" xml:space="preserve">
+    <value>Nome</value>
+  </data>
+  <data name="labelMatricula.Text" xml:space="preserve">
+    <value>Matrícula</value>
+  </data>
+  <data name="botaoFuncionarios.Text" xml:space="preserve">
+    <value>Cadastro de Funcionários</value>
+  </data>
+  <data name="labelValor.Text" xml:space="preserve">
+    <value>Valor</value>
+  </data>
+  <data name="labelIngredientes.Text" xml:space="preserve">
+    <value>Ingredientes</value>
+  </data>
+  <data name="labelCPF.Text" xml:space="preserve">
+    <value>CPF</value>
+  </data>
+  <data name="botaoSabores.Text" xml:space="preserve">
+    <value>Cadastro de Sabores</value>
+  </data>
+  <data name="labelCategoria.Text" xml:space="preserve">
+    <value>Categoria</value>
+  </data>
+  <data name="labelTelefone.Text" xml:space="preserve">
+    <value>Telefone</value>
+  </data>
   <data name="radioCnhNao.Text" xml:space="preserve">
     <value>Não</value>
   </data>
+  <data name="labelTamanho.Text" xml:space="preserve">
+    <value>Tamanho</value>
+  </data>
+  <data name="labelCodigo.Text" xml:space="preserve">
+    <value>Código</value>
+  </data>
+  <data name="buttonSalvar.Text" xml:space="preserve">
+    <value>Salvar</value>
+  </data>
+  <data name="labelObservacoes.Text" xml:space="preserve">
+    <value>Observações</value>
+  </data>
+  <data name="labelValidadeCNH.Text" xml:space="preserve">
+    <value>Validade CNH</value>
+  </data>
+  <data name="buttonEditar.Text" xml:space="preserve">
+    <value>Editar</value>
+  </data>
+  <data name="labelCEP.Text" xml:space="preserve">
+    <value>CEP</value>
+  </data>
+  <data name="labelSenha.Text" xml:space="preserve">
+    <value>Senha</value>
+  </data>
+  <data name="botaoIngredientes.Text" xml:space="preserve">
+    <value>Cadastro de Ingredientes</value>
+  </data>
+  <data name="labelComplemento.Text" xml:space="preserve">
+    <value>Complemento</value>
+  </data>
+  <data name="labelValidade.Text" xml:space="preserve">
+    <value>Data de Validade</value>
+  </data>
+  <data name="botaoValores.Text" xml:space="preserve">
+    <value>Cadastro de Valores</value>
+  </data>
+  <data name="labelCidade.Text" xml:space="preserve">
+    <value>Cidade</value>
+  </data>
+  <data name="labelTitulo.Text" xml:space="preserve">
+    <value>Pizzaria do Zé</value>
+  </data>
+  <data name="labelBairro.Text" xml:space="preserve">
+    <value>Bairro</value>
+  </data>
   <data name="radioCnhSim.Text" xml:space="preserve">
     <value>Sim</value>
+  </data>
+  <data name="labelNumero.Text" xml:space="preserve">
+    <value>Número</value>
+  </data>
+  <data name="botaoClientes.Text" xml:space="preserve">
+    <value>Cadastro de Clientes</value>
+  </data>
+  <data name="labelCNH.Text" xml:space="preserve">
+    <value>CNH</value>
+  </data>
+  <data name="botaoEnderecoFunci.Text" xml:space="preserve">
+    <value>Cadastrar Endereço</value>
+  </data>
+  <data name="labelML.Text" xml:space="preserve">
+    <value>ML</value>
+  </data>
+  <data name="labelEmail.Text" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="labelUF.Text" xml:space="preserve">
+    <value>UF</value>
+  </data>
+  <data name="buttonExcluir.Text" xml:space="preserve">
+    <value>Excluir</value>
+  </data>
+  <data name="labelGrupo.Text" xml:space="preserve">
+    <value>Grupo</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="wallpaper" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>wallpaper.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="buttonSalvarConfig.Text" xml:space="preserve">
+    <value>Salvar</value>
+  </data>
+  <data name="checkBoxReiniciarCFG.Text" xml:space="preserve">
+    <value>Reiniciar Aplicação para salvar?</value>
+  </data>
+  <data name="labelIdioma.Text" xml:space="preserve">
+    <value>Idioma/Região</value>
   </data>
 </root>

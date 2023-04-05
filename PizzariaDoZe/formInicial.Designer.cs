@@ -36,6 +36,7 @@
             labelTitulo = new Label();
             botaoValores = new Button();
             botaoProdutos = new Button();
+            button1 = new Button();
             SuspendLayout();
             // 
             // botaoFuncionarios
@@ -142,6 +143,20 @@
             botaoProdutos.UseVisualStyleBackColor = false;
             botaoProdutos.Click += botaoProdutos_Click;
             // 
+            // button1
+            // 
+            button1.BackColor = Color.WhiteSmoke;
+            button1.Cursor = Cursors.Hand;
+            button1.FlatStyle = FlatStyle.Flat;
+            button1.Font = new Font("Nexa Heavy", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            button1.Location = new Point(836, 881);
+            button1.Name = "button1";
+            button1.Size = new Size(233, 97);
+            button1.TabIndex = 8;
+            button1.Text = "CONFIGURAÇÕES";
+            button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click_1;
+            // 
             // paginaInicial
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -149,6 +164,7 @@
             BackColor = Color.White;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             ClientSize = new Size(1904, 1041);
+            Controls.Add(button1);
             Controls.Add(botaoProdutos);
             Controls.Add(botaoValores);
             Controls.Add(botaoSabores);
@@ -175,5 +191,6 @@
         private Label labelTitulo;
         private Button botaoValores;
         private Button botaoProdutos;
+        private Button button1;
     }
 }

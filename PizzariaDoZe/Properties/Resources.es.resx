@@ -150,6 +150,12 @@
   <data name="buttonSalvar.Text" xml:space="preserve">
     <value>Ahorrar</value>
   </data>
+  <data name="buttonSalvarConfig.Text" xml:space="preserve">
+    <value>Ahorrar</value>
+  </data>
+  <data name="checkBoxReiniciarCFG.Text" xml:space="preserve">
+    <value>Reiniciar la aplicación para guardar?</value>
+  </data>
   <data name="labelBairro.Text" xml:space="preserve">
     <value>Vecindario</value>
   </data>
@@ -179,6 +185,9 @@
   </data>
   <data name="labelGrupo.Text" xml:space="preserve">
     <value>Grupo</value>
+  </data>
+  <data name="labelIdioma.Text" xml:space="preserve">
+    <value>Idioma/Región</value>
   </data>
   <data name="labelIngredientes.Text" xml:space="preserve">
     <value>Ingredientes</value>
