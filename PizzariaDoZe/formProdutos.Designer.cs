@@ -49,7 +49,7 @@
             userControl.Margin = new Padding(3, 4, 3, 4);
             userControl.Name = "userControl";
             userControl.Size = new Size(479, 91);
-            userControl.TabIndex = 0;
+            userControl.TabIndex = 4;
             userControl.Load += userControl11_Load;
             // 
             // panel
@@ -79,7 +79,7 @@
             comboBoxML.Margin = new Padding(3, 2, 3, 2);
             comboBoxML.Name = "comboBoxML";
             comboBoxML.Size = new Size(106, 25);
-            comboBoxML.TabIndex = 6;
+            comboBoxML.TabIndex = 3;
             // 
             // comboBoxTipo
             // 
@@ -90,7 +90,7 @@
             comboBoxTipo.Margin = new Padding(3, 2, 3, 2);
             comboBoxTipo.Name = "comboBoxTipo";
             comboBoxTipo.Size = new Size(149, 25);
-            comboBoxTipo.TabIndex = 5;
+            comboBoxTipo.TabIndex = 2;
             // 
             // textBoxNome
             // 
@@ -98,7 +98,7 @@
             textBoxNome.Margin = new Padding(3, 2, 3, 2);
             textBoxNome.Name = "textBoxNome";
             textBoxNome.Size = new Size(108, 23);
-            textBoxNome.TabIndex = 3;
+            textBoxNome.TabIndex = 1;
             // 
             // labelNome
             // 
@@ -158,6 +158,7 @@
             Controls.Add(userControl);
             FormBorderStyle = FormBorderStyle.Fixed3D;
             Icon = (Icon)resources.GetObject("$this.Icon");
+            KeyPreview = true;
             Margin = new Padding(3, 2, 3, 2);
             Name = "formProdutos";
             Text = "Cadastro de Produtos";

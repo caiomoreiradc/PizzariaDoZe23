@@ -44,7 +44,7 @@
             // 
             labelCodigo.AutoSize = true;
             labelCodigo.Font = new Font("Nexa Heavy", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            labelCodigo.Location = new Point(18, 16);
+            labelCodigo.Location = new Point(16, 13);
             labelCodigo.Name = "labelCodigo";
             labelCodigo.Size = new Size(47, 16);
             labelCodigo.TabIndex = 0;
@@ -59,26 +59,24 @@
             panel.Controls.Add(labelNome);
             panel.Controls.Add(textBoxCodigo);
             panel.Controls.Add(labelCodigo);
-            panel.Location = new Point(11, 13);
-            panel.Margin = new Padding(3, 4, 3, 4);
+            panel.Location = new Point(10, 10);
             panel.Name = "panel";
-            panel.Size = new Size(629, 110);
+            panel.Size = new Size(550, 87);
             panel.TabIndex = 1;
             panel.Paint += panel_Paint;
             // 
             // textBoxValidade
             // 
-            textBoxValidade.Location = new Point(421, 39);
-            textBoxValidade.Margin = new Padding(3, 4, 3, 4);
+            textBoxValidade.Location = new Point(368, 31);
             textBoxValidade.Name = "textBoxValidade";
-            textBoxValidade.Size = new Size(175, 26);
-            textBoxValidade.TabIndex = 5;
+            textBoxValidade.Size = new Size(154, 23);
+            textBoxValidade.TabIndex = 2;
             // 
             // labelValidade
             // 
             labelValidade.AutoSize = true;
             labelValidade.Font = new Font("Nexa Heavy", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            labelValidade.Location = new Point(431, 16);
+            labelValidade.Location = new Point(377, 13);
             labelValidade.Name = "labelValidade";
             labelValidade.Size = new Size(111, 16);
             labelValidade.TabIndex = 4;
@@ -86,17 +84,16 @@
             // 
             // textBoxNome
             // 
-            textBoxNome.Location = new Point(157, 39);
-            textBoxNome.Margin = new Padding(3, 4, 3, 4);
+            textBoxNome.Location = new Point(137, 31);
             textBoxNome.Name = "textBoxNome";
-            textBoxNome.Size = new Size(237, 26);
-            textBoxNome.TabIndex = 3;
+            textBoxNome.Size = new Size(208, 23);
+            textBoxNome.TabIndex = 1;
             // 
             // labelNome
             // 
             labelNome.AutoSize = true;
             labelNome.Font = new Font("Nexa Heavy", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            labelNome.Location = new Point(157, 16);
+            labelNome.Location = new Point(137, 13);
             labelNome.Name = "labelNome";
             labelNome.Size = new Size(41, 16);
             labelNome.TabIndex = 2;
@@ -104,33 +101,32 @@
             // 
             // textBoxCodigo
             // 
-            textBoxCodigo.Location = new Point(18, 39);
-            textBoxCodigo.Margin = new Padding(3, 4, 3, 4);
+            textBoxCodigo.Location = new Point(16, 31);
             textBoxCodigo.Name = "textBoxCodigo";
-            textBoxCodigo.Size = new Size(90, 26);
-            textBoxCodigo.TabIndex = 1;
+            textBoxCodigo.Size = new Size(79, 23);
+            textBoxCodigo.TabIndex = 0;
             // 
             // userControl
             // 
             userControl.BackColor = Color.Transparent;
-            userControl.Location = new Point(50, 114);
-            userControl.Margin = new Padding(3, 5, 3, 5);
+            userControl.Location = new Point(44, 90);
+            userControl.Margin = new Padding(3, 4, 3, 4);
             userControl.Name = "userControl";
-            userControl.Size = new Size(558, 118);
+            userControl.Size = new Size(488, 93);
             userControl.TabIndex = 3;
             userControl.Load += userControl11_Load;
             // 
             // formIngredientes
             // 
-            AutoScaleDimensions = new SizeF(8F, 19F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
-            ClientSize = new Size(651, 233);
+            ClientSize = new Size(570, 184);
             Controls.Add(panel);
             Controls.Add(userControl);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Icon = (Icon)resources.GetObject("$this.Icon");
-            Margin = new Padding(3, 4, 3, 4);
+            KeyPreview = true;
             MaximizeBox = false;
             Name = "formIngredientes";
             Text = "Cadastro de Ingredientes";

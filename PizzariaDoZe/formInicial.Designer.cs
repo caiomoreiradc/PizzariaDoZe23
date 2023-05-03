@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(paginaInicial));
             botaoFuncionarios = new Button();
             botaoClientes = new Button();
@@ -36,7 +37,22 @@
             labelTitulo = new Label();
             botaoValores = new Button();
             botaoProdutos = new Button();
-            button1 = new Button();
+            botaoConfig = new Button();
+            contextMenuStrip = new ContextMenuStrip(components);
+            cadastroDeFuncionáriosToolStripMenuItem = new ToolStripMenuItem();
+            cadastroDeClientesToolStripMenuItem = new ToolStripMenuItem();
+            cadastroDeSaboresToolStripMenuItem = new ToolStripMenuItem();
+            cadastroDeProdutosToolStripMenuItem = new ToolStripMenuItem();
+            cadastroDeValoresToolStripMenuItem = new ToolStripMenuItem();
+            cadastroDeIngredientesToolStripMenuItem = new ToolStripMenuItem();
+            configuraçõesToolStripMenuItem = new ToolStripMenuItem();
+            notifyIconSystemTray = new NotifyIcon(components);
+            contextMenuStripSystemTray = new ContextMenuStrip(components);
+            abrirAplicaçãoToolStripMenuItem = new ToolStripMenuItem();
+            encerrarToolStripMenuItem = new ToolStripMenuItem();
+            sobreToolStripMenuItem = new ToolStripMenuItem();
+            contextMenuStrip.SuspendLayout();
+            contextMenuStripSystemTray.SuspendLayout();
             SuspendLayout();
             // 
             // botaoFuncionarios
@@ -50,7 +66,7 @@
             botaoFuncionarios.Location = new Point(250, 454);
             botaoFuncionarios.Name = "botaoFuncionarios";
             botaoFuncionarios.Size = new Size(699, 99);
-            botaoFuncionarios.TabIndex = 1;
+            botaoFuncionarios.TabIndex = 0;
             botaoFuncionarios.Text = "Cadastro de Funcionários";
             botaoFuncionarios.UseMnemonic = false;
             botaoFuncionarios.UseVisualStyleBackColor = false;
@@ -69,7 +85,7 @@
             botaoClientes.TabIndex = 2;
             botaoClientes.Text = "Cadastro de Clientes";
             botaoClientes.UseVisualStyleBackColor = false;
-            botaoClientes.Click += button2_Click;
+            botaoClientes.Click += botaoClientes_Click;
             // 
             // botaoIngredientes
             // 
@@ -81,7 +97,7 @@
             botaoIngredientes.Location = new Point(250, 664);
             botaoIngredientes.Name = "botaoIngredientes";
             botaoIngredientes.Size = new Size(699, 99);
-            botaoIngredientes.TabIndex = 3;
+            botaoIngredientes.TabIndex = 4;
             botaoIngredientes.Text = "Cadastro de Ingredientes";
             botaoIngredientes.UseVisualStyleBackColor = false;
             botaoIngredientes.Click += botaoIngredientes_Click;
@@ -96,7 +112,7 @@
             botaoSabores.Location = new Point(955, 454);
             botaoSabores.Name = "botaoSabores";
             botaoSabores.Size = new Size(699, 99);
-            botaoSabores.TabIndex = 4;
+            botaoSabores.TabIndex = 1;
             botaoSabores.Text = "Cadastro de Sabores";
             botaoSabores.UseVisualStyleBackColor = false;
             botaoSabores.Click += botaoSabores_Click;
@@ -123,10 +139,10 @@
             botaoValores.Location = new Point(955, 559);
             botaoValores.Name = "botaoValores";
             botaoValores.Size = new Size(699, 99);
-            botaoValores.TabIndex = 6;
+            botaoValores.TabIndex = 3;
             botaoValores.Text = "Cadastro de Valores";
             botaoValores.UseVisualStyleBackColor = false;
-            botaoValores.Click += button1_Click;
+            botaoValores.Click += botaoValores_Click;
             // 
             // botaoProdutos
             // 
@@ -138,24 +154,116 @@
             botaoProdutos.Location = new Point(955, 664);
             botaoProdutos.Name = "botaoProdutos";
             botaoProdutos.Size = new Size(699, 99);
-            botaoProdutos.TabIndex = 7;
+            botaoProdutos.TabIndex = 5;
             botaoProdutos.Text = "Cadastro de Produtos";
             botaoProdutos.UseVisualStyleBackColor = false;
             botaoProdutos.Click += botaoProdutos_Click;
             // 
-            // button1
+            // botaoConfig
             // 
-            button1.BackColor = Color.WhiteSmoke;
-            button1.Cursor = Cursors.Hand;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.Font = new Font("Nexa Heavy", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            button1.Location = new Point(836, 881);
-            button1.Name = "button1";
-            button1.Size = new Size(233, 97);
-            button1.TabIndex = 8;
-            button1.Text = "CONFIGURAÇÕES";
-            button1.UseVisualStyleBackColor = false;
-            button1.Click += button1_Click_1;
+            botaoConfig.BackColor = Color.WhiteSmoke;
+            botaoConfig.Cursor = Cursors.Hand;
+            botaoConfig.FlatStyle = FlatStyle.Flat;
+            botaoConfig.Font = new Font("Nexa Heavy", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            botaoConfig.Location = new Point(836, 881);
+            botaoConfig.Name = "botaoConfig";
+            botaoConfig.Size = new Size(233, 97);
+            botaoConfig.TabIndex = 6;
+            botaoConfig.Text = "CONFIGURAÇÕES";
+            botaoConfig.UseVisualStyleBackColor = false;
+            botaoConfig.Click += botaoConfigurações_Click;
+            // 
+            // contextMenuStrip
+            // 
+            contextMenuStrip.Items.AddRange(new ToolStripItem[] { cadastroDeFuncionáriosToolStripMenuItem, cadastroDeClientesToolStripMenuItem, cadastroDeSaboresToolStripMenuItem, cadastroDeProdutosToolStripMenuItem, cadastroDeValoresToolStripMenuItem, cadastroDeIngredientesToolStripMenuItem, configuraçõesToolStripMenuItem });
+            contextMenuStrip.Name = "contextMenuStrip2";
+            contextMenuStrip.Size = new Size(260, 158);
+            contextMenuStrip.Text = "Opções";
+            contextMenuStrip.Opening += contextMenuStrip_Opening;
+            // 
+            // cadastroDeFuncionáriosToolStripMenuItem
+            // 
+            cadastroDeFuncionáriosToolStripMenuItem.Name = "cadastroDeFuncionáriosToolStripMenuItem";
+            cadastroDeFuncionáriosToolStripMenuItem.ShortcutKeys = Keys.Shift | Keys.F1;
+            cadastroDeFuncionáriosToolStripMenuItem.Size = new Size(259, 22);
+            cadastroDeFuncionáriosToolStripMenuItem.Text = "Cadastro de Funcionários";
+            // 
+            // cadastroDeClientesToolStripMenuItem
+            // 
+            cadastroDeClientesToolStripMenuItem.Name = "cadastroDeClientesToolStripMenuItem";
+            cadastroDeClientesToolStripMenuItem.ShortcutKeys = Keys.Shift | Keys.F2;
+            cadastroDeClientesToolStripMenuItem.Size = new Size(259, 22);
+            cadastroDeClientesToolStripMenuItem.Text = "Cadastro de Clientes";
+            // 
+            // cadastroDeSaboresToolStripMenuItem
+            // 
+            cadastroDeSaboresToolStripMenuItem.Name = "cadastroDeSaboresToolStripMenuItem";
+            cadastroDeSaboresToolStripMenuItem.ShortcutKeys = Keys.Shift | Keys.F3;
+            cadastroDeSaboresToolStripMenuItem.Size = new Size(259, 22);
+            cadastroDeSaboresToolStripMenuItem.Text = "Cadastro de Sabores";
+            // 
+            // cadastroDeProdutosToolStripMenuItem
+            // 
+            cadastroDeProdutosToolStripMenuItem.Name = "cadastroDeProdutosToolStripMenuItem";
+            cadastroDeProdutosToolStripMenuItem.ShortcutKeys = Keys.Shift | Keys.F4;
+            cadastroDeProdutosToolStripMenuItem.Size = new Size(259, 22);
+            cadastroDeProdutosToolStripMenuItem.Text = "Cadastro de Produtos";
+            // 
+            // cadastroDeValoresToolStripMenuItem
+            // 
+            cadastroDeValoresToolStripMenuItem.Name = "cadastroDeValoresToolStripMenuItem";
+            cadastroDeValoresToolStripMenuItem.ShortcutKeys = Keys.Shift | Keys.F5;
+            cadastroDeValoresToolStripMenuItem.Size = new Size(259, 22);
+            cadastroDeValoresToolStripMenuItem.Text = "Cadastro de Valores";
+            // 
+            // cadastroDeIngredientesToolStripMenuItem
+            // 
+            cadastroDeIngredientesToolStripMenuItem.Name = "cadastroDeIngredientesToolStripMenuItem";
+            cadastroDeIngredientesToolStripMenuItem.ShortcutKeys = Keys.Shift | Keys.F6;
+            cadastroDeIngredientesToolStripMenuItem.Size = new Size(259, 22);
+            cadastroDeIngredientesToolStripMenuItem.Text = "Cadastro de Ingredientes";
+            // 
+            // configuraçõesToolStripMenuItem
+            // 
+            configuraçõesToolStripMenuItem.Name = "configuraçõesToolStripMenuItem";
+            configuraçõesToolStripMenuItem.ShortcutKeys = Keys.Shift | Keys.F7;
+            configuraçõesToolStripMenuItem.Size = new Size(259, 22);
+            configuraçõesToolStripMenuItem.Text = "Configurações";
+            // 
+            // notifyIconSystemTray
+            // 
+            notifyIconSystemTray.BalloonTipIcon = ToolTipIcon.Info;
+            notifyIconSystemTray.BalloonTipText = "Aplicação continua rodando na bandeja.";
+            notifyIconSystemTray.BalloonTipTitle = "Pizzaria do Zé";
+            notifyIconSystemTray.ContextMenuStrip = contextMenuStripSystemTray;
+            notifyIconSystemTray.Icon = (Icon)resources.GetObject("notifyIconSystemTray.Icon");
+            notifyIconSystemTray.Text = "Pizzaria do Zé";
+            notifyIconSystemTray.MouseDoubleClick += notifyIcon1_MouseDoubleClick;
+            // 
+            // contextMenuStripSystemTray
+            // 
+            contextMenuStripSystemTray.Items.AddRange(new ToolStripItem[] { abrirAplicaçãoToolStripMenuItem, encerrarToolStripMenuItem, sobreToolStripMenuItem });
+            contextMenuStripSystemTray.Name = "contextMenuStripSystemTray";
+            contextMenuStripSystemTray.Size = new Size(156, 70);
+            contextMenuStripSystemTray.Opening += contextMenuStripSystemTray_Opening;
+            // 
+            // abrirAplicaçãoToolStripMenuItem
+            // 
+            abrirAplicaçãoToolStripMenuItem.Name = "abrirAplicaçãoToolStripMenuItem";
+            abrirAplicaçãoToolStripMenuItem.Size = new Size(155, 22);
+            abrirAplicaçãoToolStripMenuItem.Text = "Abrir Aplicação";
+            // 
+            // encerrarToolStripMenuItem
+            // 
+            encerrarToolStripMenuItem.Name = "encerrarToolStripMenuItem";
+            encerrarToolStripMenuItem.Size = new Size(155, 22);
+            encerrarToolStripMenuItem.Text = "Encerrar";
+            // 
+            // sobreToolStripMenuItem
+            // 
+            sobreToolStripMenuItem.Name = "sobreToolStripMenuItem";
+            sobreToolStripMenuItem.Size = new Size(155, 22);
+            sobreToolStripMenuItem.Text = "Sobre";
             // 
             // paginaInicial
             // 
@@ -164,7 +272,8 @@
             BackColor = Color.White;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             ClientSize = new Size(1904, 1041);
-            Controls.Add(button1);
+            ContextMenuStrip = contextMenuStrip;
+            Controls.Add(botaoConfig);
             Controls.Add(botaoProdutos);
             Controls.Add(botaoValores);
             Controls.Add(botaoSabores);
@@ -172,13 +281,16 @@
             Controls.Add(botaoClientes);
             Controls.Add(botaoFuncionarios);
             Controls.Add(labelTitulo);
-            FormBorderStyle = FormBorderStyle.FixedSingle;
+            FormBorderStyle = FormBorderStyle.Fixed3D;
             Icon = (Icon)resources.GetObject("$this.Icon");
+            KeyPreview = true;
             Name = "paginaInicial";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Pizzaria do Zé 0.4";
             TransparencyKey = Color.White;
             Load += paginaInicial_Load;
+            contextMenuStrip.ResumeLayout(false);
+            contextMenuStripSystemTray.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -191,6 +303,19 @@
         private Label labelTitulo;
         private Button botaoValores;
         private Button botaoProdutos;
-        private Button button1;
+        private Button botaoConfig;
+        private ContextMenuStrip contextMenuStripSystemTray;
+        private ContextMenuStrip contextMenuStrip;
+        private ToolStripMenuItem cadastroDeFuncionáriosToolStripMenuItem;
+        private ToolStripMenuItem cadastroDeClientesToolStripMenuItem;
+        private ToolStripMenuItem cadastroDeSaboresToolStripMenuItem;
+        private ToolStripMenuItem cadastroDeProdutosToolStripMenuItem;
+        private ToolStripMenuItem cadastroDeValoresToolStripMenuItem;
+        private ToolStripMenuItem cadastroDeIngredientesToolStripMenuItem;
+        private ToolStripMenuItem configuraçõesToolStripMenuItem;
+        private NotifyIcon notifyIconSystemTray;
+        private ToolStripMenuItem abrirAplicaçãoToolStripMenuItem;
+        private ToolStripMenuItem encerrarToolStripMenuItem;
+        private ToolStripMenuItem sobreToolStripMenuItem;
     }
 }

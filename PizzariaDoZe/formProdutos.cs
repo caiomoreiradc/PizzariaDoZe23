@@ -18,11 +18,14 @@ namespace PizzariaDoZe
             this.ControlBox = false; //REMOVE BOTÕES DE MINIZAR E FECHAR
             userControl.buttonSair.Click += buttonSair_Click; //BOTAO SAIR
 
+            Funcoes.EventoFocoCampos(this);
+
+            this.KeyDown += new KeyEventHandler(Funcoes.FormEventoKeyDown!);
+
             #region idioma/região interface - satellite assembly
             // com base no idioma/região escolhido pelo usuário,
             // ajusta as propriedades dos componentes da tela com base no conteúdo do arquivo
             //resources
-            Funcoes.AjustaResourcesControl(this);
             //ajuste manual de campos ou mensagens para o usuário que não puderam ser
             //automatizadas acima
             this.Text = Properties.Resources.ResourceManager.GetString("txtTituloPrincipal");

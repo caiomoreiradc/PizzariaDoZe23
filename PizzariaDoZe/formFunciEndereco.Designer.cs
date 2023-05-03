@@ -81,11 +81,11 @@
             comboBoxPais.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
             comboBoxPais.AutoCompleteSource = AutoCompleteSource.CustomSource;
             comboBoxPais.FormattingEnabled = true;
-            comboBoxPais.Items.AddRange(new object[] { "Afghanistan", "Albania", "Algeria", "Andorra", "Angola", "Antigua & Deps", "Argentina", "Armenia", "Australia", "Austria", "Azerbaijan", "Bahamas", "Bahrain", "Bangladesh", "Barbados", "Belarus", "Belgium", "Belize", "Benin", "Bhutan", "Bolivia", "Bosnia Herzegovina", "Botswana", "Brasil", "Brunei", "Bulgaria", "Burkina", "Burundi", "Cambodia", "Cameroon", "Canada", "Cape Verde", "Central African Rep", "Chad", "Chile", "China", "Colombia", "Comoros", "Congo", "Congo {Democratic Rep}", "Costa Rica", "Croatia", "Cuba", "Cyprus", "Czech Republic", "Denmark", "Djibouti", "Dominica", "Dominican Republic", "East Timor", "Ecuador", "Egypt", "El Salvador", "Equatorial Guinea", "Eritrea", "Estonia", "Ethiopia", "Fiji", "Finland", "France", "Gabon", "Gambia", "Georgia", "Germany", "Ghana", "Greece", "Grenada", "Guatemala", "Guinea", "Guinea-Bissau", "Guyana", "Haiti", "Honduras", "Hungary", "Iceland", "India", "Indonesia", "Iran", "Iraq", "Ireland {Republic}", "Israel", "Italy", "Ivory Coast", "Jamaica", "Japan", "Jordan", "Kazakhstan", "Kenya", "Kiribati", "Korea North", "Korea South", "Kosovo", "Kuwait", "Kyrgyzstan", "Laos", "Latvia", "Lebanon", "Lesotho", "Liberia", "Libya", "Liechtenstein", "Lithuania", "Luxembourg", "Macedonia", "Madagascar", "Malawi", "Malaysia", "Maldives", "Mali", "Malta", "Marshall Islands", "Mauritania", "Mauritius", "Mexico", "Micronesia", "Moldova", "Monaco", "Mongolia", "Montenegro", "Morocco", "Mozambique", "Myanmar, {Burma}", "Namibia", "Nauru", "Nepal", "Netherlands", "New Zealand", "Nicaragua", "Niger", "Nigeria", "Norway", "Oman", "Pakistan", "Palau", "Panama", "Papua New Guinea", "Paraguay", "Peru", "Philippines", "Poland", "Portugal", "Qatar", "Romania", "Russian Federation", "Rwanda", "St Kitts & Nevis", "St Lucia", "Saint Vincent & the Grenadines", "Samoa", "San Marino", "Sao Tome & Principe", "Saudi Arabia", "Senegal", "Serbia", "Seychelles", "Sierra Leone", "Singapore", "Slovakia", "Slovenia", "Solomon Islands", "Somalia", "South Africa", "South Sudan", "Spain", "Sri Lanka", "Sudan", "Suriname", "Swaziland", "Sweden", "Switzerland", "Syria", "Taiwan", "Tajikistan", "Tanzania", "Thailand", "Togo", "Tonga", "Trinidad & Tobago", "Tunisia", "Turkey", "Turkmenistan", "Tuvalu", "Uganda", "Ukraine", "United Arab Emirates", "United Kingdom", "United States", "Uruguay", "Uzbekistan", "Vanuatu", "Vatican City", "Venezuela", "Vietnam", "Yemen", "Zambia", "Zimbabwe" });
+            comboBoxPais.Items.AddRange(new object[] { "Afghanistan", "Albania", "Algeria", "Andorra", "Angola", "Antigua & Deps", "Argentina", "Armenia", "Australia", "Austria", "Azerbaijan", "Bahamas", "Bahrain", "Bangladesh", "Barbados", "Belarus", "Belgium", "Belize", "Benin", "Bhutan", "Bolivia", "Bosnia Herzegovina", "Botswana", "Brasil", "Brunei", "Bulgaria", "Burkina", "Burundi", "Cambodia", "Cameroon", "Canada", "Cape Verde", "Central African Rep", "Chad", "Chile", "China", "Colombia", "Comoros", "Congo", "Congo {Democratic Rep}", "Costa Rica", "Croatia", "Cuba", "Cyprus", "Czech Republic", "Denmark", "Djibouti", "Dominica", "Dominican Republic", "East Timor", "Ecuador", "Egypt", "El Salvador", "Equatorial Guinea", "Eritrea", "Estonia", "Ethiopia", "Fiji", "Finland", "France", "Gabon", "Gambia", "Georgia", "Germany", "Ghana", "Greece", "Grenada", "Guatemala", "Guinea", "Guinea-Bissau", "Guyana", "Haiti", "Honduras", "Hungary", "Iceland", "India", "Indonesia", "Iran", "Iraq", "Ireland {Republic}", "Israel", "Italy", "Ivory Coast", "Jamaica", "Japan", "Jordan", "Kazakhstan", "Kenya", "Kiribati", "Korea North", "Korea South", "Kosovo", "Kuwait", "Kyrgyzstan", "Laos", "Latvia", "Lebanon", "Lesotho", "Liberia", "Libya", "Liechtenstein", "Lithuania", "Luxembourg", "Macedonia", "Madagascar", "Malawi", "Malaysia", "Maldives", "Mali", "Malta", "Marshall Islands", "Mauritania", "Mauritius", "Mexico", "Micronesia", "Moldova", "Monaco", "Mongolia", "Montenegro", "Morocco", "Mozambique", "Myanmar, {Burma}", "Namibia", "Nauru", "Nepal", "Netherlands", "New Zealand", "Nicaragua", "Niger", "Nigeria", "Norway", "Oman", "Pakistan", "Palau", "Panama", "Papua New Guinea", "Paraguay", "Peru", "Philippines", "Poland", "Portugal", "Qatar", "Romania", "Russian Federation", "Rwanda", "Saint Vincent & the Grenadines", "Samoa", "San Marino", "Sao Tome & Principe", "Saudi Arabia", "Senegal", "Serbia", "Seychelles", "Sierra Leone", "Singapore", "Slovakia", "Slovenia", "Solomon Islands", "Somalia", "South Africa", "South Sudan", "Spain", "Sri Lanka", "St Kitts & Nevis", "St Lucia", "Sudan", "Suriname", "Swaziland", "Sweden", "Switzerland", "Syria", "Taiwan", "Tajikistan", "Tanzania", "Thailand", "Togo", "Tonga", "Trinidad & Tobago", "Tunisia", "Turkey", "Turkmenistan", "Tuvalu", "Uganda", "Ukraine", "United Arab Emirates", "United Kingdom", "United States", "Uruguay", "Uzbekistan", "Vanuatu", "Vatican City", "Venezuela", "Vietnam", "Yemen", "Zambia", "Zimbabwe" });
             comboBoxPais.Location = new Point(515, 89);
             comboBoxPais.Name = "comboBoxPais";
             comboBoxPais.Size = new Size(167, 24);
-            comboBoxPais.TabIndex = 17;
+            comboBoxPais.TabIndex = 7;
             comboBoxPais.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
             // 
             // comboBoxUF
@@ -98,7 +98,7 @@
             comboBoxUF.Location = new Point(453, 90);
             comboBoxUF.Name = "comboBoxUF";
             comboBoxUF.Size = new Size(56, 24);
-            comboBoxUF.TabIndex = 16;
+            comboBoxUF.TabIndex = 6;
             comboBoxUF.SelectedIndexChanged += comboBoxUFFunci_SelectedIndexChanged;
             // 
             // labelPais
@@ -126,7 +126,7 @@
             textBoxCidade.Location = new Point(300, 90);
             textBoxCidade.Name = "textBoxCidade";
             textBoxCidade.Size = new Size(147, 26);
-            textBoxCidade.TabIndex = 11;
+            textBoxCidade.TabIndex = 5;
             // 
             // labelCidade
             // 
@@ -144,7 +144,7 @@
             textBoxComplemento.Multiline = true;
             textBoxComplemento.Name = "textBoxComplemento";
             textBoxComplemento.Size = new Size(263, 48);
-            textBoxComplemento.TabIndex = 9;
+            textBoxComplemento.TabIndex = 4;
             // 
             // labelComplemento
             // 
@@ -161,7 +161,7 @@
             textBoxBairro.Location = new Point(583, 31);
             textBoxBairro.Name = "textBoxBairro";
             textBoxBairro.Size = new Size(99, 26);
-            textBoxBairro.TabIndex = 7;
+            textBoxBairro.TabIndex = 3;
             // 
             // labelBairro
             // 
@@ -179,7 +179,7 @@
             textBoxNumero.Location = new Point(504, 31);
             textBoxNumero.Name = "textBoxNumero";
             textBoxNumero.Size = new Size(58, 26);
-            textBoxNumero.TabIndex = 5;
+            textBoxNumero.TabIndex = 2;
             // 
             // labelNumero
             // 
@@ -196,7 +196,7 @@
             textBoxLogradouro.Location = new Point(182, 31);
             textBoxLogradouro.Name = "textBoxLogradouro";
             textBoxLogradouro.Size = new Size(305, 26);
-            textBoxLogradouro.TabIndex = 3;
+            textBoxLogradouro.TabIndex = 1;
             // 
             // labelLogradouro
             // 
@@ -213,7 +213,7 @@
             textBoxCep.Location = new Point(18, 31);
             textBoxCep.Name = "textBoxCep";
             textBoxCep.Size = new Size(125, 26);
-            textBoxCep.TabIndex = 1;
+            textBoxCep.TabIndex = 0;
             // 
             // labelCEP
             // 
@@ -233,7 +233,7 @@
             userControl.Margin = new Padding(3, 4, 3, 4);
             userControl.Name = "userControl";
             userControl.Size = new Size(547, 89);
-            userControl.TabIndex = 1;
+            userControl.TabIndex = 8;
             userControl.Load += userControl11_Load;
             // 
             // formFunciEndereco
@@ -247,6 +247,7 @@
             Font = new Font("Nexa Heavy", 9F, FontStyle.Bold, GraphicsUnit.Point);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Icon = (Icon)resources.GetObject("$this.Icon");
+            KeyPreview = true;
             MaximizeBox = false;
             Name = "formFunciEndereco";
             Text = "Cadastro de Endereço dos Funcionários";

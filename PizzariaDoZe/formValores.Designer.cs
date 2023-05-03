@@ -79,7 +79,7 @@
             textBoxValorBorda.Margin = new Padding(3, 2, 3, 2);
             textBoxValorBorda.Name = "textBoxValorBorda";
             textBoxValorBorda.Size = new Size(88, 23);
-            textBoxValorBorda.TabIndex = 9;
+            textBoxValorBorda.TabIndex = 4;
             // 
             // textBoxValor
             // 
@@ -87,7 +87,7 @@
             textBoxValor.Margin = new Padding(3, 2, 3, 2);
             textBoxValor.Name = "textBoxValor";
             textBoxValor.Size = new Size(88, 23);
-            textBoxValor.TabIndex = 8;
+            textBoxValor.TabIndex = 3;
             // 
             // comboBoxCategoria
             // 
@@ -98,7 +98,7 @@
             comboBoxCategoria.Margin = new Padding(3, 2, 3, 2);
             comboBoxCategoria.Name = "comboBoxCategoria";
             comboBoxCategoria.Size = new Size(127, 24);
-            comboBoxCategoria.TabIndex = 7;
+            comboBoxCategoria.TabIndex = 2;
             // 
             // labelCategoria
             // 
@@ -119,7 +119,7 @@
             comboBoxTamanho.Margin = new Padding(3, 2, 3, 2);
             comboBoxTamanho.Name = "comboBoxTamanho";
             comboBoxTamanho.Size = new Size(134, 24);
-            comboBoxTamanho.TabIndex = 5;
+            comboBoxTamanho.TabIndex = 1;
             // 
             // labelValorBorda
             // 
@@ -130,6 +130,7 @@
             labelValorBorda.Size = new Size(99, 16);
             labelValorBorda.TabIndex = 4;
             labelValorBorda.Text = "Valor da Borda";
+            labelValorBorda.Click += labelValorBorda_Click;
             // 
             // labelValor
             // 
@@ -157,7 +158,7 @@
             textBoxCodigo.Margin = new Padding(3, 2, 3, 2);
             textBoxCodigo.Name = "textBoxCodigo";
             textBoxCodigo.Size = new Size(78, 23);
-            textBoxCodigo.TabIndex = 1;
+            textBoxCodigo.TabIndex = 0;
             // 
             // labelCodigo
             // 
@@ -179,6 +180,7 @@
             Controls.Add(userControl);
             FormBorderStyle = FormBorderStyle.Fixed3D;
             Icon = (Icon)resources.GetObject("$this.Icon");
+            KeyPreview = true;
             Margin = new Padding(3, 2, 3, 2);
             Name = "formValores";
             StartPosition = FormStartPosition.CenterScreen;

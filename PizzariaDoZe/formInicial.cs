@@ -8,18 +8,46 @@ namespace PizzariaDoZe
         {
             InitializeComponent();
 
+            Funcoes.EventoFocoCampos(this);
+
+            this.KeyDown += new KeyEventHandler(Funcoes.FormEventoKeyDown!);
+            cadastroDeFuncionáriosToolStripMenuItem.Click += new EventHandler(botaoFuncionarios_Click);
+            cadastroDeClientesToolStripMenuItem.Click += new EventHandler(botaoClientes_Click);
+            cadastroDeSaboresToolStripMenuItem.Click += new EventHandler(botaoSabores_Click);
+            cadastroDeProdutosToolStripMenuItem.Click += new EventHandler(botaoProdutos_Click);
+            cadastroDeValoresToolStripMenuItem.Click += new EventHandler(botaoValores_Click);
+            cadastroDeIngredientesToolStripMenuItem.Click += new EventHandler(botaoIngredientes_Click);
+            configuraçõesToolStripMenuItem.Click += new EventHandler(botaoConfigurações_Click);
             #region idioma/região interface - satellite assembly
             // com base no idioma/região escolhido pelo usuário,
             // ajusta as propriedades dos componentes da tela com base no conteúdo do arquivo
             //resources
-            Funcoes.AjustaResourcesControl(this);
+            Funcoes.AjustaResourcesControl(contextMenuStrip);
             //ajuste manual de campos ou mensagens para o usuário que não puderam ser
             //automatizadas acima
             this.Text = Properties.Resources.ResourceManager.GetString("txtTituloPrincipal");
             #endregion
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void NotifyIconSystemTray_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            this.Show();
+            WindowState = FormWindowState.Normal;
+            notifyIconSystemTray.Visible = false;
+        }
+        private void formInicial_Resize(object sender, EventArgs e)
+        {
+            if (this.WindowState == FormWindowState.Minimized)
+            {
+                this.Hide();
+                notifyIconSystemTray.Visible = true;
+            }
+            else if (FormWindowState.Normal == this.WindowState)
+            {
+                notifyIconSystemTray.Visible = false;
+            }
+        }
+        private void botaoClientes_Click(object sender, EventArgs e)
         {
             formClientes clientes = new formClientes();
             clientes.StartPosition = FormStartPosition.CenterScreen;
@@ -72,7 +100,7 @@ namespace PizzariaDoZe
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void botaoValores_Click(object sender, EventArgs e)
         {
             formValores valores = new formValores();
             valores.StartPosition = FormStartPosition.CenterScreen;
@@ -91,11 +119,33 @@ namespace PizzariaDoZe
 
         }
 
-        private void button1_Click_1(object sender, EventArgs e)
+        private void botaoConfigurações_Click(object sender, EventArgs e)
         {
             formConfiguracoes configuracoes = new formConfiguracoes();
             configuracoes.StartPosition = FormStartPosition.CenterScreen;
             configuracoes.Show();
         }
+
+        private void cadastroDeSaboresToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void contextMenuStrip_Opening(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+
+        }
+
+        private void notifyIcon1_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void contextMenuStripSystemTray_Opening(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+
+        }
+
+
     }
 }

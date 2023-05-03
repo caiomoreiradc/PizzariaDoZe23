@@ -54,7 +54,7 @@
             checkBoxReiniciarCFG.Location = new Point(150, 32);
             checkBoxReiniciarCFG.Name = "checkBoxReiniciarCFG";
             checkBoxReiniciarCFG.Size = new Size(220, 20);
-            checkBoxReiniciarCFG.TabIndex = 2;
+            checkBoxReiniciarCFG.TabIndex = 1;
             checkBoxReiniciarCFG.Text = "Reiniciar Aplicação para salvar?";
             checkBoxReiniciarCFG.UseVisualStyleBackColor = true;
             // 
@@ -66,7 +66,7 @@
             comboBoxIdioma.Location = new Point(12, 28);
             comboBoxIdioma.Name = "comboBoxIdioma";
             comboBoxIdioma.Size = new Size(121, 24);
-            comboBoxIdioma.TabIndex = 1;
+            comboBoxIdioma.TabIndex = 0;
             comboBoxIdioma.SelectedIndexChanged += comboBoxIdioma_SelectedIndexChanged;
             // 
             // labelIdioma
@@ -103,6 +103,7 @@
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Icon = (Icon)resources.GetObject("$this.Icon");
+            KeyPreview = true;
             Name = "formConfiguracoes";
             Text = "Configurações";
             Load += formConfiguracoes_Load;
