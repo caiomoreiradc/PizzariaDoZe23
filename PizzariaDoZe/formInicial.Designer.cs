@@ -238,7 +238,7 @@
             notifyIconSystemTray.ContextMenuStrip = contextMenuStripSystemTray;
             notifyIconSystemTray.Icon = (Icon)resources.GetObject("notifyIconSystemTray.Icon");
             notifyIconSystemTray.Text = "Pizzaria do Zé";
-            notifyIconSystemTray.MouseDoubleClick += notifyIcon1_MouseDoubleClick;
+            notifyIconSystemTray.MouseDoubleClick += NotifyIconSystemTray_MouseDoubleClick;
             // 
             // contextMenuStripSystemTray
             // 
@@ -289,6 +289,7 @@
             Text = "Pizzaria do Zé 0.4";
             TransparencyKey = Color.White;
             Load += paginaInicial_Load;
+            Resize += formInicial_Resize;
             contextMenuStrip.ResumeLayout(false);
             contextMenuStripSystemTray.ResumeLayout(false);
             ResumeLayout(false);

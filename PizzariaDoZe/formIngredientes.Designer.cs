@@ -29,62 +29,29 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formIngredientes));
-            labelCodigo = new Label();
             panel = new Panel();
-            textBoxValidade = new TextBox();
-            labelValidade = new Label();
             textBoxNome = new TextBox();
             labelNome = new Label();
-            textBoxCodigo = new TextBox();
             userControl = new UserControl1();
+            botaoVisualizarCadastros = new Button();
             panel.SuspendLayout();
             SuspendLayout();
-            // 
-            // labelCodigo
-            // 
-            labelCodigo.AutoSize = true;
-            labelCodigo.Font = new Font("Nexa Heavy", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            labelCodigo.Location = new Point(16, 13);
-            labelCodigo.Name = "labelCodigo";
-            labelCodigo.Size = new Size(47, 16);
-            labelCodigo.TabIndex = 0;
-            labelCodigo.Text = "Código";
             // 
             // panel
             // 
             panel.BackColor = Color.Silver;
-            panel.Controls.Add(textBoxValidade);
-            panel.Controls.Add(labelValidade);
+            panel.Controls.Add(botaoVisualizarCadastros);
             panel.Controls.Add(textBoxNome);
             panel.Controls.Add(labelNome);
-            panel.Controls.Add(textBoxCodigo);
-            panel.Controls.Add(labelCodigo);
             panel.Location = new Point(10, 10);
             panel.Name = "panel";
             panel.Size = new Size(550, 87);
             panel.TabIndex = 1;
             panel.Paint += panel_Paint;
             // 
-            // textBoxValidade
-            // 
-            textBoxValidade.Location = new Point(368, 31);
-            textBoxValidade.Name = "textBoxValidade";
-            textBoxValidade.Size = new Size(154, 23);
-            textBoxValidade.TabIndex = 2;
-            // 
-            // labelValidade
-            // 
-            labelValidade.AutoSize = true;
-            labelValidade.Font = new Font("Nexa Heavy", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            labelValidade.Location = new Point(377, 13);
-            labelValidade.Name = "labelValidade";
-            labelValidade.Size = new Size(111, 16);
-            labelValidade.TabIndex = 4;
-            labelValidade.Text = "Data de Validade";
-            // 
             // textBoxNome
             // 
-            textBoxNome.Location = new Point(137, 31);
+            textBoxNome.Location = new Point(16, 26);
             textBoxNome.Name = "textBoxNome";
             textBoxNome.Size = new Size(208, 23);
             textBoxNome.TabIndex = 1;
@@ -93,18 +60,11 @@
             // 
             labelNome.AutoSize = true;
             labelNome.Font = new Font("Nexa Heavy", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            labelNome.Location = new Point(137, 13);
+            labelNome.Location = new Point(34, 7);
             labelNome.Name = "labelNome";
             labelNome.Size = new Size(41, 16);
             labelNome.TabIndex = 2;
             labelNome.Text = "Nome";
-            // 
-            // textBoxCodigo
-            // 
-            textBoxCodigo.Location = new Point(16, 31);
-            textBoxCodigo.Name = "textBoxCodigo";
-            textBoxCodigo.Size = new Size(79, 23);
-            textBoxCodigo.TabIndex = 0;
             // 
             // userControl
             // 
@@ -115,6 +75,20 @@
             userControl.Size = new Size(488, 93);
             userControl.TabIndex = 3;
             userControl.Load += userControl11_Load;
+            // 
+            // botaoVisualizarCadastros
+            // 
+            botaoVisualizarCadastros.BackColor = Color.PaleGoldenrod;
+            botaoVisualizarCadastros.Cursor = Cursors.Hand;
+            botaoVisualizarCadastros.FlatStyle = FlatStyle.Flat;
+            botaoVisualizarCadastros.Font = new Font("Nexa Heavy", 11.999999F, FontStyle.Bold, GraphicsUnit.Point);
+            botaoVisualizarCadastros.Location = new Point(284, 21);
+            botaoVisualizarCadastros.Name = "botaoVisualizarCadastros";
+            botaoVisualizarCadastros.Size = new Size(249, 52);
+            botaoVisualizarCadastros.TabIndex = 13;
+            botaoVisualizarCadastros.Text = "Visualizar Cadastros";
+            botaoVisualizarCadastros.UseVisualStyleBackColor = false;
+            botaoVisualizarCadastros.Click += botaoVisualizarCadastros_Click;
             // 
             // formIngredientes
             // 
@@ -137,14 +111,10 @@
         }
 
         #endregion
-
-        private Label labelCodigo;
         private Panel panel;
-        private TextBox textBoxValidade;
-        private Label labelValidade;
         private TextBox textBoxNome;
         private Label labelNome;
-        private TextBox textBoxCodigo;
         private UserControl1 userControl;
+        private Button botaoVisualizarCadastros;
     }
 }

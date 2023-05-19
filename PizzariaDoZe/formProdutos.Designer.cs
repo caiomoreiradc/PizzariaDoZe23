@@ -35,8 +35,6 @@
             comboBoxTipo = new ComboBox();
             textBoxNome = new TextBox();
             labelNome = new Label();
-            textBoxCodigo = new TextBox();
-            labelCodigo = new Label();
             labelML = new Label();
             labelTipo = new Label();
             panel.SuspendLayout();
@@ -59,8 +57,6 @@
             panel.Controls.Add(comboBoxTipo);
             panel.Controls.Add(textBoxNome);
             panel.Controls.Add(labelNome);
-            panel.Controls.Add(textBoxCodigo);
-            panel.Controls.Add(labelCodigo);
             panel.Controls.Add(labelML);
             panel.Controls.Add(labelTipo);
             panel.Location = new Point(11, 23);
@@ -94,39 +90,21 @@
             // 
             // textBoxNome
             // 
-            textBoxNome.Location = new Point(130, 23);
+            textBoxNome.Location = new Point(20, 23);
             textBoxNome.Margin = new Padding(3, 2, 3, 2);
             textBoxNome.Name = "textBoxNome";
-            textBoxNome.Size = new Size(108, 23);
+            textBoxNome.Size = new Size(215, 23);
             textBoxNome.TabIndex = 1;
             // 
             // labelNome
             // 
             labelNome.AutoSize = true;
             labelNome.Font = new Font("Nexa Heavy", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            labelNome.Location = new Point(130, 8);
+            labelNome.Location = new Point(39, 8);
             labelNome.Name = "labelNome";
             labelNome.Size = new Size(41, 16);
             labelNome.TabIndex = 2;
             labelNome.Text = "Nome";
-            // 
-            // textBoxCodigo
-            // 
-            textBoxCodigo.Location = new Point(10, 23);
-            textBoxCodigo.Margin = new Padding(3, 2, 3, 2);
-            textBoxCodigo.Name = "textBoxCodigo";
-            textBoxCodigo.Size = new Size(88, 23);
-            textBoxCodigo.TabIndex = 0;
-            // 
-            // labelCodigo
-            // 
-            labelCodigo.AutoSize = true;
-            labelCodigo.Font = new Font("Nexa Heavy", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            labelCodigo.Location = new Point(10, 5);
-            labelCodigo.Name = "labelCodigo";
-            labelCodigo.Size = new Size(47, 16);
-            labelCodigo.TabIndex = 1;
-            labelCodigo.Text = "Código";
             // 
             // labelML
             // 
@@ -178,7 +156,5 @@
         private Label labelTipo;
         private TextBox textBoxNome;
         private Label labelNome;
-        private Label labelCodigo;
-        private TextBox textBoxCodigo;
     }
 }

@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formClientes));
             panel = new Panel();
+            maskedTelefone = new MaskedTextBox();
+            maskedCPF = new MaskedTextBox();
             comboBoxPais = new ComboBox();
             textBoxComplemento = new TextBox();
             labelComplemento = new Label();
@@ -42,25 +44,24 @@
             labelNumero = new Label();
             textBoxLogradouro = new TextBox();
             labelLogradouro = new Label();
-            textBoxCEP = new TextBox();
             labelCEP = new Label();
             textBoxEmaiL = new TextBox();
             labelEmail = new Label();
-            textBoxTelefone = new TextBox();
             labelTelefone = new Label();
-            textBoxCPF = new TextBox();
             labelCpf = new Label();
             textBoxNome = new TextBox();
             labelNome = new Label();
-            textBoxCodigo = new TextBox();
-            labelCodigo = new Label();
             userControl = new UserControl1();
+            maskedCEP = new MaskedTextBox();
             panel.SuspendLayout();
             SuspendLayout();
             // 
             // panel
             // 
             panel.BackColor = Color.Silver;
+            panel.Controls.Add(maskedCEP);
+            panel.Controls.Add(maskedTelefone);
+            panel.Controls.Add(maskedCPF);
             panel.Controls.Add(comboBoxPais);
             panel.Controls.Add(textBoxComplemento);
             panel.Controls.Add(labelComplemento);
@@ -73,23 +74,34 @@
             panel.Controls.Add(labelNumero);
             panel.Controls.Add(textBoxLogradouro);
             panel.Controls.Add(labelLogradouro);
-            panel.Controls.Add(textBoxCEP);
             panel.Controls.Add(labelCEP);
             panel.Controls.Add(textBoxEmaiL);
             panel.Controls.Add(labelEmail);
-            panel.Controls.Add(textBoxTelefone);
             panel.Controls.Add(labelTelefone);
-            panel.Controls.Add(textBoxCPF);
             panel.Controls.Add(labelCpf);
             panel.Controls.Add(textBoxNome);
             panel.Controls.Add(labelNome);
-            panel.Controls.Add(textBoxCodigo);
-            panel.Controls.Add(labelCodigo);
             panel.Location = new Point(11, 17);
             panel.Name = "panel";
             panel.Size = new Size(842, 196);
             panel.TabIndex = 0;
             panel.Paint += panel_Paint;
+            // 
+            // maskedTelefone
+            // 
+            maskedTelefone.Location = new Point(607, 29);
+            maskedTelefone.Mask = "+00 (00)00000-0000";
+            maskedTelefone.Name = "maskedTelefone";
+            maskedTelefone.Size = new Size(179, 23);
+            maskedTelefone.TabIndex = 24;
+            // 
+            // maskedCPF
+            // 
+            maskedCPF.Location = new Point(406, 29);
+            maskedCPF.Mask = "000.000.000-00";
+            maskedCPF.Name = "maskedCPF";
+            maskedCPF.Size = new Size(157, 23);
+            maskedCPF.TabIndex = 23;
             // 
             // comboBoxPais
             // 
@@ -206,13 +218,6 @@
             labelLogradouro.TabIndex = 12;
             labelLogradouro.Text = "Logradouro";
             // 
-            // textBoxCEP
-            // 
-            textBoxCEP.Location = new Point(300, 87);
-            textBoxCEP.Name = "textBoxCEP";
-            textBoxCEP.Size = new Size(126, 23);
-            textBoxCEP.TabIndex = 5;
-            // 
             // labelCEP
             // 
             labelCEP.AutoSize = true;
@@ -240,13 +245,6 @@
             labelEmail.TabIndex = 8;
             labelEmail.Text = "Email";
             // 
-            // textBoxTelefone
-            // 
-            textBoxTelefone.Location = new Point(607, 29);
-            textBoxTelefone.Name = "textBoxTelefone";
-            textBoxTelefone.Size = new Size(177, 23);
-            textBoxTelefone.TabIndex = 3;
-            // 
             // labelTelefone
             // 
             labelTelefone.AutoSize = true;
@@ -257,13 +255,6 @@
             labelTelefone.TabIndex = 6;
             labelTelefone.Text = "Telefone";
             labelTelefone.Click += labelTelefone_Click;
-            // 
-            // textBoxCPF
-            // 
-            textBoxCPF.Location = new Point(406, 29);
-            textBoxCPF.Name = "textBoxCPF";
-            textBoxCPF.Size = new Size(157, 23);
-            textBoxCPF.TabIndex = 2;
             // 
             // labelCpf
             // 
@@ -277,38 +268,21 @@
             // 
             // textBoxNome
             // 
-            textBoxNome.Location = new Point(109, 29);
+            textBoxNome.Location = new Point(14, 29);
             textBoxNome.Name = "textBoxNome";
-            textBoxNome.Size = new Size(277, 23);
+            textBoxNome.Size = new Size(375, 23);
             textBoxNome.TabIndex = 1;
             // 
             // labelNome
             // 
             labelNome.AutoSize = true;
             labelNome.Font = new Font("Nexa Heavy", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            labelNome.Location = new Point(109, 11);
+            labelNome.Location = new Point(22, 10);
             labelNome.Name = "labelNome";
             labelNome.Size = new Size(41, 16);
             labelNome.TabIndex = 2;
             labelNome.Text = "Nome";
             labelNome.Click += labelNome_Click;
-            // 
-            // textBoxCodigo
-            // 
-            textBoxCodigo.Location = new Point(12, 29);
-            textBoxCodigo.Name = "textBoxCodigo";
-            textBoxCodigo.Size = new Size(78, 23);
-            textBoxCodigo.TabIndex = 0;
-            // 
-            // labelCodigo
-            // 
-            labelCodigo.AutoSize = true;
-            labelCodigo.Font = new Font("Nexa Heavy", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            labelCodigo.Location = new Point(12, 11);
-            labelCodigo.Name = "labelCodigo";
-            labelCodigo.Size = new Size(47, 16);
-            labelCodigo.TabIndex = 0;
-            labelCodigo.Text = "Código";
             // 
             // userControl
             // 
@@ -319,6 +293,14 @@
             userControl.Size = new Size(481, 91);
             userControl.TabIndex = 12;
             userControl.Load += userControl11_Load;
+            // 
+            // maskedCEP
+            // 
+            maskedCEP.Location = new Point(300, 87);
+            maskedCEP.Mask = "00000-000";
+            maskedCEP.Name = "maskedCEP";
+            maskedCEP.Size = new Size(140, 23);
+            maskedCEP.TabIndex = 13;
             // 
             // formClientes
             // 
@@ -350,23 +332,21 @@
         private Label labelNumero;
         private TextBox textBoxLogradouro;
         private Label labelLogradouro;
-        private TextBox textBoxCEP;
         private Label labelCEP;
         private TextBox textBoxEmaiL;
         private Label labelEmail;
-        private TextBox textBoxTelefone;
         private Label labelTelefone;
-        private TextBox textBoxCPF;
         private Label labelCpf;
         private TextBox textBoxNome;
         private Label labelNome;
-        private TextBox textBoxCodigo;
-        private Label labelCodigo;
         private TextBox textBoxComplemento;
         private Label labelComplemento;
         private Label labelPais;
         private ComboBox comboBoxUF;
         private UserControl1 userControl;
         private ComboBox comboBoxPais;
+        private MaskedTextBox maskedTelefone;
+        private MaskedTextBox maskedCPF;
+        private MaskedTextBox maskedCEP;
     }
 }

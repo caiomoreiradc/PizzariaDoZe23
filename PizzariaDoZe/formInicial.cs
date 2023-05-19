@@ -1,3 +1,5 @@
+using System.Configuration;
+using System.Data.Common;
 using System.Globalization;
 
 namespace PizzariaDoZe
@@ -8,6 +10,7 @@ namespace PizzariaDoZe
         {
             InitializeComponent();
 
+            ValidaConexaoDB();
             Funcoes.EventoFocoCampos(this);
 
             this.KeyDown += new KeyEventHandler(Funcoes.FormEventoKeyDown!);
@@ -46,6 +49,7 @@ namespace PizzariaDoZe
             {
                 notifyIconSystemTray.Visible = false;
             }
+
         }
         private void botaoClientes_Click(object sender, EventArgs e)
         {
@@ -136,16 +140,29 @@ namespace PizzariaDoZe
 
         }
 
-        private void notifyIcon1_MouseDoubleClick(object sender, MouseEventArgs e)
-        {
-
-        }
-
         private void contextMenuStripSystemTray_Opening(object sender, System.ComponentModel.CancelEventArgs e)
         {
 
         }
 
-
+        public static void ValidaConexaoDB()
+        {
+            DbProviderFactory factory;
+            try
+            {
+                factory = DbProviderFactories.GetFactory(ConfigurationManager.ConnectionStrings["BD"].ProviderName);
+                using var conexao = factory.CreateConnection();
+                conexao!.ConnectionString = ConfigurationManager.ConnectionStrings["BD"].ConnectionString;
+                using var comando = factory.CreateCommand();
+                comando!.Connection = conexao;
+                conexao.Open();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                new formConfiguracoes().ShowDialog();
+                ValidaConexaoDB();
+            }
+        }
     }
 }

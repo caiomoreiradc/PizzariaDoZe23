@@ -39,8 +39,6 @@
             labelValorBorda = new Label();
             labelValor = new Label();
             labelTamanho = new Label();
-            textBoxCodigo = new TextBox();
-            labelCodigo = new Label();
             panel.SuspendLayout();
             SuspendLayout();
             // 
@@ -65,8 +63,6 @@
             panel.Controls.Add(labelValorBorda);
             panel.Controls.Add(labelValor);
             panel.Controls.Add(labelTamanho);
-            panel.Controls.Add(textBoxCodigo);
-            panel.Controls.Add(labelCodigo);
             panel.Location = new Point(21, 17);
             panel.Margin = new Padding(3, 2, 3, 2);
             panel.Name = "panel";
@@ -75,7 +71,7 @@
             // 
             // textBoxValorBorda
             // 
-            textBoxValorBorda.Location = new Point(12, 118);
+            textBoxValorBorda.Location = new Point(12, 79);
             textBoxValorBorda.Margin = new Padding(3, 2, 3, 2);
             textBoxValorBorda.Name = "textBoxValorBorda";
             textBoxValorBorda.Size = new Size(88, 23);
@@ -83,7 +79,7 @@
             // 
             // textBoxValor
             // 
-            textBoxValor.Location = new Point(12, 62);
+            textBoxValor.Location = new Point(12, 23);
             textBoxValor.Margin = new Padding(3, 2, 3, 2);
             textBoxValor.Name = "textBoxValor";
             textBoxValor.Size = new Size(88, 23);
@@ -125,7 +121,7 @@
             // 
             labelValorBorda.AutoSize = true;
             labelValorBorda.Font = new Font("Nexa Heavy", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            labelValorBorda.Location = new Point(12, 95);
+            labelValorBorda.Location = new Point(12, 61);
             labelValorBorda.Name = "labelValorBorda";
             labelValorBorda.Size = new Size(99, 16);
             labelValorBorda.TabIndex = 4;
@@ -136,7 +132,7 @@
             // 
             labelValor.AutoSize = true;
             labelValor.Font = new Font("Nexa Heavy", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            labelValor.Location = new Point(20, 47);
+            labelValor.Location = new Point(20, 8);
             labelValor.Name = "labelValor";
             labelValor.Size = new Size(39, 16);
             labelValor.TabIndex = 3;
@@ -151,24 +147,6 @@
             labelTamanho.Size = new Size(61, 16);
             labelTamanho.TabIndex = 2;
             labelTamanho.Text = "Tamanho";
-            // 
-            // textBoxCodigo
-            // 
-            textBoxCodigo.Location = new Point(13, 24);
-            textBoxCodigo.Margin = new Padding(3, 2, 3, 2);
-            textBoxCodigo.Name = "textBoxCodigo";
-            textBoxCodigo.Size = new Size(78, 23);
-            textBoxCodigo.TabIndex = 0;
-            // 
-            // labelCodigo
-            // 
-            labelCodigo.AutoSize = true;
-            labelCodigo.Font = new Font("Nexa Heavy", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            labelCodigo.Location = new Point(13, 7);
-            labelCodigo.Name = "labelCodigo";
-            labelCodigo.Size = new Size(47, 16);
-            labelCodigo.TabIndex = 0;
-            labelCodigo.Text = "Código";
             // 
             // formValores
             // 
@@ -195,9 +173,7 @@
 
         private UserControl1 userControl;
         private Panel panel;
-        private Label labelCodigo;
         private Label labelTamanho;
-        private TextBox textBoxCodigo;
         private TextBox textBoxValorBorda;
         private TextBox textBoxValor;
         private ComboBox comboBoxCategoria;

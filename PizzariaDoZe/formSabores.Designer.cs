@@ -37,8 +37,6 @@
             labelCategoria = new Label();
             comboBoxTipo = new ComboBox();
             labelTipo = new Label();
-            textBoxCodigo = new TextBox();
-            labelCodigo = new Label();
             userControl = new UserControl1();
             panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBoxPizza).BeginInit();
@@ -54,8 +52,6 @@
             panel.Controls.Add(labelCategoria);
             panel.Controls.Add(comboBoxTipo);
             panel.Controls.Add(labelTipo);
-            panel.Controls.Add(textBoxCodigo);
-            panel.Controls.Add(labelCodigo);
             panel.Location = new Point(12, 12);
             panel.Name = "panel";
             panel.Size = new Size(548, 309);
@@ -76,7 +72,7 @@
             // 
             pictureBoxPizza.Image = (Image)resources.GetObject("pictureBoxPizza.Image");
             pictureBoxPizza.InitialImage = (Image)resources.GetObject("pictureBoxPizza.InitialImage");
-            pictureBoxPizza.Location = new Point(39, 64);
+            pictureBoxPizza.Location = new Point(23, 33);
             pictureBoxPizza.Name = "pictureBoxPizza";
             pictureBoxPizza.Size = new Size(179, 159);
             pictureBoxPizza.TabIndex = 13;
@@ -135,23 +131,6 @@
             labelTipo.TabIndex = 2;
             labelTipo.Text = "Tipo";
             // 
-            // textBoxCodigo
-            // 
-            textBoxCodigo.Location = new Point(92, 16);
-            textBoxCodigo.Name = "textBoxCodigo";
-            textBoxCodigo.Size = new Size(100, 23);
-            textBoxCodigo.TabIndex = 0;
-            // 
-            // labelCodigo
-            // 
-            labelCodigo.AutoSize = true;
-            labelCodigo.Font = new Font("Nexa Heavy", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            labelCodigo.Location = new Point(39, 16);
-            labelCodigo.Name = "labelCodigo";
-            labelCodigo.Size = new Size(47, 16);
-            labelCodigo.TabIndex = 0;
-            labelCodigo.Text = "Código";
-            // 
             // userControl
             // 
             userControl.BackColor = Color.Transparent;
@@ -192,8 +171,6 @@
         private Label labelCategoria;
         private ComboBox comboBoxTipo;
         private Label labelTipo;
-        private TextBox textBoxCodigo;
-        private Label labelCodigo;
         private UserControl1 userControl;
         private CheckedListBox ingredientes;
     }

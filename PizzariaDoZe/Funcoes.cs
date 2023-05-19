@@ -1,4 +1,6 @@
 ﻿using System.ComponentModel;
+using System.Configuration;
+using System.Data.Common;
 using System.Globalization;
 
 namespace PizzariaDoZe
@@ -135,7 +137,6 @@ namespace PizzariaDoZe
                 form.Close();
             }
         }
-    
 
     }
 }

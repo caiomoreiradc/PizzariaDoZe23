@@ -30,66 +30,87 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formFunci));
             panel = new Panel();
+            maskedSenha = new MaskedTextBox();
+            maskedCNH = new MaskedTextBox();
+            maskedCPF = new MaskedTextBox();
             textBoxObservacoes = new TextBox();
             botaoEnderecoFunci = new Button();
             labelObservacoes = new Label();
             textBoxEmail = new TextBox();
             labelEmail = new Label();
-            textBoxTelefone = new TextBox();
             labelTelefone = new Label();
-            textBoxValCnh = new TextBox();
             labelValidadeCNH = new Label();
             radioCnhNao = new RadioButton();
             radioCnhSim = new RadioButton();
             labelCNH = new Label();
             comboBoxGrupo = new ComboBox();
             labelGrupo = new Label();
-            textBoxSenha = new TextBox();
             labelSenha = new Label();
             textBoxMatricula = new TextBox();
             labelMatricula = new Label();
-            textBoxCPF = new TextBox();
             labelCPF = new Label();
             textBoxNome = new TextBox();
             labelNome = new Label();
-            textBoxCodigo = new TextBox();
-            labelCodigo = new Label();
             userControl = new UserControl1();
+            maskedTelefone = new MaskedTextBox();
             panel.SuspendLayout();
             SuspendLayout();
             // 
             // panel
             // 
             panel.BackColor = Color.Silver;
+            panel.Controls.Add(maskedTelefone);
+            panel.Controls.Add(maskedSenha);
+            panel.Controls.Add(maskedCNH);
+            panel.Controls.Add(maskedCPF);
             panel.Controls.Add(textBoxObservacoes);
             panel.Controls.Add(botaoEnderecoFunci);
             panel.Controls.Add(labelObservacoes);
             panel.Controls.Add(textBoxEmail);
             panel.Controls.Add(labelEmail);
-            panel.Controls.Add(textBoxTelefone);
             panel.Controls.Add(labelTelefone);
-            panel.Controls.Add(textBoxValCnh);
             panel.Controls.Add(labelValidadeCNH);
             panel.Controls.Add(radioCnhNao);
             panel.Controls.Add(radioCnhSim);
             panel.Controls.Add(labelCNH);
             panel.Controls.Add(comboBoxGrupo);
             panel.Controls.Add(labelGrupo);
-            panel.Controls.Add(textBoxSenha);
             panel.Controls.Add(labelSenha);
             panel.Controls.Add(textBoxMatricula);
             panel.Controls.Add(labelMatricula);
-            panel.Controls.Add(textBoxCPF);
             panel.Controls.Add(labelCPF);
             panel.Controls.Add(textBoxNome);
             panel.Controls.Add(labelNome);
-            panel.Controls.Add(textBoxCodigo);
-            panel.Controls.Add(labelCodigo);
             panel.Location = new Point(11, 22);
             panel.Name = "panel";
             panel.Size = new Size(916, 173);
             panel.TabIndex = 2;
             panel.Paint += panelFunci1_Paint;
+            // 
+            // maskedSenha
+            // 
+            maskedSenha.Location = new Point(662, 28);
+            maskedSenha.Name = "maskedSenha";
+            maskedSenha.Size = new Size(228, 23);
+            maskedSenha.TabIndex = 24;
+            maskedSenha.UseSystemPasswordChar = true;
+            // 
+            // maskedCNH
+            // 
+            maskedCNH.Location = new Point(206, 81);
+            maskedCNH.Mask = "00/00/0000";
+            maskedCNH.Name = "maskedCNH";
+            maskedCNH.Size = new Size(64, 23);
+            maskedCNH.TabIndex = 23;
+            maskedCNH.ValidatingType = typeof(DateTime);
+            // 
+            // maskedCPF
+            // 
+            maskedCPF.Location = new Point(349, 27);
+            maskedCPF.Mask = "000.000.000-00";
+            maskedCPF.Name = "maskedCPF";
+            maskedCPF.Size = new Size(143, 23);
+            maskedCPF.TabIndex = 22;
             // 
             // textBoxObservacoes
             // 
@@ -140,13 +161,6 @@
             labelEmail.Text = "Email";
             labelEmail.Click += label1_Click;
             // 
-            // textBoxTelefone
-            // 
-            textBoxTelefone.Location = new Point(335, 81);
-            textBoxTelefone.Name = "textBoxTelefone";
-            textBoxTelefone.Size = new Size(189, 23);
-            textBoxTelefone.TabIndex = 9;
-            // 
             // labelTelefone
             // 
             labelTelefone.AutoSize = true;
@@ -156,13 +170,6 @@
             labelTelefone.Size = new Size(56, 16);
             labelTelefone.TabIndex = 17;
             labelTelefone.Text = "Telefone";
-            // 
-            // textBoxValCnh
-            // 
-            textBoxValCnh.Location = new Point(193, 81);
-            textBoxValCnh.Name = "textBoxValCnh";
-            textBoxValCnh.Size = new Size(100, 23);
-            textBoxValCnh.TabIndex = 8;
             // 
             // labelValidadeCNH
             // 
@@ -229,13 +236,6 @@
             labelGrupo.TabIndex = 10;
             labelGrupo.Text = "Grupo";
             // 
-            // textBoxSenha
-            // 
-            textBoxSenha.Location = new Point(653, 27);
-            textBoxSenha.Name = "textBoxSenha";
-            textBoxSenha.Size = new Size(241, 23);
-            textBoxSenha.TabIndex = 4;
-            // 
             // labelSenha
             // 
             labelSenha.AutoSize = true;
@@ -263,18 +263,11 @@
             labelMatricula.TabIndex = 6;
             labelMatricula.Text = "Matrícula";
             // 
-            // textBoxCPF
-            // 
-            textBoxCPF.Location = new Point(358, 27);
-            textBoxCPF.Name = "textBoxCPF";
-            textBoxCPF.Size = new Size(142, 23);
-            textBoxCPF.TabIndex = 2;
-            // 
             // labelCPF
             // 
             labelCPF.AutoSize = true;
             labelCPF.Font = new Font("Nexa Heavy", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            labelCPF.Location = new Point(358, 9);
+            labelCPF.Location = new Point(349, 9);
             labelCPF.Name = "labelCPF";
             labelCPF.Size = new Size(31, 16);
             labelCPF.TabIndex = 4;
@@ -282,7 +275,7 @@
             // 
             // textBoxNome
             // 
-            textBoxNome.Location = new Point(72, 27);
+            textBoxNome.Location = new Point(14, 27);
             textBoxNome.Name = "textBoxNome";
             textBoxNome.Size = new Size(280, 23);
             textBoxNome.TabIndex = 1;
@@ -291,29 +284,11 @@
             // 
             labelNome.AutoSize = true;
             labelNome.Font = new Font("Nexa Heavy", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            labelNome.Location = new Point(72, 9);
+            labelNome.Location = new Point(17, 9);
             labelNome.Name = "labelNome";
             labelNome.Size = new Size(41, 16);
             labelNome.TabIndex = 2;
             labelNome.Text = "Nome";
-            // 
-            // textBoxCodigo
-            // 
-            textBoxCodigo.Location = new Point(14, 27);
-            textBoxCodigo.Name = "textBoxCodigo";
-            textBoxCodigo.Size = new Size(46, 23);
-            textBoxCodigo.TabIndex = 0;
-            textBoxCodigo.TextChanged += textBoxCod_TextChanged;
-            // 
-            // labelCodigo
-            // 
-            labelCodigo.AutoSize = true;
-            labelCodigo.Font = new Font("Nexa Heavy", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            labelCodigo.Location = new Point(14, 9);
-            labelCodigo.Name = "labelCodigo";
-            labelCodigo.Size = new Size(47, 16);
-            labelCodigo.TabIndex = 0;
-            labelCodigo.Text = "Código";
             // 
             // userControl
             // 
@@ -324,6 +299,14 @@
             userControl.Size = new Size(477, 91);
             userControl.TabIndex = 13;
             userControl.Load += userControl11_Load;
+            // 
+            // maskedTelefone
+            // 
+            maskedTelefone.Location = new Point(335, 81);
+            maskedTelefone.Mask = "+00 (00)00000-0000";
+            maskedTelefone.Name = "maskedTelefone";
+            maskedTelefone.Size = new Size(147, 23);
+            maskedTelefone.TabIndex = 25;
             // 
             // formFunci
             // 
@@ -347,30 +330,28 @@
 
         #endregion
         private Panel panel;
-        private TextBox textBoxSenha;
         private Label labelSenha;
         private TextBox textBoxMatricula;
         private Label labelMatricula;
-        private TextBox textBoxCPF;
         private Label labelCPF;
         private TextBox textBoxNome;
         private Label labelNome;
-        private TextBox textBoxCodigo;
-        private Label labelCodigo;
         private Label labelGrupo;
         private ComboBox comboBoxGrupo;
         private RadioButton radioCnhNao;
         private RadioButton radioCnhSim;
         private Label labelCNH;
         private Label labelEmail;
-        private TextBox textBoxTelefone;
         private Label labelTelefone;
-        private TextBox textBoxValCnh;
         private Label labelValidadeCNH;
         private TextBox textBoxEmail;
         private Button botaoEnderecoFunci;
         private TextBox textBoxObservacoes;
         private Label labelObservacoes;
         private UserControl1 userControl;
+        private MaskedTextBox maskedSenha;
+        private MaskedTextBox maskedCNH;
+        private MaskedTextBox maskedCPF;
+        private MaskedTextBox maskedTelefone;
     }
 }

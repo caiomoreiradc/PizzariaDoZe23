@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Button buttonSalvar;
+            //Button buttonSalvar;
             buttonEditar = new Button();
             buttonExcluir = new Button();
             buttonSair = new Button();

@@ -40,19 +40,18 @@
             labelComplemento = new Label();
             textBoxBairro = new TextBox();
             labelBairro = new Label();
-            textBoxNumero = new TextBox();
-            labelNumero = new Label();
             textBoxLogradouro = new TextBox();
             labelLogradouro = new Label();
-            textBoxCep = new TextBox();
             labelCEP = new Label();
             userControl = new UserControl1();
+            maskedCEP = new MaskedTextBox();
             panel.SuspendLayout();
             SuspendLayout();
             // 
             // panel
             // 
             panel.BackColor = Color.Silver;
+            panel.Controls.Add(maskedCEP);
             panel.Controls.Add(comboBoxPais);
             panel.Controls.Add(comboBoxUF);
             panel.Controls.Add(labelPais);
@@ -63,11 +62,8 @@
             panel.Controls.Add(labelComplemento);
             panel.Controls.Add(textBoxBairro);
             panel.Controls.Add(labelBairro);
-            panel.Controls.Add(textBoxNumero);
-            panel.Controls.Add(labelNumero);
             panel.Controls.Add(textBoxLogradouro);
             panel.Controls.Add(labelLogradouro);
-            panel.Controls.Add(textBoxCep);
             panel.Controls.Add(labelCEP);
             panel.Location = new Point(12, 7);
             panel.Name = "panel";
@@ -158,38 +154,21 @@
             // 
             // textBoxBairro
             // 
-            textBoxBairro.Location = new Point(583, 31);
+            textBoxBairro.Location = new Point(515, 31);
             textBoxBairro.Name = "textBoxBairro";
-            textBoxBairro.Size = new Size(99, 26);
+            textBoxBairro.Size = new Size(176, 26);
             textBoxBairro.TabIndex = 3;
             // 
             // labelBairro
             // 
             labelBairro.AutoSize = true;
             labelBairro.Font = new Font("Nexa Heavy", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            labelBairro.Location = new Point(583, 12);
+            labelBairro.Location = new Point(515, 12);
             labelBairro.Name = "labelBairro";
             labelBairro.Size = new Size(46, 16);
             labelBairro.TabIndex = 6;
             labelBairro.Text = "Bairro";
             labelBairro.Click += label1_Click_1;
-            // 
-            // textBoxNumero
-            // 
-            textBoxNumero.Location = new Point(504, 31);
-            textBoxNumero.Name = "textBoxNumero";
-            textBoxNumero.Size = new Size(58, 26);
-            textBoxNumero.TabIndex = 2;
-            // 
-            // labelNumero
-            // 
-            labelNumero.AutoSize = true;
-            labelNumero.Font = new Font("Nexa Heavy", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            labelNumero.Location = new Point(504, 12);
-            labelNumero.Name = "labelNumero";
-            labelNumero.Size = new Size(54, 16);
-            labelNumero.TabIndex = 4;
-            labelNumero.Text = "Número";
             // 
             // textBoxLogradouro
             // 
@@ -207,13 +186,6 @@
             labelLogradouro.Size = new Size(77, 16);
             labelLogradouro.TabIndex = 2;
             labelLogradouro.Text = "Logradouro";
-            // 
-            // textBoxCep
-            // 
-            textBoxCep.Location = new Point(18, 31);
-            textBoxCep.Name = "textBoxCep";
-            textBoxCep.Size = new Size(125, 26);
-            textBoxCep.TabIndex = 0;
             // 
             // labelCEP
             // 
@@ -235,6 +207,14 @@
             userControl.Size = new Size(547, 89);
             userControl.TabIndex = 8;
             userControl.Load += userControl11_Load;
+            // 
+            // maskedCEP
+            // 
+            maskedCEP.Location = new Point(18, 31);
+            maskedCEP.Mask = "00000-000";
+            maskedCEP.Name = "maskedCEP";
+            maskedCEP.Size = new Size(72, 26);
+            maskedCEP.TabIndex = 15;
             // 
             // formFunciEndereco
             // 
@@ -261,10 +241,7 @@
 
         private Panel panel;
         private Label labelCEP;
-        private TextBox textBoxCep;
         private Label labelBairro;
-        private TextBox textBoxNumero;
-        private Label labelNumero;
         private TextBox textBoxLogradouro;
         private Label labelLogradouro;
         private Label labelUF;
@@ -277,5 +254,6 @@
         private ComboBox comboBoxUF;
         private UserControl1 userControl;
         private ComboBox comboBoxPais;
+        private MaskedTextBox maskedCEP;
     }
 }
