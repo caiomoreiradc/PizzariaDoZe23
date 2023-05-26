@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formFunciEndereco));
             panel = new Panel();
+            maskedCEP = new MaskedTextBox();
             comboBoxPais = new ComboBox();
             comboBoxUF = new ComboBox();
             labelPais = new Label();
@@ -38,13 +39,10 @@
             labelCidade = new Label();
             textBoxComplemento = new TextBox();
             labelComplemento = new Label();
-            textBoxBairro = new TextBox();
-            labelBairro = new Label();
             textBoxLogradouro = new TextBox();
             labelLogradouro = new Label();
             labelCEP = new Label();
             userControl = new UserControl1();
-            maskedCEP = new MaskedTextBox();
             panel.SuspendLayout();
             SuspendLayout();
             // 
@@ -60,8 +58,6 @@
             panel.Controls.Add(labelCidade);
             panel.Controls.Add(textBoxComplemento);
             panel.Controls.Add(labelComplemento);
-            panel.Controls.Add(textBoxBairro);
-            panel.Controls.Add(labelBairro);
             panel.Controls.Add(textBoxLogradouro);
             panel.Controls.Add(labelLogradouro);
             panel.Controls.Add(labelCEP);
@@ -70,6 +66,14 @@
             panel.Size = new Size(694, 160);
             panel.TabIndex = 0;
             panel.Paint += panel1_Paint;
+            // 
+            // maskedCEP
+            // 
+            maskedCEP.Location = new Point(18, 31);
+            maskedCEP.Mask = "00000-000";
+            maskedCEP.Name = "maskedCEP";
+            maskedCEP.Size = new Size(72, 26);
+            maskedCEP.TabIndex = 15;
             // 
             // comboBoxPais
             // 
@@ -152,29 +156,11 @@
             labelComplemento.TabIndex = 8;
             labelComplemento.Text = "Complemento";
             // 
-            // textBoxBairro
-            // 
-            textBoxBairro.Location = new Point(515, 31);
-            textBoxBairro.Name = "textBoxBairro";
-            textBoxBairro.Size = new Size(176, 26);
-            textBoxBairro.TabIndex = 3;
-            // 
-            // labelBairro
-            // 
-            labelBairro.AutoSize = true;
-            labelBairro.Font = new Font("Nexa Heavy", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            labelBairro.Location = new Point(515, 12);
-            labelBairro.Name = "labelBairro";
-            labelBairro.Size = new Size(46, 16);
-            labelBairro.TabIndex = 6;
-            labelBairro.Text = "Bairro";
-            labelBairro.Click += label1_Click_1;
-            // 
             // textBoxLogradouro
             // 
             textBoxLogradouro.Location = new Point(182, 31);
             textBoxLogradouro.Name = "textBoxLogradouro";
-            textBoxLogradouro.Size = new Size(305, 26);
+            textBoxLogradouro.Size = new Size(461, 26);
             textBoxLogradouro.TabIndex = 1;
             // 
             // labelLogradouro
@@ -208,14 +194,6 @@
             userControl.TabIndex = 8;
             userControl.Load += userControl11_Load;
             // 
-            // maskedCEP
-            // 
-            maskedCEP.Location = new Point(18, 31);
-            maskedCEP.Mask = "00000-000";
-            maskedCEP.Name = "maskedCEP";
-            maskedCEP.Size = new Size(72, 26);
-            maskedCEP.TabIndex = 15;
-            // 
             // formFunciEndereco
             // 
             AutoScaleDimensions = new SizeF(8F, 16F);
@@ -241,7 +219,6 @@
 
         private Panel panel;
         private Label labelCEP;
-        private Label labelBairro;
         private TextBox textBoxLogradouro;
         private Label labelLogradouro;
         private Label labelUF;
@@ -249,7 +226,6 @@
         private Label labelCidade;
         private TextBox textBoxComplemento;
         private Label labelComplemento;
-        private TextBox textBoxBairro;
         private Label labelPais;
         private ComboBox comboBoxUF;
         private UserControl1 userControl;

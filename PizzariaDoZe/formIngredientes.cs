@@ -59,7 +59,6 @@ namespace PizzariaDoZe
             //Instância e Preenche o objeto com os dados da view
             var ingrediente = new Ingrediente
             {
-                Codigo = 0,
                 Nome = textBoxNome.Text,
             };
             try

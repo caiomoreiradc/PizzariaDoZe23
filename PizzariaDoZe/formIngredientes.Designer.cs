@@ -30,10 +30,10 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formIngredientes));
             panel = new Panel();
+            botaoVisualizarCadastros = new Button();
             textBoxNome = new TextBox();
             labelNome = new Label();
             userControl = new UserControl1();
-            botaoVisualizarCadastros = new Button();
             panel.SuspendLayout();
             SuspendLayout();
             // 
@@ -49,9 +49,23 @@
             panel.TabIndex = 1;
             panel.Paint += panel_Paint;
             // 
+            // botaoVisualizarCadastros
+            // 
+            botaoVisualizarCadastros.BackColor = Color.PaleGoldenrod;
+            botaoVisualizarCadastros.Cursor = Cursors.Hand;
+            botaoVisualizarCadastros.FlatStyle = FlatStyle.Flat;
+            botaoVisualizarCadastros.Font = new Font("Nexa Heavy", 11.999999F, FontStyle.Bold, GraphicsUnit.Point);
+            botaoVisualizarCadastros.Location = new Point(284, 21);
+            botaoVisualizarCadastros.Name = "botaoVisualizarCadastros";
+            botaoVisualizarCadastros.Size = new Size(249, 52);
+            botaoVisualizarCadastros.TabIndex = 13;
+            botaoVisualizarCadastros.Text = "Visualizar Cadastros";
+            botaoVisualizarCadastros.UseVisualStyleBackColor = false;
+            botaoVisualizarCadastros.Click += botaoVisualizarCadastros_Click;
+            // 
             // textBoxNome
             // 
-            textBoxNome.Location = new Point(16, 26);
+            textBoxNome.Location = new Point(16, 40);
             textBoxNome.Name = "textBoxNome";
             textBoxNome.Size = new Size(208, 23);
             textBoxNome.TabIndex = 1;
@@ -60,7 +74,7 @@
             // 
             labelNome.AutoSize = true;
             labelNome.Font = new Font("Nexa Heavy", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            labelNome.Location = new Point(34, 7);
+            labelNome.Location = new Point(16, 21);
             labelNome.Name = "labelNome";
             labelNome.Size = new Size(41, 16);
             labelNome.TabIndex = 2;
@@ -75,20 +89,6 @@
             userControl.Size = new Size(488, 93);
             userControl.TabIndex = 3;
             userControl.Load += userControl11_Load;
-            // 
-            // botaoVisualizarCadastros
-            // 
-            botaoVisualizarCadastros.BackColor = Color.PaleGoldenrod;
-            botaoVisualizarCadastros.Cursor = Cursors.Hand;
-            botaoVisualizarCadastros.FlatStyle = FlatStyle.Flat;
-            botaoVisualizarCadastros.Font = new Font("Nexa Heavy", 11.999999F, FontStyle.Bold, GraphicsUnit.Point);
-            botaoVisualizarCadastros.Location = new Point(284, 21);
-            botaoVisualizarCadastros.Name = "botaoVisualizarCadastros";
-            botaoVisualizarCadastros.Size = new Size(249, 52);
-            botaoVisualizarCadastros.TabIndex = 13;
-            botaoVisualizarCadastros.Text = "Visualizar Cadastros";
-            botaoVisualizarCadastros.UseVisualStyleBackColor = false;
-            botaoVisualizarCadastros.Click += botaoVisualizarCadastros_Click;
             // 
             // formIngredientes
             // 

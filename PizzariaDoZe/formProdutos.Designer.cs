@@ -37,6 +37,8 @@
             labelNome = new Label();
             labelML = new Label();
             labelTipo = new Label();
+            textBoxValor = new TextBox();
+            labelValor = new Label();
             panel.SuspendLayout();
             SuspendLayout();
             // 
@@ -53,6 +55,8 @@
             // panel
             // 
             panel.BackColor = Color.Silver;
+            panel.Controls.Add(labelValor);
+            panel.Controls.Add(textBoxValor);
             panel.Controls.Add(comboBoxML);
             panel.Controls.Add(comboBoxTipo);
             panel.Controls.Add(textBoxNome);
@@ -126,6 +130,24 @@
             labelTipo.TabIndex = 4;
             labelTipo.Text = "Tipo";
             // 
+            // textBoxValor
+            // 
+            textBoxValor.Location = new Point(20, 75);
+            textBoxValor.Margin = new Padding(3, 2, 3, 2);
+            textBoxValor.Name = "textBoxValor";
+            textBoxValor.Size = new Size(215, 23);
+            textBoxValor.TabIndex = 8;
+            // 
+            // labelValor
+            // 
+            labelValor.AutoSize = true;
+            labelValor.Font = new Font("Nexa Heavy", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            labelValor.Location = new Point(39, 57);
+            labelValor.Name = "labelValor";
+            labelValor.Size = new Size(39, 16);
+            labelValor.TabIndex = 9;
+            labelValor.Text = "Valor";
+            // 
             // formProdutos
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -156,5 +178,7 @@
         private Label labelTipo;
         private TextBox textBoxNome;
         private Label labelNome;
+        private Label labelValor;
+        private TextBox textBoxValor;
     }
 }
