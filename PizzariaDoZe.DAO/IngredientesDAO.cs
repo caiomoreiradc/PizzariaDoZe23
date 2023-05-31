@@ -36,7 +36,7 @@ public class IngredienteDAO
         nome.Value = ingrediente.Nome;
         comando.Parameters.Add(nome);
         conexao.Open();
-        comando.CommandText = @"INSERT INTO cad_ingredientes(nome) VALUES (@nome)";
+        comando.CommandText = @"INSERT INTO cad_ingredientes(nome_ingrediente) VALUES (@nome)";
         //Executa o script na conexão e retorna o número de linhas afetadas.
         var linhas = comando.ExecuteNonQuery();
         //using faz o Close() automático quando fecha o seu escopo
@@ -56,14 +56,14 @@ public class IngredienteDAO
         }
         else if (ingrediente.Nome.Length > 0)
         {
-            auxSqlFiltro = "WHERE i.nome like '%" + ingrediente.Nome + "%' ";
+            auxSqlFiltro = "WHERE i.nome_ingrediente like '%" + ingrediente.Nome + "%' ";
         }
         conexao.Open();
         comando.CommandText = @" " +
-        "SELECT i.id_ingrediente AS ID, i.nome AS Nome " +
+        "SELECT i.id_ingrediente AS ID, i.nome_ingrediente AS Nome " +
         "FROM cad_ingredientes AS i " +
         auxSqlFiltro +
-        "ORDER BY i.nome;";
+        "ORDER BY i.nome_ingrediente;";
         //Executa o script na conexão e retorna as linhas afetadas.
         var sdr = comando.ExecuteReader();
         DataTable linhas = new();

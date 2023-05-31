@@ -31,10 +31,10 @@
             Button buttonSalvar;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formConfiguracoes));
             panel1 = new Panel();
+            buttonSalvarConfig = new Button();
             checkBoxReiniciarCFG = new CheckBox();
             comboBoxIdioma = new ComboBox();
             labelIdioma = new Label();
-            buttonSalvarConfig = new Button();
             labelBanco = new Label();
             comboBoxProvider = new ComboBox();
             labelProvider = new Label();
@@ -55,7 +55,7 @@
             buttonSalvar.Location = new Point(215, 89);
             buttonSalvar.Name = "buttonSalvar";
             buttonSalvar.Size = new Size(187, 47);
-            buttonSalvar.TabIndex = 6;
+            buttonSalvar.TabIndex = 5;
             buttonSalvar.Text = "Salvar Banco";
             buttonSalvar.UseVisualStyleBackColor = false;
             buttonSalvar.Click += buttonSalvar_Click;
@@ -70,6 +70,20 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(620, 64);
             panel1.TabIndex = 0;
+            // 
+            // buttonSalvarConfig
+            // 
+            buttonSalvarConfig.BackColor = Color.FromArgb(0, 192, 0);
+            buttonSalvarConfig.Cursor = Cursors.Hand;
+            buttonSalvarConfig.FlatStyle = FlatStyle.Flat;
+            buttonSalvarConfig.Font = new Font("Nexa Heavy", 14F, FontStyle.Bold, GraphicsUnit.Point);
+            buttonSalvarConfig.Location = new Point(451, 18);
+            buttonSalvarConfig.Name = "buttonSalvarConfig";
+            buttonSalvarConfig.Size = new Size(114, 36);
+            buttonSalvarConfig.TabIndex = 2;
+            buttonSalvarConfig.Text = "Salvar";
+            buttonSalvarConfig.UseVisualStyleBackColor = false;
+            buttonSalvarConfig.Click += buttonSalvarConfig_Click;
             // 
             // checkBoxReiniciarCFG
             // 
@@ -102,20 +116,6 @@
             labelIdioma.Size = new Size(98, 16);
             labelIdioma.TabIndex = 0;
             labelIdioma.Text = "Idioma/ Região";
-            // 
-            // buttonSalvarConfig
-            // 
-            buttonSalvarConfig.BackColor = Color.FromArgb(0, 192, 0);
-            buttonSalvarConfig.Cursor = Cursors.Hand;
-            buttonSalvarConfig.FlatStyle = FlatStyle.Flat;
-            buttonSalvarConfig.Font = new Font("Nexa Heavy", 14F, FontStyle.Bold, GraphicsUnit.Point);
-            buttonSalvarConfig.Location = new Point(451, 18);
-            buttonSalvarConfig.Name = "buttonSalvarConfig";
-            buttonSalvarConfig.Size = new Size(114, 36);
-            buttonSalvarConfig.TabIndex = 2;
-            buttonSalvarConfig.Text = "Salvar";
-            buttonSalvarConfig.UseVisualStyleBackColor = false;
-            buttonSalvarConfig.Click += buttonSalvarConfig_Click;
             // 
             // labelBanco
             // 
@@ -164,7 +164,7 @@
             textBoxStringDeConexao.Location = new Point(244, 45);
             textBoxStringDeConexao.Name = "textBoxStringDeConexao";
             textBoxStringDeConexao.Size = new Size(350, 23);
-            textBoxStringDeConexao.TabIndex = 6;
+            textBoxStringDeConexao.TabIndex = 4;
             // 
             // labelString
             // 

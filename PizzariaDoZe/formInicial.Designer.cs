@@ -288,6 +288,7 @@
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Pizzaria do Zé 0.4";
             TransparencyKey = Color.White;
+            FormClosing += paginaInicial_FormClosing;
             Load += paginaInicial_Load;
             Resize += formInicial_Resize;
             contextMenuStrip.ResumeLayout(false);

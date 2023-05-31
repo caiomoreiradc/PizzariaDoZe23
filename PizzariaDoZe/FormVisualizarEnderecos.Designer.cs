@@ -1,6 +1,6 @@
 ﻿namespace PizzariaDoZe
 {
-    partial class FormVisualizarIngredientes
+    partial class FormVisualizarEnderecos
     {
         /// <summary>
         /// Required designer variable.
@@ -28,20 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormVisualizarIngredientes));
-            dataGridViewIng = new DataGridView();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormVisualizarEnderecos));
             buttonSair = new Button();
-            ((System.ComponentModel.ISupportInitialize)dataGridViewIng).BeginInit();
+            dataGridViewDados = new DataGridView();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewDados).BeginInit();
             SuspendLayout();
-            // 
-            // dataGridViewIng
-            // 
-            dataGridViewIng.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewIng.Location = new Point(12, 12);
-            dataGridViewIng.Name = "dataGridViewIng";
-            dataGridViewIng.RowTemplate.Height = 25;
-            dataGridViewIng.Size = new Size(508, 344);
-            dataGridViewIng.TabIndex = 0;
             // 
             // buttonSair
             // 
@@ -49,34 +40,44 @@
             buttonSair.Cursor = Cursors.Hand;
             buttonSair.Font = new Font("Nexa Heavy", 15.7499981F, FontStyle.Bold, GraphicsUnit.Point);
             buttonSair.ForeColor = Color.White;
-            buttonSair.Location = new Point(210, 362);
+            buttonSair.Location = new Point(404, 303);
             buttonSair.Name = "buttonSair";
             buttonSair.Size = new Size(113, 73);
-            buttonSair.TabIndex = 1;
+            buttonSair.TabIndex = 2;
             buttonSair.Text = "Sair";
             buttonSair.UseVisualStyleBackColor = false;
             buttonSair.Click += buttonSair_Click;
             // 
-            // FormVisualizarIngredientes
+            // dataGridViewDados
+            // 
+            dataGridViewDados.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewDados.Dock = DockStyle.Top;
+            dataGridViewDados.Location = new Point(0, 0);
+            dataGridViewDados.Name = "dataGridViewDados";
+            dataGridViewDados.RowTemplate.Height = 25;
+            dataGridViewDados.Size = new Size(921, 297);
+            dataGridViewDados.TabIndex = 3;
+            // 
+            // FormVisualizarEnderecos
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
-            ClientSize = new Size(532, 446);
+            ClientSize = new Size(921, 391);
+            Controls.Add(dataGridViewDados);
             Controls.Add(buttonSair);
-            Controls.Add(dataGridViewIng);
+            FormBorderStyle = FormBorderStyle.Fixed3D;
             Icon = (Icon)resources.GetObject("$this.Icon");
-            KeyPreview = true;
-            Name = "FormVisualizarIngredientes";
-            Text = "Lista de Ingredientes Cadastrados";
-            Load += FormVisualizarIngredientes_Load;
-            ((System.ComponentModel.ISupportInitialize)dataGridViewIng).EndInit();
+            Name = "FormVisualizarEnderecos";
+            Text = "Lista de Endereços Cadastrados";
+            Load += FormVisualizarEnderecos_Load;
+            ((System.ComponentModel.ISupportInitialize)dataGridViewDados).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
 
-        private DataGridView dataGridViewIng;
         private Button buttonSair;
+        private DataGridView dataGridViewDados;
     }
 }

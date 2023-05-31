@@ -73,7 +73,7 @@ namespace PizzariaDoZe
 
             config.Save(ConfigurationSaveMode.Modified, true);
             //recarrega os dados da seção especificada
-            ConfigurationManager.RefreshSection ("connectionStrings");
+            ConfigurationManager.RefreshSection("connectionStrings");
             //fecha a tela
 
             Close();
