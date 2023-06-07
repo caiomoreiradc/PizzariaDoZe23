@@ -57,6 +57,24 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="botaoConfig.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAALGPC/xhBQAAApFJREFUaEPt
+        lOtNxTAUg+8ojMIobMIojMIojAL9kA6yLJ80DRX0Ry1Zt71JfV5OHjdu3DgVrxs/dvi28bIguc8dvm+8
+        LOhwSlrJnstCk3wy0vlavySeN1aCyedqL/ZeDi8bK0EOs4P//qUAEsMS/HZwi6S9WgB7R0Wgx8RSIw5D
+        DybPKuqJF1MBarEiSaJRQNvj6fphaNeUCHdXZheUAlKxIy3I2hJIQoVScCXFznSLPV1jij6FpTOjCfMM
+        CO7dWg2AliYK0S77pfjTcL96gtXFw8IGdNBAy8HaKIchtPplD54AnTbTmgIjrI9g6s4M6CBdW7FXwe06
+        usp/kLzJO//PwO23osE+dUF9P90MBPymQGBvGv6Nc0YjNWDZximhboweuJIlOM/6fzcJty+css0IBNME
+        um5oUN/jluhuL23YqNDD0MOUOkKgWu+S0z0kl6AF7FntEPYK0NF3EwI6hXQgZ3UOQwtIgdX/o86pFZM9
+        /qSAPQt19tA9MEELOM1Cfrt0wqODTvJqn6672qhTDrEeqmKaAPAOkwBJa+LFDh4PjaVJeMdKLPlfkQpW
+        zmiwzj79jlymp+GWKYFZpOLP0Jgp/htewOptQBJwKmgA3+qZgNNaWv1qAWdA8zgywe/q68M0OtbxO2s8
+        r4JvSYwmeQx3wuFJ6viqekR8rBSxclPona9adcv92gU6hRLXdycBuyu2oJNLGh2Xp5y6BKvrKRH+68bt
+        e2s/He6KWpnuD6hchXlWweqoBoSpgNQM12KPWgf+GoiS+MgeBNezkbqmBZDkyBZVyCjm6dBbIxWgBf5p
+        YrOgo5Ug3XNoAaPu/xu0ACzHu1LPEu+XhCY54mXhN0histdlULfHiOmA37hxYwmPxxcimP9VrKCWEwAA
+        AABJRU5ErkJggg==
+</value>
+  </data>
   <metadata name="contextMenuStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>20, 13</value>
   </metadata>
@@ -66,7 +84,6 @@
   <metadata name="contextMenuStripSystemTray.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>337, 13</value>
   </metadata>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="notifyIconSystemTray.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAEAurgAAAEAIAAoKAIAFgAAACgAAAC6AAAAcAEAAAEAIAAAAAAAwBYCAMMOAADDDgAAAAAAAAAA

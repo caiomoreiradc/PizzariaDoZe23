@@ -165,11 +165,11 @@
             botaoConfig.Cursor = Cursors.Hand;
             botaoConfig.FlatStyle = FlatStyle.Flat;
             botaoConfig.Font = new Font("Nexa Heavy", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            botaoConfig.Image = (Image)resources.GetObject("botaoConfig.Image");
             botaoConfig.Location = new Point(836, 881);
             botaoConfig.Name = "botaoConfig";
             botaoConfig.Size = new Size(233, 97);
             botaoConfig.TabIndex = 6;
-            botaoConfig.Text = "CONFIGURAÇÕES";
             botaoConfig.UseVisualStyleBackColor = false;
             botaoConfig.Click += botaoConfigurações_Click;
             // 
@@ -286,7 +286,7 @@
             KeyPreview = true;
             Name = "paginaInicial";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Pizzaria do Zé 0.4";
+            Text = "Pizzaria do Zé 0.6";
             TransparencyKey = Color.White;
             FormClosing += paginaInicial_FormClosing;
             Load += paginaInicial_Load;

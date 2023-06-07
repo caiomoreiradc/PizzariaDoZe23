@@ -166,6 +166,7 @@
             // 
             // dateTimePickerValidade
             // 
+            dateTimePickerValidade.CalendarFont = new Font("Nexa Heavy", 9F, FontStyle.Bold, GraphicsUnit.Point);
             dateTimePickerValidade.Location = new Point(224, 81);
             dateTimePickerValidade.Name = "dateTimePickerValidade";
             dateTimePickerValidade.Size = new Size(105, 23);
@@ -173,7 +174,7 @@
             // 
             // textBoxCNH
             // 
-            textBoxCNH.Location = new Point(153, 81);
+            textBoxCNH.Location = new Point(139, 80);
             textBoxCNH.Name = "textBoxCNH";
             textBoxCNH.Size = new Size(65, 23);
             textBoxCNH.TabIndex = 28;
@@ -278,7 +279,7 @@
             // 
             labelCNH.AutoSize = true;
             labelCNH.Font = new Font("Nexa Heavy", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            labelCNH.Location = new Point(156, 62);
+            labelCNH.Location = new Point(149, 62);
             labelCNH.Name = "labelCNH";
             labelCNH.Size = new Size(33, 16);
             labelCNH.TabIndex = 12;

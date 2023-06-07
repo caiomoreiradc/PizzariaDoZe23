@@ -28,11 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            //Button buttonSalvar;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserControl1));
+            buttonSalvar = new Button();
             buttonEditar = new Button();
             buttonExcluir = new Button();
             buttonSair = new Button();
-            buttonSalvar = new Button();
             SuspendLayout();
             // 
             // buttonSalvar
@@ -41,11 +41,11 @@
             buttonSalvar.Cursor = Cursors.Hand;
             buttonSalvar.FlatStyle = FlatStyle.Flat;
             buttonSalvar.Font = new Font("Nexa Heavy", 15.7499981F, FontStyle.Bold, GraphicsUnit.Point);
+            buttonSalvar.Image = (Image)resources.GetObject("buttonSalvar.Image");
             buttonSalvar.Location = new Point(4, 10);
             buttonSalvar.Name = "buttonSalvar";
             buttonSalvar.Size = new Size(113, 73);
             buttonSalvar.TabIndex = 0;
-            buttonSalvar.Text = "Salvar";
             buttonSalvar.UseVisualStyleBackColor = false;
             buttonSalvar.Click += buttonSalvar_Click;
             // 
@@ -55,11 +55,11 @@
             buttonEditar.Cursor = Cursors.Hand;
             buttonEditar.FlatStyle = FlatStyle.Flat;
             buttonEditar.Font = new Font("Nexa Heavy", 15.7499981F, FontStyle.Bold, GraphicsUnit.Point);
+            buttonEditar.Image = (Image)resources.GetObject("buttonEditar.Image");
             buttonEditar.Location = new Point(122, 10);
             buttonEditar.Name = "buttonEditar";
             buttonEditar.Size = new Size(113, 73);
             buttonEditar.TabIndex = 1;
-            buttonEditar.Text = "Editar";
             buttonEditar.UseVisualStyleBackColor = false;
             buttonEditar.Click += buttonEditar_Click;
             // 
@@ -69,11 +69,11 @@
             buttonExcluir.Cursor = Cursors.Hand;
             buttonExcluir.FlatStyle = FlatStyle.Flat;
             buttonExcluir.Font = new Font("Nexa Heavy", 15.7499981F, FontStyle.Bold, GraphicsUnit.Point);
+            buttonExcluir.Image = (Image)resources.GetObject("buttonExcluir.Image");
             buttonExcluir.Location = new Point(241, 10);
             buttonExcluir.Name = "buttonExcluir";
             buttonExcluir.Size = new Size(113, 73);
             buttonExcluir.TabIndex = 2;
-            buttonExcluir.Text = "Excluir";
             buttonExcluir.UseVisualStyleBackColor = false;
             buttonExcluir.Click += buttonExcluir_Click;
             // 
@@ -84,11 +84,11 @@
             buttonSair.FlatStyle = FlatStyle.Flat;
             buttonSair.Font = new Font("Nexa Heavy", 15.7499981F, FontStyle.Bold, GraphicsUnit.Point);
             buttonSair.ForeColor = Color.Ivory;
+            buttonSair.Image = (Image)resources.GetObject("buttonSair.Image");
             buttonSair.Location = new Point(359, 10);
             buttonSair.Name = "buttonSair";
             buttonSair.Size = new Size(113, 73);
             buttonSair.TabIndex = 3;
-            buttonSair.Text = "Sair";
             buttonSair.UseVisualStyleBackColor = false;
             buttonSair.Click += buttonSair_Click;
             // 
@@ -106,10 +106,9 @@
         }
 
         #endregion
-
-        public Button buttonSalvar;
         public Button buttonEditar;
         public Button buttonExcluir;
         public Button buttonSair;
+        public Button buttonSalvar;
     }
 }
