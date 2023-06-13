@@ -1,6 +1,8 @@
-﻿using System;
+﻿using PizzariaDoZe.DAO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
 using System.Drawing;
 using System.Linq;
@@ -12,15 +14,25 @@ namespace PizzariaDoZe
 {
     public partial class formProdutos : Form
     {
+        private ProdutoDAO produtoDAO;
         public formProdutos()
         {
             InitializeComponent();
             this.ControlBox = false; //REMOVE BOTÕES DE MINIZAR E FECHAR
             userControl.buttonSair.Click += buttonSair_Click; //BOTAO SAIR
-
-            Funcoes.EventoFocoCampos(this);
+            userControl.buttonSalvar.Click += buttonSalvar_Click; //BOTAO SALVAR
 
             this.KeyDown += new KeyEventHandler(Funcoes.FormEventoKeyDown!);
+            Funcoes.EventoFocoCampos(this);
+
+            CarregaEnumListBox();
+
+            // pega os dados do banco de dados
+            string provider = ConfigurationManager.ConnectionStrings["BD"].ProviderName;
+            string strConnection =
+            ConfigurationManager.ConnectionStrings["BD"].ConnectionString;
+            // cria a instancia da classe da model
+            produtoDAO = new ProdutoDAO(provider, strConnection);
 
             #region idioma/região interface - satellite assembly
             // com base no idioma/região escolhido pelo usuário,
@@ -32,6 +44,36 @@ namespace PizzariaDoZe
             #endregion
         }
 
+        private void buttonSalvar_Click(object? sender, EventArgs e)
+        {
+
+            //Instância e Preenche o objeto com os dados da view
+            var produto = new Produto
+            {
+                Id = 0,
+                Descricao = textBoxNome.Text,
+                Valor = decimal.Parse(textBoxValor.Text),
+                Tipo = (char)(EnumProdutoTipo)Enum.Parse(typeof(EnumProdutoTipo), listBoxTipo.Text),
+                ML = listBoxMl.Text,
+            };
+            try
+            {
+                // chama o método para inserir da camada model
+                produtoDAO.Inserir(produto);
+                MessageBox.Show("Dados inseridos com sucesso!");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+        }
+        private void CarregaEnumListBox()
+        {
+            //popular listBoxTipo
+            listBoxTipo.Items.Clear();
+            listBoxTipo.DataSource = Enum.GetValues(typeof(EnumProdutoTipo));
+        }
         public void buttonSair_Click(object sender, EventArgs e)
         {
             Close();
@@ -55,6 +97,13 @@ namespace PizzariaDoZe
         private void formProdutos_Load_1(object sender, EventArgs e)
         {
 
+        }
+
+        private void botaoVisualizarCadastros_Click(object sender, EventArgs e)
+        {
+            FormVisualizarProdutos visuProd = new FormVisualizarProdutos();
+            visuProd.StartPosition = FormStartPosition.CenterScreen;
+            visuProd.Show();
         }
     }
 }

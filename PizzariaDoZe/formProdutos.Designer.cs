@@ -31,21 +31,22 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formProdutos));
             userControl = new UserControl1();
             panel = new Panel();
-            comboBoxML = new ComboBox();
-            comboBoxTipo = new ComboBox();
+            listBoxMl = new ListBox();
+            listBoxTipo = new ListBox();
+            labelValor = new Label();
+            textBoxValor = new TextBox();
             textBoxNome = new TextBox();
             labelNome = new Label();
             labelML = new Label();
             labelTipo = new Label();
-            textBoxValor = new TextBox();
-            labelValor = new Label();
+            botaoVisualizarCadastros = new Button();
             panel.SuspendLayout();
             SuspendLayout();
             // 
             // userControl
             // 
             userControl.BackColor = Color.Transparent;
-            userControl.Location = new Point(50, 160);
+            userControl.Location = new Point(50, 190);
             userControl.Margin = new Padding(3, 4, 3, 4);
             userControl.Name = "userControl";
             userControl.Size = new Size(479, 91);
@@ -55,10 +56,11 @@
             // panel
             // 
             panel.BackColor = Color.Silver;
+            panel.Controls.Add(botaoVisualizarCadastros);
+            panel.Controls.Add(listBoxMl);
+            panel.Controls.Add(listBoxTipo);
             panel.Controls.Add(labelValor);
             panel.Controls.Add(textBoxValor);
-            panel.Controls.Add(comboBoxML);
-            panel.Controls.Add(comboBoxTipo);
             panel.Controls.Add(textBoxNome);
             panel.Controls.Add(labelNome);
             panel.Controls.Add(labelML);
@@ -66,31 +68,46 @@
             panel.Location = new Point(11, 23);
             panel.Margin = new Padding(3, 2, 3, 2);
             panel.Name = "panel";
-            panel.Size = new Size(564, 143);
+            panel.Size = new Size(564, 168);
             panel.TabIndex = 1;
             panel.Paint += panel_Paint;
             // 
-            // comboBoxML
+            // listBoxMl
             // 
-            comboBoxML.Font = new Font("Nexa Heavy", 10F, FontStyle.Bold, GraphicsUnit.Point);
-            comboBoxML.FormattingEnabled = true;
-            comboBoxML.Items.AddRange(new object[] { "150", "300", "600", "1000", "1500", "2000" });
-            comboBoxML.Location = new Point(438, 23);
-            comboBoxML.Margin = new Padding(3, 2, 3, 2);
-            comboBoxML.Name = "comboBoxML";
-            comboBoxML.Size = new Size(106, 25);
-            comboBoxML.TabIndex = 3;
+            listBoxMl.FormattingEnabled = true;
+            listBoxMl.ItemHeight = 15;
+            listBoxMl.Items.AddRange(new object[] { "150", "300", "600", "1000", "1500", "2000" });
+            listBoxMl.Location = new Point(420, 27);
+            listBoxMl.Name = "listBoxMl";
+            listBoxMl.Size = new Size(120, 109);
+            listBoxMl.TabIndex = 11;
             // 
-            // comboBoxTipo
+            // listBoxTipo
             // 
-            comboBoxTipo.Font = new Font("Nexa Heavy", 10F, FontStyle.Bold, GraphicsUnit.Point);
-            comboBoxTipo.FormattingEnabled = true;
-            comboBoxTipo.Items.AddRange(new object[] { "R - REFRIGERANTE", "C - CERVEJA ", "S - SUCO", "A - ÁGUA", "O - OUTROS" });
-            comboBoxTipo.Location = new Point(269, 23);
-            comboBoxTipo.Margin = new Padding(3, 2, 3, 2);
-            comboBoxTipo.Name = "comboBoxTipo";
-            comboBoxTipo.Size = new Size(149, 25);
-            comboBoxTipo.TabIndex = 2;
+            listBoxTipo.FormattingEnabled = true;
+            listBoxTipo.ItemHeight = 15;
+            listBoxTipo.Location = new Point(269, 27);
+            listBoxTipo.Name = "listBoxTipo";
+            listBoxTipo.Size = new Size(120, 94);
+            listBoxTipo.TabIndex = 10;
+            // 
+            // labelValor
+            // 
+            labelValor.AutoSize = true;
+            labelValor.Font = new Font("Nexa Heavy", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            labelValor.Location = new Point(39, 57);
+            labelValor.Name = "labelValor";
+            labelValor.Size = new Size(39, 16);
+            labelValor.TabIndex = 9;
+            labelValor.Text = "Valor";
+            // 
+            // textBoxValor
+            // 
+            textBoxValor.Location = new Point(20, 75);
+            textBoxValor.Margin = new Padding(3, 2, 3, 2);
+            textBoxValor.Name = "textBoxValor";
+            textBoxValor.Size = new Size(215, 23);
+            textBoxValor.TabIndex = 8;
             // 
             // textBoxNome
             // 
@@ -130,30 +147,26 @@
             labelTipo.TabIndex = 4;
             labelTipo.Text = "Tipo";
             // 
-            // textBoxValor
+            // botaoVisualizarCadastros
             // 
-            textBoxValor.Location = new Point(20, 75);
-            textBoxValor.Margin = new Padding(3, 2, 3, 2);
-            textBoxValor.Name = "textBoxValor";
-            textBoxValor.Size = new Size(215, 23);
-            textBoxValor.TabIndex = 8;
-            // 
-            // labelValor
-            // 
-            labelValor.AutoSize = true;
-            labelValor.Font = new Font("Nexa Heavy", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            labelValor.Location = new Point(39, 57);
-            labelValor.Name = "labelValor";
-            labelValor.Size = new Size(39, 16);
-            labelValor.TabIndex = 9;
-            labelValor.Text = "Valor";
+            botaoVisualizarCadastros.BackColor = Color.PaleGoldenrod;
+            botaoVisualizarCadastros.Cursor = Cursors.Hand;
+            botaoVisualizarCadastros.FlatStyle = FlatStyle.Flat;
+            botaoVisualizarCadastros.Font = new Font("Nexa Heavy", 11.999999F, FontStyle.Bold, GraphicsUnit.Point);
+            botaoVisualizarCadastros.Location = new Point(14, 108);
+            botaoVisualizarCadastros.Name = "botaoVisualizarCadastros";
+            botaoVisualizarCadastros.Size = new Size(249, 52);
+            botaoVisualizarCadastros.TabIndex = 14;
+            botaoVisualizarCadastros.Text = "Visualizar Cadastros";
+            botaoVisualizarCadastros.UseVisualStyleBackColor = false;
+            botaoVisualizarCadastros.Click += botaoVisualizarCadastros_Click;
             // 
             // formProdutos
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
-            ClientSize = new Size(586, 254);
+            ClientSize = new Size(586, 294);
             Controls.Add(panel);
             Controls.Add(userControl);
             FormBorderStyle = FormBorderStyle.Fixed3D;
@@ -173,12 +186,13 @@
         private UserControl1 userControl;
         private Panel panel;
         private Label labelML;
-        private ComboBox comboBoxML;
-        private ComboBox comboBoxTipo;
         private Label labelTipo;
         private TextBox textBoxNome;
         private Label labelNome;
         private Label labelValor;
         private TextBox textBoxValor;
+        private ListBox listBoxMl;
+        private ListBox listBoxTipo;
+        private Button botaoVisualizarCadastros;
     }
 }

@@ -30,54 +30,96 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formSabores));
             panel = new Panel();
-            ingredientes = new CheckedListBox();
-            pictureBoxPizza = new PictureBox();
+            textBoxNome = new TextBox();
+            labelNome = new Label();
+            listBoxTipo = new ListBox();
+            listBoxCategoria = new ListBox();
+            checkedListBoxIngredientes = new CheckedListBox();
+            pictureBoxImagem = new PictureBox();
             labelIngredientes = new Label();
-            comboBoxCategoria = new ComboBox();
             labelCategoria = new Label();
-            comboBoxTipo = new ComboBox();
             labelTipo = new Label();
             userControl = new UserControl1();
+            botaoVisualizarCadastros = new Button();
             panel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBoxPizza).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxImagem).BeginInit();
             SuspendLayout();
             // 
             // panel
             // 
             panel.BackColor = Color.Silver;
-            panel.Controls.Add(ingredientes);
-            panel.Controls.Add(pictureBoxPizza);
+            panel.Controls.Add(botaoVisualizarCadastros);
+            panel.Controls.Add(textBoxNome);
+            panel.Controls.Add(labelNome);
+            panel.Controls.Add(listBoxTipo);
+            panel.Controls.Add(listBoxCategoria);
+            panel.Controls.Add(checkedListBoxIngredientes);
+            panel.Controls.Add(pictureBoxImagem);
             panel.Controls.Add(labelIngredientes);
-            panel.Controls.Add(comboBoxCategoria);
             panel.Controls.Add(labelCategoria);
-            panel.Controls.Add(comboBoxTipo);
             panel.Controls.Add(labelTipo);
             panel.Location = new Point(12, 12);
             panel.Name = "panel";
             panel.Size = new Size(548, 309);
             panel.TabIndex = 0;
             // 
-            // ingredientes
+            // textBoxNome
             // 
-            ingredientes.Font = new Font("Nexa Heavy", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            ingredientes.FormattingEnabled = true;
-            ingredientes.Items.AddRange(new object[] { "Tomate", "Catupiry", "Bacon", "Queijo", "Rúcula", "Frango", "Cebola", "Alho", "Ovo", "Lombo", "Pepperoni", "Pimentão", "Presunto", "Queijo", "Calabresa" });
-            ingredientes.Location = new Point(398, 22);
-            ingredientes.Name = "ingredientes";
-            ingredientes.Size = new Size(120, 235);
-            ingredientes.TabIndex = 3;
-            ingredientes.SelectedIndexChanged += checkedListBox1_SelectedIndexChanged;
+            textBoxNome.Location = new Point(21, 24);
+            textBoxNome.Name = "textBoxNome";
+            textBoxNome.Size = new Size(148, 23);
+            textBoxNome.TabIndex = 17;
             // 
-            // pictureBoxPizza
+            // labelNome
             // 
-            pictureBoxPizza.Image = (Image)resources.GetObject("pictureBoxPizza.Image");
-            pictureBoxPizza.InitialImage = (Image)resources.GetObject("pictureBoxPizza.InitialImage");
-            pictureBoxPizza.Location = new Point(23, 33);
-            pictureBoxPizza.Name = "pictureBoxPizza";
-            pictureBoxPizza.Size = new Size(179, 159);
-            pictureBoxPizza.TabIndex = 13;
-            pictureBoxPizza.TabStop = false;
-            pictureBoxPizza.Click += pictureBoxPizza_Click;
+            labelNome.AutoSize = true;
+            labelNome.Font = new Font("Nexa Heavy", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            labelNome.Location = new Point(21, 5);
+            labelNome.Name = "labelNome";
+            labelNome.Size = new Size(41, 16);
+            labelNome.TabIndex = 16;
+            labelNome.Text = "Nome";
+            // 
+            // listBoxTipo
+            // 
+            listBoxTipo.FormattingEnabled = true;
+            listBoxTipo.ItemHeight = 15;
+            listBoxTipo.Location = new Point(251, 137);
+            listBoxTipo.Name = "listBoxTipo";
+            listBoxTipo.Size = new Size(120, 94);
+            listBoxTipo.TabIndex = 15;
+            // 
+            // listBoxCategoria
+            // 
+            listBoxCategoria.FormattingEnabled = true;
+            listBoxCategoria.ItemHeight = 15;
+            listBoxCategoria.Location = new Point(251, 24);
+            listBoxCategoria.Name = "listBoxCategoria";
+            listBoxCategoria.Size = new Size(120, 94);
+            listBoxCategoria.TabIndex = 14;
+            // 
+            // checkedListBoxIngredientes
+            // 
+            checkedListBoxIngredientes.Font = new Font("Nexa Heavy", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            checkedListBoxIngredientes.FormattingEnabled = true;
+            checkedListBoxIngredientes.Items.AddRange(new object[] { "Tomate", "Catupiry", "Bacon", "Queijo", "Rúcula", "Frango", "Cebola", "Alho", "Ovo", "Lombo", "Pepperoni", "Pimentão", "Presunto", "Queijo", "Calabresa" });
+            checkedListBoxIngredientes.Location = new Point(398, 22);
+            checkedListBoxIngredientes.Name = "checkedListBoxIngredientes";
+            checkedListBoxIngredientes.Size = new Size(120, 235);
+            checkedListBoxIngredientes.TabIndex = 3;
+            checkedListBoxIngredientes.SelectedIndexChanged += checkedListBox1_SelectedIndexChanged;
+            // 
+            // pictureBoxImagem
+            // 
+            pictureBoxImagem.BackColor = Color.White;
+            pictureBoxImagem.InitialImage = (Image)resources.GetObject("pictureBoxImagem.InitialImage");
+            pictureBoxImagem.Location = new Point(21, 64);
+            pictureBoxImagem.Name = "pictureBoxImagem";
+            pictureBoxImagem.Size = new Size(179, 159);
+            pictureBoxImagem.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBoxImagem.TabIndex = 13;
+            pictureBoxImagem.TabStop = false;
+            pictureBoxImagem.Click += pictureBoxPizza_Click;
             // 
             // labelIngredientes
             // 
@@ -89,47 +131,26 @@
             labelIngredientes.TabIndex = 6;
             labelIngredientes.Text = "Ingredientes";
             // 
-            // comboBoxCategoria
-            // 
-            comboBoxCategoria.AutoCompleteCustomSource.AddRange(new string[] { "Tradicional", "Premium" });
-            comboBoxCategoria.Font = new Font("Nexa Heavy", 9.749999F, FontStyle.Bold, GraphicsUnit.Point);
-            comboBoxCategoria.FormattingEnabled = true;
-            comboBoxCategoria.Items.AddRange(new object[] { "Tradicional", "Premium" });
-            comboBoxCategoria.Location = new Point(251, 64);
-            comboBoxCategoria.Name = "comboBoxCategoria";
-            comboBoxCategoria.Size = new Size(132, 25);
-            comboBoxCategoria.TabIndex = 1;
-            // 
             // labelCategoria
             // 
             labelCategoria.AutoSize = true;
             labelCategoria.Font = new Font("Nexa Heavy", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            labelCategoria.Location = new Point(251, 45);
+            labelCategoria.Location = new Point(251, 5);
             labelCategoria.Name = "labelCategoria";
             labelCategoria.Size = new Size(66, 16);
             labelCategoria.TabIndex = 4;
             labelCategoria.Text = "Categoria";
             // 
-            // comboBoxTipo
-            // 
-            comboBoxTipo.AutoCompleteCustomSource.AddRange(new string[] { "Doce", "Salgada" });
-            comboBoxTipo.Font = new Font("Nexa Heavy", 9.749999F, FontStyle.Bold, GraphicsUnit.Point);
-            comboBoxTipo.FormattingEnabled = true;
-            comboBoxTipo.Items.AddRange(new object[] { "Doce", "Salgada" });
-            comboBoxTipo.Location = new Point(250, 156);
-            comboBoxTipo.Name = "comboBoxTipo";
-            comboBoxTipo.Size = new Size(133, 25);
-            comboBoxTipo.TabIndex = 2;
-            // 
             // labelTipo
             // 
             labelTipo.AutoSize = true;
             labelTipo.Font = new Font("Nexa Heavy", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            labelTipo.Location = new Point(251, 137);
+            labelTipo.Location = new Point(251, 121);
             labelTipo.Name = "labelTipo";
             labelTipo.Size = new Size(32, 16);
             labelTipo.TabIndex = 2;
             labelTipo.Text = "Tipo";
+            labelTipo.Click += labelTipo_Click;
             // 
             // userControl
             // 
@@ -140,6 +161,20 @@
             userControl.Size = new Size(479, 91);
             userControl.TabIndex = 4;
             userControl.Load += userControl11_Load;
+            // 
+            // botaoVisualizarCadastros
+            // 
+            botaoVisualizarCadastros.BackColor = Color.PaleGoldenrod;
+            botaoVisualizarCadastros.Cursor = Cursors.Hand;
+            botaoVisualizarCadastros.FlatStyle = FlatStyle.Flat;
+            botaoVisualizarCadastros.Font = new Font("Nexa Heavy", 11.999999F, FontStyle.Bold, GraphicsUnit.Point);
+            botaoVisualizarCadastros.Location = new Point(21, 237);
+            botaoVisualizarCadastros.Name = "botaoVisualizarCadastros";
+            botaoVisualizarCadastros.Size = new Size(249, 52);
+            botaoVisualizarCadastros.TabIndex = 18;
+            botaoVisualizarCadastros.Text = "Visualizar Cadastros";
+            botaoVisualizarCadastros.UseVisualStyleBackColor = false;
+            botaoVisualizarCadastros.Click += botaoVisualizarCadastros_Click;
             // 
             // formSabores
             // 
@@ -158,20 +193,23 @@
             Load += formSabores_Load;
             panel.ResumeLayout(false);
             panel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBoxPizza).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxImagem).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
 
         private Panel panel;
-        private PictureBox pictureBoxPizza;
+        private PictureBox pictureBoxImagem;
         private Label labelIngredientes;
-        private ComboBox comboBoxCategoria;
         private Label labelCategoria;
-        private ComboBox comboBoxTipo;
         private Label labelTipo;
         private UserControl1 userControl;
-        private CheckedListBox ingredientes;
+        private CheckedListBox checkedListBoxIngredientes;
+        private ListBox listBoxTipo;
+        private ListBox listBoxCategoria;
+        private TextBox textBoxNome;
+        private Label labelNome;
+        private Button botaoVisualizarCadastros;
     }
 }

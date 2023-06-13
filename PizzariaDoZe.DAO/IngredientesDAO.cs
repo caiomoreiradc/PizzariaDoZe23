@@ -1,16 +1,6 @@
 ﻿using System.Data;
 using System.Data.Common;
 namespace PizzariaDoZe.DAO;
-public class Ingrediente
-{
-    public int Id { get; set; }
-    public string Nome { get; set; }
-    public Ingrediente(int id = 0, string nome = "")
-    {
-        Id = id;
-        Nome = nome;
-    }
-}
 public class IngredienteDAO
 {
     /// Utilização de mais do que um provider com o mesmo script (MySQL, SQLServer, Firebird...)
