@@ -50,7 +50,7 @@ namespace PizzariaDoZe
             Close();
         }
 
-        private void DataGridViewDados_CellFormatting(object? sender, DataGridViewCellFormattingEventArgs e)
+        private void dataGridViewDados_CellFormatting(object? sender, DataGridViewCellFormattingEventArgs e)
         {
             if (e.RowIndex == this.dataGridViewDados.NewRowIndex || e.Value.ToString().Trim().Length == 0)
             {

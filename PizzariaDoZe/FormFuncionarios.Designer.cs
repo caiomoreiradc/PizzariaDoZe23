@@ -1,6 +1,6 @@
 ﻿namespace PizzariaDoZe
 {
-    partial class formFunci
+    partial class FormFuncionarios
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formFunci));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormFuncionarios));
             panel = new Panel();
             radioButtonGrupoEntregador = new RadioButton();
             botaoVisualizarCadastros = new Button();
@@ -73,8 +73,10 @@
             label6 = new Label();
             label7 = new Label();
             labelTitle = new Label();
+            dataGridViewDados = new DataGridView();
             panel.SuspendLayout();
             panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewDados).BeginInit();
             SuspendLayout();
             // 
             // panel
@@ -181,10 +183,14 @@
             // 
             // textBoxIdFunci
             // 
+            textBoxIdFunci.Enabled = false;
             textBoxIdFunci.Location = new Point(14, 28);
             textBoxIdFunci.Name = "textBoxIdFunci";
+            textBoxIdFunci.ReadOnly = true;
             textBoxIdFunci.Size = new Size(71, 23);
             textBoxIdFunci.TabIndex = 27;
+            textBoxIdFunci.Text = "0";
+            textBoxIdFunci.TextAlign = HorizontalAlignment.Center;
             // 
             // maskedTelefone
             // 
@@ -308,6 +314,7 @@
             // textBoxMatricula
             // 
             textBoxMatricula.Location = new Point(540, 28);
+            textBoxMatricula.MaxLength = 6;
             textBoxMatricula.Name = "textBoxMatricula";
             textBoxMatricula.Size = new Size(97, 23);
             textBoxMatricula.TabIndex = 2;
@@ -352,7 +359,7 @@
             // userControl
             // 
             userControl.BackColor = Color.Transparent;
-            userControl.Location = new Point(231, 342);
+            userControl.Location = new Point(235, 541);
             userControl.Margin = new Padding(3, 4, 3, 4);
             userControl.Name = "userControl";
             userControl.Size = new Size(477, 91);
@@ -377,7 +384,7 @@
             panel1.Controls.Add(textBoxLogradouro);
             panel1.Controls.Add(label6);
             panel1.Controls.Add(label7);
-            panel1.Location = new Point(12, 213);
+            panel1.Location = new Point(9, 213);
             panel1.Name = "panel1";
             panel1.Size = new Size(915, 134);
             panel1.TabIndex = 1001;
@@ -531,12 +538,31 @@
             labelTitle.TabIndex = 1002;
             labelTitle.Text = "Cadastro de Funcionários";
             // 
+            // dataGridViewDados
+            // 
+            dataGridViewDados.AllowUserToAddRows = false;
+            dataGridViewDados.AllowUserToDeleteRows = false;
+            dataGridViewDados.AllowUserToResizeRows = false;
+            dataGridViewDados.BackgroundColor = SystemColors.InactiveCaption;
+            dataGridViewDados.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewDados.EditMode = DataGridViewEditMode.EditProgrammatically;
+            dataGridViewDados.Location = new Point(8, 362);
+            dataGridViewDados.MultiSelect = false;
+            dataGridViewDados.Name = "dataGridViewDados";
+            dataGridViewDados.RowTemplate.Height = 25;
+            dataGridViewDados.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dataGridViewDados.Size = new Size(916, 172);
+            dataGridViewDados.TabIndex = 1003;
+            dataGridViewDados.CellFormatting += dataGridViewDados_CellFormatting_1;
+            dataGridViewDados.MouseDoubleClick += dataGridViewDados_MouseDoubleClick;
+            // 
             // formFunci
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
-            ClientSize = new Size(939, 440);
+            ClientSize = new Size(950, 645);
+            Controls.Add(dataGridViewDados);
             Controls.Add(panel1);
             Controls.Add(panel);
             Controls.Add(userControl);
@@ -552,6 +578,7 @@
             panel.PerformLayout();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewDados).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -559,47 +586,48 @@
         #endregion
         private Panel panel;
         private Label labelSenha;
-        private TextBox textBoxMatricula;
+        public TextBox textBoxMatricula;
         private Label labelMatricula;
         private Label labelCPF;
-        private TextBox textBoxNome;
+        public TextBox textBoxNome;
         private Label labelNome;
         private Label labelGrupo;
         private Label labelCNH;
         private Label labelEmail;
         private Label labelTelefone;
         private Label labelValidadeCNH;
-        private TextBox textBoxEmail;
-        private TextBox textBoxObservacoes;
+        public TextBox textBoxEmail;
+        public TextBox textBoxObservacoes;
         private Label labelObservacoes;
-        private UserControl1 userControl;
-        private MaskedTextBox maskedSenha;
-        private MaskedTextBox maskedCPF;
-        private MaskedTextBox maskedTelefone;
-        private Panel panel1;
-        private MaskedTextBox maskedCEP;
-        private TextBox textBoxId;
+        public UserControl1 userControl;
+        public MaskedTextBox maskedSenha;
+        public MaskedTextBox maskedCPF;
+        public MaskedTextBox maskedTelefone;
+        public Panel panel1;
+        public MaskedTextBox maskedCEP;
+        public TextBox textBoxId;
         private Label labelID;
-        private ComboBox comboBoxUF;
-        private TextBox textBoxPais;
-        private TextBox textBoxComplemento;
+        public ComboBox comboBoxUF;
+        public TextBox textBoxPais;
+        public TextBox textBoxComplemento;
         private Label label1;
         private Label label2;
         private Label label3;
-        private TextBox textBoxCidade;
+        public TextBox textBoxCidade;
         private Label label4;
-        private TextBox textBoxLogradouro;
+        public TextBox textBoxLogradouro;
         private Label label6;
         private Label label7;
-        private TextBox textBoxIdFunci;
+        public TextBox textBoxIdFunci;
         private Label label5;
-        private TextBox textBoxCNH;
-        private DateTimePicker dateTimePickerValidade;
-        private RadioButton radioButtonGrupoAdmin;
-        private RadioButton radioButtonGrupoAtendente;
-        private Button botaoVisualizarCadastros;
-        private RadioButton radioButtonGrupoEntregador;
-        private Button buttonVisualizarEndereços;
+        public TextBox textBoxCNH;
+        public DateTimePicker dateTimePickerValidade;
+        public RadioButton radioButtonGrupoAdmin;
+        public RadioButton radioButtonGrupoAtendente;
+        public Button botaoVisualizarCadastros;
+        public RadioButton radioButtonGrupoEntregador;
+        public Button buttonVisualizarEndereços;
         private Label labelTitle;
+        private DataGridView dataGridViewDados;
     }
 }

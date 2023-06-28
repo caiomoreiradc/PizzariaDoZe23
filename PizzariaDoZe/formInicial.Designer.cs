@@ -51,6 +51,7 @@
             abrirAplicaçãoToolStripMenuItem = new ToolStripMenuItem();
             encerrarToolStripMenuItem = new ToolStripMenuItem();
             sobreToolStripMenuItem = new ToolStripMenuItem();
+            buttonPedidos = new Button();
             contextMenuStrip.SuspendLayout();
             contextMenuStripSystemTray.SuspendLayout();
             SuspendLayout();
@@ -166,7 +167,7 @@
             botaoConfig.FlatStyle = FlatStyle.Flat;
             botaoConfig.Font = new Font("Nexa Heavy", 9F, FontStyle.Bold, GraphicsUnit.Point);
             botaoConfig.Image = (Image)resources.GetObject("botaoConfig.Image");
-            botaoConfig.Location = new Point(836, 881);
+            botaoConfig.Location = new Point(836, 932);
             botaoConfig.Name = "botaoConfig";
             botaoConfig.Size = new Size(233, 97);
             botaoConfig.TabIndex = 6;
@@ -265,6 +266,21 @@
             sobreToolStripMenuItem.Size = new Size(155, 22);
             sobreToolStripMenuItem.Text = "Sobre";
             // 
+            // buttonPedidos
+            // 
+            buttonPedidos.BackColor = Color.WhiteSmoke;
+            buttonPedidos.Cursor = Cursors.Hand;
+            buttonPedidos.FlatStyle = FlatStyle.Flat;
+            buttonPedidos.Font = new Font("Microsoft Sans Serif", 23.9999981F, FontStyle.Bold, GraphicsUnit.Point);
+            buttonPedidos.ForeColor = Color.Black;
+            buttonPedidos.Location = new Point(603, 769);
+            buttonPedidos.Name = "buttonPedidos";
+            buttonPedidos.Size = new Size(699, 99);
+            buttonPedidos.TabIndex = 7;
+            buttonPedidos.Text = "Cadastro de Pedidos";
+            buttonPedidos.UseVisualStyleBackColor = false;
+            buttonPedidos.Click += buttonPedidos_Click;
+            // 
             // paginaInicial
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -273,6 +289,7 @@
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             ClientSize = new Size(1904, 1041);
             ContextMenuStrip = contextMenuStrip;
+            Controls.Add(buttonPedidos);
             Controls.Add(botaoConfig);
             Controls.Add(botaoProdutos);
             Controls.Add(botaoValores);
@@ -319,5 +336,6 @@
         private ToolStripMenuItem abrirAplicaçãoToolStripMenuItem;
         private ToolStripMenuItem encerrarToolStripMenuItem;
         private ToolStripMenuItem sobreToolStripMenuItem;
+        private Button buttonPedidos;
     }
 }

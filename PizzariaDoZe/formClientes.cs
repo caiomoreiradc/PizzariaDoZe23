@@ -85,7 +85,7 @@ namespace PizzariaDoZe
             //Instância e Preenche o objeto com os dados da view
             var cliente = new Cliente
             {
-               // Id = 0,
+                // Id = 0,
                 Nome = textBoxNome.Text,
                 Cpf = maskedCPF.Text,
                 Telefone = maskedTelefone.Text,
@@ -173,18 +173,18 @@ namespace PizzariaDoZe
             }
         }
 
-        private void botaoVisualizarCadastros_Click(object sender, EventArgs e)
-        {
-            FormVisualizarClientes visuCli = new FormVisualizarClientes();
-            visuCli.StartPosition = FormStartPosition.CenterScreen;
-            visuCli.Show();
-        }
-
         private void buttonVisualizarEndereços_Click(object sender, EventArgs e)
         {
             FormVisualizarEnderecos visuEnd = new FormVisualizarEnderecos();
             visuEnd.StartPosition = FormStartPosition.CenterScreen;
             visuEnd.Show();
+        }
+
+        private void botaoVisualizarCadastros_Click(object sender, EventArgs e)
+        {
+            FormVisualizarClientes visuCli = new FormVisualizarClientes();
+            visuCli.StartPosition = FormStartPosition.CenterScreen;
+            visuCli.Show();
         }
     }
 }

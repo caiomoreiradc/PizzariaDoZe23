@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formSabores));
             panel = new Panel();
+            textBoxId = new TextBox();
+            label1 = new Label();
             textBoxNome = new TextBox();
             labelNome = new Label();
             listBoxTipo = new ListBox();
@@ -40,15 +42,17 @@
             labelCategoria = new Label();
             labelTipo = new Label();
             userControl = new UserControl1();
-            botaoVisualizarCadastros = new Button();
+            dataGridViewDados = new DataGridView();
             panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBoxImagem).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewDados).BeginInit();
             SuspendLayout();
             // 
             // panel
             // 
             panel.BackColor = Color.Silver;
-            panel.Controls.Add(botaoVisualizarCadastros);
+            panel.Controls.Add(textBoxId);
+            panel.Controls.Add(label1);
             panel.Controls.Add(textBoxNome);
             panel.Controls.Add(labelNome);
             panel.Controls.Add(listBoxTipo);
@@ -60,21 +64,42 @@
             panel.Controls.Add(labelTipo);
             panel.Location = new Point(12, 12);
             panel.Name = "panel";
-            panel.Size = new Size(548, 309);
+            panel.Size = new Size(548, 270);
             panel.TabIndex = 0;
+            // 
+            // textBoxId
+            // 
+            textBoxId.Enabled = false;
+            textBoxId.Location = new Point(21, 22);
+            textBoxId.Name = "textBoxId";
+            textBoxId.ReadOnly = true;
+            textBoxId.Size = new Size(52, 23);
+            textBoxId.TabIndex = 0;
+            textBoxId.Text = "0";
+            textBoxId.TextAlign = HorizontalAlignment.Center;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Nexa Heavy", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.Location = new Point(21, 3);
+            label1.Name = "label1";
+            label1.Size = new Size(20, 16);
+            label1.TabIndex = 18;
+            label1.Text = "ID";
             // 
             // textBoxNome
             // 
-            textBoxNome.Location = new Point(21, 24);
+            textBoxNome.Location = new Point(21, 69);
             textBoxNome.Name = "textBoxNome";
             textBoxNome.Size = new Size(148, 23);
-            textBoxNome.TabIndex = 17;
+            textBoxNome.TabIndex = 1;
             // 
             // labelNome
             // 
             labelNome.AutoSize = true;
             labelNome.Font = new Font("Nexa Heavy", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            labelNome.Location = new Point(21, 5);
+            labelNome.Location = new Point(21, 50);
             labelNome.Name = "labelNome";
             labelNome.Size = new Size(41, 16);
             labelNome.TabIndex = 16;
@@ -106,14 +131,14 @@
             checkedListBoxIngredientes.Location = new Point(398, 22);
             checkedListBoxIngredientes.Name = "checkedListBoxIngredientes";
             checkedListBoxIngredientes.Size = new Size(120, 235);
-            checkedListBoxIngredientes.TabIndex = 3;
+            checkedListBoxIngredientes.TabIndex = 4;
             checkedListBoxIngredientes.SelectedIndexChanged += checkedListBox1_SelectedIndexChanged;
             // 
             // pictureBoxImagem
             // 
             pictureBoxImagem.BackColor = Color.White;
             pictureBoxImagem.InitialImage = (Image)resources.GetObject("pictureBoxImagem.InitialImage");
-            pictureBoxImagem.Location = new Point(21, 64);
+            pictureBoxImagem.Location = new Point(21, 98);
             pictureBoxImagem.Name = "pictureBoxImagem";
             pictureBoxImagem.Size = new Size(179, 159);
             pictureBoxImagem.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -155,33 +180,35 @@
             // userControl
             // 
             userControl.BackColor = Color.Transparent;
-            userControl.Location = new Point(51, 315);
+            userControl.Location = new Point(51, 484);
             userControl.Margin = new Padding(3, 4, 3, 4);
             userControl.Name = "userControl";
             userControl.Size = new Size(479, 91);
             userControl.TabIndex = 4;
             userControl.Load += userControl11_Load;
             // 
-            // botaoVisualizarCadastros
+            // dataGridViewDados
             // 
-            botaoVisualizarCadastros.BackColor = Color.PaleGoldenrod;
-            botaoVisualizarCadastros.Cursor = Cursors.Hand;
-            botaoVisualizarCadastros.FlatStyle = FlatStyle.Flat;
-            botaoVisualizarCadastros.Font = new Font("Nexa Heavy", 11.999999F, FontStyle.Bold, GraphicsUnit.Point);
-            botaoVisualizarCadastros.Location = new Point(21, 237);
-            botaoVisualizarCadastros.Name = "botaoVisualizarCadastros";
-            botaoVisualizarCadastros.Size = new Size(249, 52);
-            botaoVisualizarCadastros.TabIndex = 18;
-            botaoVisualizarCadastros.Text = "Visualizar Cadastros";
-            botaoVisualizarCadastros.UseVisualStyleBackColor = false;
-            botaoVisualizarCadastros.Click += botaoVisualizarCadastros_Click;
+            dataGridViewDados.AllowUserToAddRows = false;
+            dataGridViewDados.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewDados.EditMode = DataGridViewEditMode.EditProgrammatically;
+            dataGridViewDados.Location = new Point(12, 299);
+            dataGridViewDados.MultiSelect = false;
+            dataGridViewDados.Name = "dataGridViewDados";
+            dataGridViewDados.RowTemplate.Height = 25;
+            dataGridViewDados.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dataGridViewDados.Size = new Size(548, 178);
+            dataGridViewDados.TabIndex = 5;
+            dataGridViewDados.CellContentDoubleClick += dataGridViewDados_CellContentDoubleClick;
+            dataGridViewDados.CellFormatting += dataGridViewDados_CellFormatting;
             // 
             // formSabores
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
-            ClientSize = new Size(568, 406);
+            ClientSize = new Size(568, 588);
+            Controls.Add(dataGridViewDados);
             Controls.Add(panel);
             Controls.Add(userControl);
             FormBorderStyle = FormBorderStyle.FixedSingle;
@@ -194,6 +221,7 @@
             panel.ResumeLayout(false);
             panel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBoxImagem).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewDados).EndInit();
             ResumeLayout(false);
         }
 
@@ -210,6 +238,8 @@
         private ListBox listBoxCategoria;
         private TextBox textBoxNome;
         private Label labelNome;
-        private Button botaoVisualizarCadastros;
+        private DataGridView dataGridViewDados;
+        private TextBox textBoxId;
+        private Label label1;
     }
 }

@@ -168,5 +168,18 @@ namespace PizzariaDoZe
             // retorna o hash SHA256.
             return hash.ToString();
         }
+
+        public static Image? ConverteByteArrayParaImagem(byte[] pData)
+        {
+            try
+            {
+                ImageConverter imgConverter = new();
+                return imgConverter.ConvertFrom(pData) as Image;
+            }
+            catch
+            {
+                return null;
+            }
+        }
     }
 }

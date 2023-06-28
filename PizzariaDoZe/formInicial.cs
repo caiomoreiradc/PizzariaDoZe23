@@ -60,7 +60,7 @@ namespace PizzariaDoZe
 
         private void botaoFuncionarios_Click(object sender, EventArgs e)
         {
-            formFunci funcionarios = new formFunci();
+            FormFuncionarios funcionarios = new FormFuncionarios();
             funcionarios.StartPosition = FormStartPosition.CenterScreen;
             funcionarios.Show();
         }
@@ -176,6 +176,13 @@ namespace PizzariaDoZe
                     e.Cancel = true;
                 }
             }
+        }
+
+        private void buttonPedidos_Click(object sender, EventArgs e)
+        {
+            FormPedidos pedidos = new FormPedidos();
+            pedidos.StartPosition = FormStartPosition.CenterScreen;
+            pedidos.Show();
         }
     }
 }

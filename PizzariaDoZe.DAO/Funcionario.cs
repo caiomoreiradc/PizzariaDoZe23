@@ -32,4 +32,6 @@ public class Funcionario
         EnderecoId = endereco_id;
         Complemento = complemento;
     }
+
+
 }
